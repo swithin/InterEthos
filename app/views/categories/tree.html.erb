@@ -1,0 +1,39 @@
+<% @title = 'Show One Category' %>
+
+<!-- Pull-down Menu -->
+<%# tree_select(Category.find(:all, :conditions => "parent_id = 170"), 'category', 'parent_id', @category) %><br />
+
+
+
+
+<!-- Level ONE -->
+<% for category in Category.find_all_by_parent_id(@category_root_id, :order => "name") %>
+
+<strong><%= h(category.name) -%></strong> <%#= h(category.id) -%><br />
+	<% render_tree(category) do |branch| %>
+		<%# for indent < branch[1], ++1) %>
+		<% if branch[1] == 0 %>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+		<% elsif branch[1] == 1 %>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<% elsif branch[1] == 2 %>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<% elsif branch[1] == 3 %>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<% end %>
+		<%= h(branch[0].name) %><%#= h(branch[1]) %><br>
+	<% end %>
+
+<!--module CategoriesHelper
+  def render_tree(roots, depth=0, &block)
+    roots.children.sort_by {|f| f.name}.each do | child |
+      yield(child, depth)
+      render_tree(child, depth+1, &block)
+    end
+  end
+end -->
+
+<% end %>
+<!-- / Level ONE -->
+
+

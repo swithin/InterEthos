@@ -1,0 +1,43 @@
+<% @title = 'Show Category' %>
+
+<p>
+  <b>Name:</b>
+  <%=h @category.name %>
+</p>
+
+<p>
+  <b>Parent:</b>
+  <%=h @category.parent.name %>
+</p>
+
+<p>
+  <b>Synonyms:</b>
+  <% if @category.relationships(@category).empty? %>
+	  <em>(none found)</em>
+  <% else %>
+	  <ul>
+		<% for relationship in @category.relationships %>
+		  <li><%=h relationship.synonym.name %> <%= link_to '<img src="/images/remove.jpg" border="0">', relationship_path(relationship.id), :confirm => 'Are you sure?', :method => :delete %></li>
+		<% end %>
+	  </ul>
+  <% end %>
+
+  <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_relationship_path(:category_id => @category.id) %>
+</p>
+
+<p>
+  <b>Other categories that list this category as a synonym:</b>
+    <% if @category.inverse_synonyms(@category).empty? %>
+	  <em>(none found)</em>
+    <% else %>
+	  <ul>
+		<% for synonym in @category.inverse_synonyms %>
+		  <li><%=h synonym.name %> </li>
+		<% end %>
+	  </ul>
+    <% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>

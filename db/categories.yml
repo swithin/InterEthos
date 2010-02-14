@@ -1,0 +1,2224 @@
+--- 
+- !ruby/object:Category 
+  attributes: 
+    name: root
+    updated_at: 2009-01-21 07:02:09
+    id: "1"
+    parent_id: "0"
+    created_at: 2008-12-27 19:29:23
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: leaf on b 2 aa
+    updated_at: 2009-01-21 07:02:09
+    id: "11"
+    parent_id: "11"
+    created_at: 2009-01-02 06:06:17
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Nature
+    updated_at: 2009-01-21 07:02:09
+    id: "18"
+    parent_id: "170"
+    created_at: 2009-01-09 06:55:57
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Human Services
+    updated_at: 2009-01-21 07:02:10
+    id: "19"
+    parent_id: "170"
+    created_at: 2009-01-09 06:56:12
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Culture
+    updated_at: 2009-01-21 07:02:10
+    id: "20"
+    parent_id: "170"
+    created_at: 2009-01-09 06:56:28
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Animal Welfare
+    updated_at: 2009-01-21 07:02:10
+    id: "21"
+    parent_id: "18"
+    created_at: 2009-01-09 06:57:07
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Environment
+    updated_at: 2009-01-21 07:02:10
+    id: "22"
+    parent_id: "18"
+    created_at: 2009-01-09 06:57:22
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Biodiversity
+    updated_at: 2009-01-21 07:02:10
+    id: "23"
+    parent_id: "22"
+    created_at: 2009-01-09 06:57:52
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Urban
+    updated_at: 2009-01-21 07:02:11
+    id: "24"
+    parent_id: "22"
+    created_at: 2009-01-09 06:58:09
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Science
+    updated_at: 2009-01-21 07:02:11
+    id: "25"
+    parent_id: "22"
+    created_at: 2009-01-09 06:58:23
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Food
+    updated_at: 2009-01-21 07:02:11
+    id: "26"
+    parent_id: "19"
+    created_at: 2009-01-09 06:59:05
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Shelter
+    updated_at: 2009-01-21 07:02:11
+    id: "27"
+    parent_id: "19"
+    created_at: 2009-01-09 06:59:21
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Clothing
+    updated_at: 2009-01-21 07:02:12
+    id: "28"
+    parent_id: "19"
+    created_at: 2009-01-09 06:59:43
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Disabilities
+    updated_at: 2009-01-21 07:02:12
+    id: "29"
+    parent_id: "19"
+    created_at: 2009-01-09 07:00:08
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Well Being
+    updated_at: 2009-01-21 07:02:12
+    id: "30"
+    parent_id: "19"
+    created_at: 2009-01-09 07:00:25
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Health
+    updated_at: 2009-01-21 07:02:12
+    id: "31"
+    parent_id: "19"
+    created_at: 2009-01-09 07:00:39
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Employment
+    updated_at: 2009-01-21 07:02:12
+    id: "32"
+    parent_id: "19"
+    created_at: 2009-01-09 07:01:00
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Safety
+    updated_at: 2009-01-21 07:02:12
+    id: "33"
+    parent_id: "19"
+    created_at: 2009-01-09 07:01:17
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Community
+    updated_at: 2009-01-21 07:02:13
+    id: "34"
+    parent_id: "19"
+    created_at: 2009-01-09 07:01:37
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: General
+    updated_at: 2009-01-21 07:02:13
+    id: "35"
+    parent_id: "19"
+    created_at: 2009-01-09 07:01:51
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Legal Assistance
+    updated_at: 2009-01-21 07:02:13
+    id: "36"
+    parent_id: "30"
+    created_at: 2009-01-09 07:02:56
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Arts
+    updated_at: 2009-01-21 07:02:13
+    id: "37"
+    parent_id: "30"
+    created_at: 2009-01-09 07:03:24
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Sports
+    updated_at: 2009-01-21 07:02:13
+    id: "38"
+    parent_id: "30"
+    created_at: 2009-01-09 07:03:40
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Arts
+    updated_at: 2009-01-21 07:02:14
+    id: "39"
+    parent_id: "20"
+    created_at: 2009-01-09 07:04:25
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Education
+    updated_at: 2009-01-21 07:02:14
+    id: "40"
+    parent_id: "20"
+    created_at: 2009-01-09 07:04:46
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Informal
+    updated_at: 2009-01-21 07:02:14
+    id: "41"
+    parent_id: "40"
+    created_at: 2009-01-09 07:05:04
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Formal
+    updated_at: 2009-01-21 07:02:14
+    id: "42"
+    parent_id: "40"
+    created_at: 2009-01-09 07:05:18
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Performing
+    updated_at: 2009-01-21 07:02:15
+    id: "43"
+    parent_id: "39"
+    created_at: 2009-01-09 07:06:11
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Works
+    updated_at: 2009-01-21 07:02:15
+    id: "44"
+    parent_id: "39"
+    created_at: 2009-01-09 07:06:43
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: General
+    updated_at: 2009-01-21 07:02:15
+    id: "45"
+    parent_id: "39"
+    created_at: 2009-01-09 07:07:02
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Community
+    updated_at: 2009-01-21 07:02:15
+    id: "46"
+    parent_id: "39"
+    created_at: 2009-01-09 07:07:21
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Education
+    updated_at: 2009-01-21 07:02:16
+    id: "47"
+    parent_id: "39"
+    created_at: 2009-01-09 07:07:50
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Jobs
+    updated_at: 2009-01-21 07:02:16
+    id: "48"
+    parent_id: "32"
+    created_at: 2009-01-09 07:08:38
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Career Development
+    updated_at: 2009-01-21 07:02:16
+    id: "49"
+    parent_id: "32"
+    created_at: 2009-01-09 07:08:58
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Quality
+    updated_at: 2009-01-21 07:02:16
+    id: "50"
+    parent_id: "26"
+    created_at: 2009-01-09 07:09:43
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Hunger
+    updated_at: 2009-01-21 07:02:16
+    id: "51"
+    parent_id: "26"
+    created_at: 2009-01-09 07:09:59
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: School related
+    updated_at: 2009-01-21 07:02:17
+    id: "55"
+    parent_id: "42"
+    created_at: 2009-01-10 23:55:12
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Vocational
+    updated_at: 2009-01-21 07:02:17
+    id: "56"
+    parent_id: "55"
+    created_at: 2009-01-10 23:55:30
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Academic
+    updated_at: 2009-01-21 07:02:17
+    id: "57"
+    parent_id: "55"
+    created_at: 2009-01-10 23:55:38
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Schools
+    updated_at: 2009-01-21 07:02:17
+    id: "58"
+    parent_id: "42"
+    created_at: 2009-01-10 23:55:56
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Academic
+    updated_at: 2009-01-21 07:02:17
+    id: "59"
+    parent_id: "58"
+    created_at: 2009-01-10 23:56:07
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Vocational
+    updated_at: 2009-01-21 07:02:18
+    id: "60"
+    parent_id: "58"
+    created_at: 2009-01-10 23:56:41
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Adult Education
+    updated_at: 2009-01-21 07:02:18
+    id: "61"
+    parent_id: "42"
+    created_at: 2009-01-10 23:56:57
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Academic
+    updated_at: 2009-01-21 07:02:18
+    id: "62"
+    parent_id: "61"
+    created_at: 2009-01-10 23:57:10
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Vocational
+    updated_at: 2009-01-21 07:02:19
+    id: "63"
+    parent_id: "61"
+    created_at: 2009-01-10 23:57:17
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Museums
+    updated_at: 2009-01-21 07:02:19
+    id: "64"
+    parent_id: "41"
+    created_at: 2009-01-10 23:57:33
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Zoos, Aquaria
+    updated_at: 2009-01-21 07:02:19
+    id: "65"
+    parent_id: "41"
+    created_at: 2009-01-10 23:57:54
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Libraries
+    updated_at: 2009-01-21 07:02:20
+    id: "66"
+    parent_id: "41"
+    created_at: 2009-01-10 23:58:03
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Health
+    updated_at: 2009-01-21 07:02:20
+    id: "67"
+    parent_id: "41"
+    created_at: 2009-01-10 23:58:11
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Citizenship
+    updated_at: 2009-01-21 07:02:20
+    id: "68"
+    parent_id: "41"
+    created_at: 2009-01-10 23:58:21
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: General
+    updated_at: 2009-01-21 07:02:20
+    id: "69"
+    parent_id: "41"
+    created_at: 2009-01-10 23:58:29
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Vocational
+    updated_at: 2009-01-21 07:02:21
+    id: "70"
+    parent_id: "41"
+    created_at: 2009-01-10 23:58:42
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: International
+    updated_at: 2009-01-21 07:02:21
+    id: "71"
+    parent_id: "41"
+    created_at: 2009-01-10 23:58:58
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Civic Forum
+    updated_at: 2009-01-21 07:02:21
+    id: "72"
+    parent_id: "41"
+    created_at: 2009-01-10 23:59:07
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Historic Preservation
+    updated_at: 2009-01-21 07:02:21
+    id: "73"
+    parent_id: "41"
+    created_at: 2009-01-10 23:59:18
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Technology Centers
+    updated_at: 2009-01-21 07:02:21
+    id: "74"
+    parent_id: "41"
+    created_at: 2009-01-10 23:59:27
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Botanic Gardens
+    updated_at: 2009-01-21 07:02:22
+    id: "75"
+    parent_id: "41"
+    created_at: 2009-01-10 23:59:37
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: General
+    updated_at: 2009-01-21 07:02:22
+    id: "76"
+    parent_id: "44"
+    created_at: 2009-01-11 00:01:56
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Crafts
+    updated_at: 2009-01-21 07:02:22
+    id: "77"
+    parent_id: "44"
+    created_at: 2009-01-11 00:02:15
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Literary
+    updated_at: 2009-01-21 07:02:22
+    id: "78"
+    parent_id: "44"
+    created_at: 2009-01-11 00:02:22
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Visual
+    updated_at: 2009-01-21 07:02:23
+    id: "79"
+    parent_id: "44"
+    created_at: 2009-01-11 00:02:29
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Theatre
+    updated_at: 2009-01-21 07:02:23
+    id: "80"
+    parent_id: "43"
+    created_at: 2009-01-11 00:02:52
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Dance
+    updated_at: 2009-01-21 07:02:23
+    id: "81"
+    parent_id: "43"
+    created_at: 2009-01-11 00:02:58
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Film
+    updated_at: 2009-01-21 07:02:23
+    id: "82"
+    parent_id: "43"
+    created_at: 2009-01-11 00:03:03
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Music
+    updated_at: 2009-01-21 07:02:23
+    id: "83"
+    parent_id: "43"
+    created_at: 2009-01-11 00:03:10
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: General
+    updated_at: 2009-01-21 07:02:24
+    id: "84"
+    parent_id: "43"
+    created_at: 2009-01-11 00:03:24
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Visual Literacy
+    updated_at: 2009-01-21 07:02:24
+    id: "85"
+    parent_id: "47"
+    created_at: 2009-01-11 00:03:58
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: General
+    updated_at: 2009-01-21 07:02:24
+    id: "86"
+    parent_id: "47"
+    created_at: 2009-01-11 00:04:05
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Performing
+    updated_at: 2009-01-21 07:02:24
+    id: "87"
+    parent_id: "47"
+    created_at: 2009-01-11 00:04:11
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Performing
+    updated_at: 2009-01-21 07:02:25
+    id: "88"
+    parent_id: "46"
+    created_at: 2009-01-11 00:04:30
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Visual Literacy
+    updated_at: 2009-01-21 07:02:25
+    id: "89"
+    parent_id: "46"
+    created_at: 2009-01-11 00:04:39
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: General
+    updated_at: 2009-01-21 07:02:25
+    id: "90"
+    parent_id: "46"
+    created_at: 2009-01-11 00:04:47
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Family Support
+    updated_at: 2009-01-21 07:02:25
+    id: "91"
+    parent_id: "30"
+    created_at: 2009-01-11 00:05:45
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Criminal
+    updated_at: 2009-01-21 07:02:26
+    id: "92"
+    parent_id: "36"
+    created_at: 2009-01-11 00:06:05
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Civil
+    updated_at: 2009-01-21 07:02:26
+    id: "93"
+    parent_id: "36"
+    created_at: 2009-01-11 00:06:09
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Support Services
+    updated_at: 2009-01-21 07:02:26
+    id: "94"
+    parent_id: "30"
+    created_at: 2009-01-11 00:06:37
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: General
+    updated_at: 2009-01-21 07:02:26
+    id: "95"
+    parent_id: "30"
+    created_at: 2009-01-11 00:06:50
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Affordable Housing
+    updated_at: 2009-01-21 07:02:27
+    id: "96"
+    parent_id: "27"
+    created_at: 2009-01-11 00:07:19
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Homelessness
+    updated_at: 2009-01-21 07:02:27
+    id: "97"
+    parent_id: "27"
+    created_at: 2009-01-11 00:07:26
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Emergency Shelters
+    updated_at: 2009-01-21 07:02:27
+    id: "98"
+    parent_id: "27"
+    created_at: 2009-01-11 00:07:37
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Crime Prevention
+    updated_at: 2009-01-21 07:02:27
+    id: "99"
+    parent_id: "33"
+    created_at: 2009-01-11 00:07:56
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Rape
+    updated_at: 2009-01-21 07:02:27
+    id: "100"
+    parent_id: "33"
+    created_at: 2009-01-11 00:08:01
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Domestic Violence
+    updated_at: 2009-01-21 07:02:27
+    id: "101"
+    parent_id: "33"
+    created_at: 2009-01-11 00:08:12
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Sexual Abuse
+    updated_at: 2009-01-21 07:02:27
+    id: "102"
+    parent_id: "33"
+    created_at: 2009-01-11 00:08:19
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Treatment
+    updated_at: 2009-01-21 07:02:28
+    id: "103"
+    parent_id: "31"
+    created_at: 2009-01-11 00:08:29
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Disease Prevention
+    updated_at: 2009-01-21 07:02:28
+    id: "104"
+    parent_id: "31"
+    created_at: 2009-01-11 00:08:39
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Maintenance
+    updated_at: 2009-01-21 07:02:28
+    id: "105"
+    parent_id: "31"
+    created_at: 2009-01-11 00:08:49
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: General
+    updated_at: 2009-01-21 07:02:29
+    id: "106"
+    parent_id: "31"
+    created_at: 2009-01-11 00:08:54
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Education
+    updated_at: 2009-01-21 07:02:29
+    id: "107"
+    parent_id: "31"
+    created_at: 2009-01-11 00:09:02
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Research
+    updated_at: 2009-01-21 07:02:29
+    id: "108"
+    parent_id: "31"
+    created_at: 2009-01-11 00:09:07
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Mental
+    updated_at: 2009-01-21 07:02:29
+    id: "109"
+    parent_id: "29"
+    created_at: 2009-01-11 00:09:41
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Physical
+    updated_at: 2009-01-21 07:02:29
+    id: "110"
+    parent_id: "29"
+    created_at: 2009-01-11 00:09:48
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Research
+    updated_at: 2009-01-21 07:02:29
+    id: "111"
+    parent_id: "29"
+    created_at: 2009-01-11 00:09:54
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Service
+    updated_at: 2009-01-21 07:02:29
+    id: "112"
+    parent_id: "34"
+    created_at: 2009-01-11 00:10:15
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Enhancement
+    updated_at: 2009-01-21 07:02:30
+    id: "113"
+    parent_id: "34"
+    created_at: 2009-01-11 00:10:23
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Development
+    updated_at: 2009-01-21 07:02:30
+    id: "114"
+    parent_id: "34"
+    created_at: 2009-01-11 00:10:29
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Advocacy
+    updated_at: 2009-01-21 07:02:30
+    id: "115"
+    parent_id: "24"
+    created_at: 2009-01-11 00:11:12
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Enhancement
+    updated_at: 2009-01-21 07:02:30
+    id: "116"
+    parent_id: "24"
+    created_at: 2009-01-11 00:11:18
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Education
+    updated_at: 2009-01-21 07:02:30
+    id: "117"
+    parent_id: "24"
+    created_at: 2009-01-11 00:11:25
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Research
+    updated_at: 2009-01-21 07:02:30
+    id: "118"
+    parent_id: "25"
+    created_at: 2009-01-11 00:12:01
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Education
+    updated_at: 2009-01-21 07:02:31
+    id: "119"
+    parent_id: "25"
+    created_at: 2009-01-11 00:12:07
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Advocacy
+    updated_at: 2009-01-21 07:02:31
+    id: "120"
+    parent_id: "25"
+    created_at: 2009-01-11 00:12:12
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: General
+    updated_at: 2009-01-21 07:02:31
+    id: "121"
+    parent_id: "22"
+    created_at: 2009-01-11 00:12:44
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Climate
+    updated_at: 2009-01-21 07:02:31
+    id: "122"
+    parent_id: "22"
+    created_at: 2009-01-11 00:12:50
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Air
+    updated_at: 2009-01-21 07:02:31
+    id: "123"
+    parent_id: "22"
+    created_at: 2009-01-11 00:12:55
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Water
+    updated_at: 2009-01-21 07:02:31
+    id: "124"
+    parent_id: "22"
+    created_at: 2009-01-11 00:13:00
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Soil
+    updated_at: 2009-01-21 07:02:32
+    id: "125"
+    parent_id: "22"
+    created_at: 2009-01-11 00:13:06
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Energy
+    updated_at: 2009-01-21 07:02:32
+    id: "126"
+    parent_id: "22"
+    created_at: 2009-01-11 00:13:12
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Waste Recycling
+    updated_at: 2009-01-21 07:02:32
+    id: "127"
+    parent_id: "22"
+    created_at: 2009-01-11 00:13:21
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Toxics
+    updated_at: 2009-01-21 07:02:32
+    id: "128"
+    parent_id: "22"
+    created_at: 2009-01-11 00:13:27
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Land
+    updated_at: 2009-01-21 07:02:32
+    id: "129"
+    parent_id: "23"
+    created_at: 2009-01-11 00:13:48
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Air
+    updated_at: 2009-01-21 07:02:32
+    id: "130"
+    parent_id: "23"
+    created_at: 2009-01-11 00:13:52
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Sea
+    updated_at: 2009-01-21 07:02:33
+    id: "131"
+    parent_id: "23"
+    created_at: 2009-01-11 00:13:57
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Wild
+    updated_at: 2009-01-21 07:02:33
+    id: "132"
+    parent_id: "21"
+    created_at: 2009-01-11 00:14:19
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Domesticated
+    updated_at: 2009-01-21 07:02:33
+    id: "133"
+    parent_id: "21"
+    created_at: 2009-01-11 00:14:29
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Land
+    updated_at: 2009-01-21 07:02:33
+    id: "134"
+    parent_id: "132"
+    created_at: 2009-01-11 00:14:39
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Sea
+    updated_at: 2009-01-21 07:02:33
+    id: "135"
+    parent_id: "132"
+    created_at: 2009-01-11 00:14:46
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Air
+    updated_at: 2009-01-21 07:02:33
+    id: "136"
+    parent_id: "132"
+    created_at: 2009-01-11 00:14:53
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: International
+    updated_at: 2009-01-21 07:02:34
+    id: "137"
+    parent_id: "170"
+    created_at: 2009-01-11 00:15:23
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Nature
+    updated_at: 2009-01-21 07:02:34
+    id: "138"
+    parent_id: "137"
+    created_at: 2009-01-11 00:21:22
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Culture
+    updated_at: 2009-01-21 07:02:34
+    id: "139"
+    parent_id: "137"
+    created_at: 2009-01-11 00:21:33
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Human Services
+    updated_at: 2009-01-21 07:02:34
+    id: "140"
+    parent_id: "137"
+    created_at: 2009-01-11 00:21:40
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Promoting Philanthropy
+    updated_at: 2009-01-21 07:02:35
+    id: "141"
+    parent_id: "137"
+    created_at: 2009-01-11 00:21:58
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Community Foundations
+    updated_at: 2009-01-21 07:02:35
+    id: "142"
+    parent_id: "141"
+    created_at: 2009-01-11 00:31:14
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Donor Education
+    updated_at: 2009-01-21 07:02:35
+    id: "143"
+    parent_id: "141"
+    created_at: 2009-01-11 00:31:22
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Charitable Giving
+    updated_at: 2009-01-21 07:02:35
+    id: "144"
+    parent_id: "141"
+    created_at: 2009-01-11 00:31:30
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Technical Assistance
+    updated_at: 2009-01-21 07:02:36
+    id: "145"
+    parent_id: "141"
+    created_at: 2009-01-11 00:31:42
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: The Big Five Inventory - personality traits
+    updated_at: 2009-01-21 07:02:36
+    id: "146"
+    parent_id: "1"
+    created_at: 2009-01-14 02:29:02
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: E = Extraversion vs. introversion
+    updated_at: 2009-01-21 07:02:36
+    id: "147"
+    parent_id: "146"
+    created_at: 2009-01-14 02:29:25
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Gregariousness (sociable)
+    updated_at: 2009-01-21 07:02:36
+    id: "148"
+    parent_id: "147"
+    created_at: 2009-01-14 02:29:37
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Assertiveness (forceful)
+    updated_at: 2009-01-21 07:02:36
+    id: "149"
+    parent_id: "147"
+    created_at: 2009-01-14 02:29:52
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Activity (energetic)
+    updated_at: 2009-01-21 07:02:36
+    id: "150"
+    parent_id: "147"
+    created_at: 2009-01-14 02:30:02
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Excitement-seeking (adventurous)
+    updated_at: 2009-01-21 07:02:37
+    id: "151"
+    parent_id: "147"
+    created_at: 2009-01-14 02:30:13
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Positive emotions (enthusiastic)
+    updated_at: 2009-01-21 07:02:37
+    id: "152"
+    parent_id: "147"
+    created_at: 2009-01-14 02:30:22
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Warmth (outgoing)
+    updated_at: 2009-01-21 07:02:37
+    id: "153"
+    parent_id: "147"
+    created_at: 2009-01-14 02:30:31
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: A = Agreeableness vs. antagonism
+    updated_at: 2009-01-21 07:02:37
+    id: "154"
+    parent_id: "146"
+    created_at: 2009-01-14 02:30:51
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Trust (forgiving)
+    updated_at: 2009-01-21 07:02:37
+    id: "155"
+    parent_id: "154"
+    created_at: 2009-01-14 02:31:07
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: O = Openness vs. closedness to experience
+    updated_at: 2009-01-21 07:02:37
+    id: "156"
+    parent_id: "146"
+    created_at: 2009-01-14 02:31:34
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Ideas (curious)
+    updated_at: 2009-01-21 07:02:38
+    id: "157"
+    parent_id: "156"
+    created_at: 2009-01-14 02:31:45
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Fantasy (imaginative)
+    updated_at: 2009-01-21 07:02:38
+    id: "158"
+    parent_id: "156"
+    created_at: 2009-01-14 02:31:55
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Aesthetics (artistic)
+    updated_at: 2009-01-21 07:02:38
+    id: "159"
+    parent_id: "156"
+    created_at: 2009-01-14 02:32:49
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Actions (wide interests)
+    updated_at: 2009-01-21 07:02:38
+    id: "160"
+    parent_id: "156"
+    created_at: 2009-01-14 02:33:26
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Feelings (excitable)
+    updated_at: 2009-01-21 07:02:38
+    id: "161"
+    parent_id: "156"
+    created_at: 2009-01-14 02:33:40
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Values (unconventional)
+    updated_at: 2009-01-21 07:02:38
+    id: "162"
+    parent_id: "156"
+    created_at: 2009-01-14 02:33:49
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: N = Neuroticism vs. emotional stability
+    updated_at: 2009-01-21 07:02:39
+    id: "163"
+    parent_id: "146"
+    created_at: 2009-01-14 02:34:05
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Anxiety (tense)
+    updated_at: 2009-01-21 07:02:39
+    id: "164"
+    parent_id: "163"
+    created_at: 2009-01-14 02:34:18
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Angry hostility (irritable)
+    updated_at: 2009-01-21 07:02:39
+    id: "165"
+    parent_id: "163"
+    created_at: 2009-01-14 02:34:27
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Depression (not contented)
+    updated_at: 2009-01-21 07:02:39
+    id: "166"
+    parent_id: "163"
+    created_at: 2009-01-14 02:35:14
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Self-consciousness (shy)
+    updated_at: 2009-01-21 07:02:39
+    id: "167"
+    parent_id: "163"
+    created_at: 2009-01-14 02:35:28
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Impulsiveness (moody)
+    updated_at: 2009-01-21 07:02:40
+    id: "168"
+    parent_id: "163"
+    created_at: 2009-01-14 02:35:44
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Vulnerability (not self-confident)
+    updated_at: 2009-01-21 07:02:40
+    id: "169"
+    parent_id: "163"
+    created_at: 2009-01-14 02:36:00
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Catalogue for Philanthropy
+    updated_at: 2009-01-21 07:02:40
+    id: "170"
+    parent_id: "1"
+    created_at: 2009-01-14 02:36:39
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: C = Conscientiousness vs. lack of direction
+    updated_at: 2009-01-21 07:02:40
+    id: "171"
+    parent_id: "146"
+    created_at: 2009-01-14 02:40:50
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Competence (efficient)
+    updated_at: 2009-01-21 07:02:40
+    id: "172"
+    parent_id: "171"
+    created_at: 2009-01-14 02:41:02
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Order (organized)
+    updated_at: 2009-01-21 07:02:40
+    id: "173"
+    parent_id: "171"
+    created_at: 2009-01-14 02:41:13
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Dutifulness (not careless)
+    updated_at: 2009-01-21 07:02:40
+    id: "174"
+    parent_id: "171"
+    created_at: 2009-01-14 02:41:26
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Achievement striving (thorough)
+    updated_at: 2009-01-21 07:02:41
+    id: "175"
+    parent_id: "171"
+    created_at: 2009-01-14 02:41:39
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Self-discipline (not lazy)
+    updated_at: 2009-01-21 07:02:41
+    id: "176"
+    parent_id: "171"
+    created_at: 2009-01-14 02:41:55
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Deliberation (not impulsive)
+    updated_at: 2009-01-21 07:02:41
+    id: "177"
+    parent_id: "171"
+    created_at: 2009-01-14 02:42:07
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Straightforwardness (not demanding)
+    updated_at: 2009-01-21 07:02:41
+    id: "178"
+    parent_id: "154"
+    created_at: 2009-01-14 02:42:23
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Altruism (warm)
+    updated_at: 2009-01-21 07:02:41
+    id: "179"
+    parent_id: "154"
+    created_at: 2009-01-14 02:42:35
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Compliance (not stubborn)
+    updated_at: 2009-01-21 07:02:41
+    id: "180"
+    parent_id: "154"
+    created_at: 2009-01-14 02:42:44
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Modesty (not show-off)
+    updated_at: 2009-01-21 07:02:41
+    id: "181"
+    parent_id: "154"
+    created_at: 2009-01-14 02:42:55
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Tender-mindedness (sympathetic)
+    updated_at: 2009-01-21 07:02:42
+    id: "182"
+    parent_id: "154"
+    created_at: 2009-01-14 02:43:06
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Insightful
+    updated_at: 2009-01-21 07:02:42
+    id: "183"
+    parent_id: "157"
+    created_at: 2009-01-14 02:48:51
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Curious
+    updated_at: 2009-01-21 07:02:42
+    id: "184"
+    parent_id: "157"
+    created_at: 2009-01-14 02:49:03
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Sophisticated
+    updated_at: 2009-01-21 07:02:42
+    id: "185"
+    parent_id: "159"
+    created_at: 2009-01-14 02:49:26
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Artistic
+    updated_at: 2009-01-21 07:02:42
+    id: "186"
+    parent_id: "159"
+    created_at: 2009-01-14 02:56:32
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Clever
+    updated_at: 2009-01-21 07:02:43
+    id: "191"
+    parent_id: "159"
+    created_at: 2009-01-14 03:09:25
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Inventive
+    updated_at: 2009-01-21 07:02:43
+    id: "192"
+    parent_id: "159"
+    created_at: 2009-01-14 03:11:00
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Sharp-witted
+    updated_at: 2009-01-21 07:02:43
+    id: "193"
+    parent_id: "159"
+    created_at: 2009-01-14 03:11:15
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Ingenious
+    updated_at: 2009-01-21 07:02:44
+    id: "194"
+    parent_id: "159"
+    created_at: 2009-01-14 03:11:24
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Wide interests
+    updated_at: 2009-01-21 07:02:44
+    id: "195"
+    parent_id: "158"
+    created_at: 2009-01-14 03:14:13
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Imaginative
+    updated_at: 2009-01-21 07:02:44
+    id: "196"
+    parent_id: "158"
+    created_at: 2009-01-14 03:14:21
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Intelligent
+    updated_at: 2009-01-21 07:02:44
+    id: "197"
+    parent_id: "158"
+    created_at: 2009-01-14 03:14:29
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Original
+    updated_at: 2009-01-21 07:02:44
+    id: "198"
+    parent_id: "158"
+    created_at: 2009-01-14 03:14:36
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Civilized*
+    updated_at: 2009-01-21 07:02:45
+    id: "199"
+    parent_id: "162"
+    created_at: 2009-01-14 03:20:23
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Foresighted*
+    updated_at: 2009-01-21 07:02:45
+    id: "200"
+    parent_id: "162"
+    created_at: 2009-01-14 03:20:32
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Polished*
+    updated_at: 2009-01-21 07:02:45
+    id: "201"
+    parent_id: "162"
+    created_at: 2009-01-14 03:20:40
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Dignified*
+    updated_at: 2009-01-21 07:02:46
+    id: "202"
+    parent_id: "162"
+    created_at: 2009-01-14 03:20:50
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Logical*
+    updated_at: 2009-01-21 07:02:46
+    id: "203"
+    parent_id: "160"
+    created_at: 2009-01-14 03:24:53
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Wise
+    updated_at: 2009-01-21 07:02:46
+    id: "204"
+    parent_id: "160"
+    created_at: 2009-01-14 03:26:00
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Resourceful*
+    updated_at: 2009-01-21 07:02:46
+    id: "205"
+    parent_id: "161"
+    created_at: 2009-01-14 03:26:35
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Witty*
+    updated_at: 2009-01-21 07:02:46
+    id: "206"
+    parent_id: "161"
+    created_at: 2009-01-14 03:26:46
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Tense
+    updated_at: 2009-01-21 07:02:46
+    id: "207"
+    parent_id: "164"
+    created_at: 2009-01-14 03:28:28
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Anxious
+    updated_at: 2009-01-21 07:02:47
+    id: "208"
+    parent_id: "164"
+    created_at: 2009-01-14 03:32:05
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Nervous
+    updated_at: 2009-01-21 07:02:47
+    id: "209"
+    parent_id: "164"
+    created_at: 2009-01-14 03:33:52
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Moody
+    updated_at: 2009-01-21 07:02:47
+    id: "210"
+    parent_id: "164"
+    created_at: 2009-01-14 03:35:58
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Worrying
+    updated_at: 2009-01-21 07:02:47
+    id: "211"
+    parent_id: "164"
+    created_at: 2009-01-14 03:37:04
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Unstable
+    updated_at: 2009-01-21 07:02:48
+    id: "212"
+    parent_id: "168"
+    created_at: 2009-01-14 03:39:41
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Self-punishing
+    updated_at: 2009-01-21 07:02:48
+    id: "213"
+    parent_id: "169"
+    created_at: 2009-01-14 03:39:53
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Despondent
+    updated_at: 2009-01-21 07:02:48
+    id: "214"
+    parent_id: "167"
+    created_at: 2009-01-14 03:39:59
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Emotional
+    updated_at: 2009-01-21 07:02:48
+    id: "215"
+    parent_id: "168"
+    created_at: 2009-01-14 03:40:16
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Temperamental
+    updated_at: 2009-01-21 07:02:48
+    id: "216"
+    parent_id: "165"
+    created_at: 2009-01-14 03:40:51
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Self-pitying
+    updated_at: 2009-01-21 07:02:48
+    id: "217"
+    parent_id: "166"
+    created_at: 2009-01-14 03:41:03
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: High-strung
+    updated_at: 2009-01-21 07:02:49
+    id: "218"
+    parent_id: "165"
+    created_at: 2009-01-14 03:41:11
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Fearful
+    updated_at: 2009-01-21 07:02:49
+    id: "219"
+    parent_id: "167"
+    created_at: 2009-01-14 03:41:19
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Touchy
+    updated_at: 2009-01-21 07:02:49
+    id: "220"
+    parent_id: "165"
+    created_at: 2009-01-14 03:41:25
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Talkative
+    updated_at: 2009-01-21 07:02:49
+    id: "221"
+    parent_id: "150"
+    created_at: 2009-01-14 03:46:30
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Assertive
+    updated_at: 2009-01-21 07:02:49
+    id: "222"
+    parent_id: "149"
+    created_at: 2009-01-14 03:46:40
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Active
+    updated_at: 2009-01-21 07:02:50
+    id: "223"
+    parent_id: "150"
+    created_at: 2009-01-14 03:46:47
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Energetic
+    updated_at: 2009-01-21 07:02:50
+    id: "224"
+    parent_id: "150"
+    created_at: 2009-01-14 03:46:53
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Outgoing
+    updated_at: 2009-01-21 07:02:50
+    id: "225"
+    parent_id: "153"
+    created_at: 2009-01-14 03:47:00
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Outspoken
+    updated_at: 2009-01-21 07:02:50
+    id: "226"
+    parent_id: "153"
+    created_at: 2009-01-14 03:47:06
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Dominant
+    updated_at: 2009-01-21 07:02:50
+    id: "227"
+    parent_id: "149"
+    created_at: 2009-01-14 03:47:32
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Forceful
+    updated_at: 2009-01-21 07:02:50
+    id: "228"
+    parent_id: "149"
+    created_at: 2009-01-14 03:47:39
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Enthusiastic
+    updated_at: 2009-01-21 07:02:51
+    id: "229"
+    parent_id: "152"
+    created_at: 2009-01-14 03:47:46
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Show-off
+    updated_at: 2009-01-21 07:02:51
+    id: "230"
+    parent_id: "148"
+    created_at: 2009-01-14 03:48:16
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Sociable
+    updated_at: 2009-01-21 07:02:51
+    id: "231"
+    parent_id: "148"
+    created_at: 2009-01-14 03:48:23
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Spunky
+    updated_at: 2009-01-21 07:02:51
+    id: "232"
+    parent_id: "148"
+    created_at: 2009-01-14 03:48:29
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Adventurous
+    updated_at: 2009-01-21 07:02:51
+    id: "233"
+    parent_id: "151"
+    created_at: 2009-01-14 03:48:37
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Noisy
+    updated_at: 2009-01-21 07:02:51
+    id: "234"
+    parent_id: "148"
+    created_at: 2009-01-14 03:48:45
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Bossy
+    updated_at: 2009-01-21 07:02:51
+    id: "235"
+    parent_id: "150"
+    created_at: 2009-01-14 03:49:10
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Organized
+    updated_at: 2009-01-21 07:02:52
+    id: "236"
+    parent_id: "173"
+    created_at: 2009-01-14 03:53:34
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Thorough
+    updated_at: 2009-01-21 07:02:52
+    id: "237"
+    parent_id: "176"
+    created_at: 2009-01-14 03:53:41
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Planful
+    updated_at: 2009-01-21 07:02:52
+    id: "238"
+    parent_id: "172"
+    created_at: 2009-01-14 03:54:12
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Efficient
+    updated_at: 2009-01-21 07:02:52
+    id: "239"
+    parent_id: "172"
+    created_at: 2009-01-14 03:54:18
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Responsible
+    updated_at: 2009-01-21 07:02:52
+    id: "240"
+    parent_id: "172"
+    created_at: 2009-01-14 03:54:25
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Reliable
+    updated_at: 2009-01-21 07:02:52
+    id: "241"
+    parent_id: "172"
+    created_at: 2009-01-14 03:54:31
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Dependable
+    updated_at: 2009-01-21 07:02:53
+    id: "242"
+    parent_id: "172"
+    created_at: 2009-01-14 03:54:38
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Conscientious
+    updated_at: 2009-01-21 07:02:53
+    id: "243"
+    parent_id: "174"
+    created_at: 2009-01-14 03:55:08
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Precise
+    updated_at: 2009-01-21 07:02:53
+    id: "244"
+    parent_id: "177"
+    created_at: 2009-01-14 03:55:14
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Practical
+    updated_at: 2009-01-21 07:02:53
+    id: "245"
+    parent_id: "177"
+    created_at: 2009-01-14 03:55:20
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Deliberate
+    updated_at: 2009-01-21 07:02:53
+    id: "246"
+    parent_id: "177"
+    created_at: 2009-01-14 03:55:26
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Painstaking
+    updated_at: 2009-01-21 07:02:53
+    id: "247"
+    parent_id: "175"
+    created_at: 2009-01-14 03:55:50
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Cautious*
+    updated_at: 2009-01-21 07:02:54
+    id: "248"
+    parent_id: "174"
+    created_at: 2009-01-14 03:56:02
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Sympathetic
+    updated_at: 2009-01-21 07:02:54
+    id: "249"
+    parent_id: "182"
+    created_at: 2009-01-14 03:57:40
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Kind
+    updated_at: 2009-01-21 07:02:54
+    id: "250"
+    parent_id: "182"
+    created_at: 2009-01-14 03:57:55
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Appreciative
+    updated_at: 2009-01-21 07:02:54
+    id: "251"
+    parent_id: "182"
+    created_at: 2009-01-14 03:58:00
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Affectionate
+    updated_at: 2009-01-21 07:02:54
+    id: "252"
+    parent_id: "182"
+    created_at: 2009-01-14 03:58:06
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Soft-hearted
+    updated_at: 2009-01-21 07:02:54
+    id: "253"
+    parent_id: "182"
+    created_at: 2009-01-14 03:58:16
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Warm
+    updated_at: 2009-01-21 07:02:55
+    id: "254"
+    parent_id: "179"
+    created_at: 2009-01-14 03:58:21
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Generous
+    updated_at: 2009-01-21 07:02:55
+    id: "255"
+    parent_id: "178"
+    created_at: 2009-01-14 03:58:27
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Trusting
+    updated_at: 2009-01-21 07:02:55
+    id: "256"
+    parent_id: "155"
+    created_at: 2009-01-14 03:58:45
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Helpful
+    updated_at: 2009-01-21 07:02:55
+    id: "257"
+    parent_id: "178"
+    created_at: 2009-01-14 03:58:53
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Forgiving
+    updated_at: 2009-01-21 07:02:55
+    id: "258"
+    parent_id: "155"
+    created_at: 2009-01-14 03:58:59
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Pleasant
+    updated_at: 2009-01-21 07:02:56
+    id: "259"
+    parent_id: "155"
+    created_at: 2009-01-14 03:59:05
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Good-natured
+    updated_at: 2009-01-21 07:02:56
+    id: "260"
+    parent_id: "155"
+    created_at: 2009-01-14 03:59:12
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Friendly
+    updated_at: 2009-01-21 07:02:56
+    id: "261"
+    parent_id: "180"
+    created_at: 2009-01-14 03:59:20
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Cooperative
+    updated_at: 2009-01-21 07:02:56
+    id: "262"
+    parent_id: "180"
+    created_at: 2009-01-14 03:59:24
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Gentle
+    updated_at: 2009-01-21 07:02:56
+    id: "263"
+    parent_id: "181"
+    created_at: 2009-01-14 03:59:44
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Unselfish
+    updated_at: 2009-01-21 07:02:56
+    id: "264"
+    parent_id: "181"
+    created_at: 2009-01-14 03:59:49
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Praising
+    updated_at: 2009-01-21 07:02:57
+    id: "265"
+    parent_id: "179"
+    created_at: 2009-01-14 04:00:11
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: Sensitive
+    updated_at: 2009-01-21 07:02:57
+    id: "266"
+    parent_id: "179"
+    created_at: 2009-01-14 04:00:16
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: New Root
+    updated_at: 2009-01-21 07:02:57
+    id: "269"
+    parent_id: "1"
+    created_at: 2009-01-14 06:26:01
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: branch
+    updated_at: 2009-01-21 07:02:57
+    id: "270"
+    parent_id: "269"
+    created_at: 2009-01-14 06:26:11
+  attributes_cache: {}
+
+- !ruby/object:Category 
+  attributes: 
+    name: branch
+    updated_at: 2009-01-21 07:02:57
+    id: "271"
+    parent_id: "269"
+    created_at: 2009-01-14 06:26:21
+  attributes_cache: {}
+

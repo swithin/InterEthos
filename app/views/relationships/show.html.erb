@@ -1,0 +1,16 @@
+<% @title = 'Relationship' %>
+
+<p>
+  <strong>Category:</strong>
+  <%=h @relationship.category_id %>
+</p>
+<p>
+  <strong>Synonym:</strong>
+  <%=h @relationship.synonym_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_relationship_path(@relationship) %> |
+  <%= link_to "Destroy", @relationship, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", relationships_path %>
+</p>

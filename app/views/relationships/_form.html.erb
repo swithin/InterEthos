@@ -1,0 +1,15 @@
+<% form_for @relationship do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= label(:category, :id, 'category') %><br />
+    <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"),
+                        'relationship', 'category_id',  @relationship.category) %>
+  </p>
+  <p>
+    <%= label(:synonym, :id, 'synonym') %><br />
+    <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"),
+                        'relationship', 'synonym_id',  @relationship.synonym) %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>
+

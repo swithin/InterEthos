@@ -1,0 +1,20 @@
+<h1>Listing validations</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @validations.each do |validation| %>
+  <tr>
+    <td><%=h validation.name %></td>
+    <td><%= link_to 'Show', validation %></td>
+    <td><%= link_to 'Edit', edit_validation_path(validation) %></td>
+    <td><%= link_to 'Destroy', validation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New validation', new_validation_path %>

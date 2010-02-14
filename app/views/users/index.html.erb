@@ -1,0 +1,25 @@
+<% @title = 'Users' %>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Validation</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%=h user.first_name %></td>
+    <td><%=h user.last_name %></td>
+    <td><%=h user.email %></td>
+    <td><%=h user.validation.name %></td>
+    <td><%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', edit_user_path(user) %></td>
+    <td><%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New user', new_user_path %>
