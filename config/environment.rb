@@ -7,6 +7,43 @@ RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
+  config.active_record.observers = :user_observer
+  config.gem 'rubyist-aasm', :lib => 'aasm', :source => 'http://gems.github.com'
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => false,
+    :address => 'interethos.net',
+    :port => 25,
+    :authentication => :login,
+    :user_name => 'interethos@interethos.net',
+    :password => 'peacE01'
+  }
+  # config.action_mailer.smtp_settings = {
+    # :enable_starttls_auto => true,
+    # :address => 'mail.swithin.com',
+    # :port => 8889,
+    # :authentication => :login,
+    # :user_name => 'josh@swithin.com',
+    # :password => 'peacE01'
+  # }
+  # config.action_mailer.smtp_settings = {
+    # :enable_starttls_auto => true,
+    # :address => 'mail.interethos.net',
+    # :port => 465,
+    # :authentication => :login,
+    # :user_name => 'interethos@interethos.net',
+    # :password => 'peacE01'
+  # }
+  # Josh could not get the following GMail settings to work.
+  # config.action_mailer.smtp_settings = {
+    # :enable_starttls_auto => true,
+    # :address => 'smtp.gmail.com',
+    # :port => 587,
+    # :authentication => :plain,
+    # :user_name => 'josh.shortlidge',
+    # :password => 'peacE01'
+  # }
+
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
   # -- all .rb files in that directory are automatically loaded.

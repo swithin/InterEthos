@@ -5,8 +5,8 @@
 # Make sure the secret is at least 30 characters and all random, 
 # no regular words or you'll be exposed to dictionary attacks.
 ActionController::Base.session = {
-  :key         => '_sharedtaxonomy_session',
-  :secret      => 'd7f2c4b635ab7e96ded4c619919dd1fb80792535f76fea3c24bc7c5ae759a47cfc0080a1f116939f62d645daf968db62885a9debfe3271bc0d5c699998604f66'
+  :key         => '_interethos_session',
+  :secret      => '5c822c0f57db8c4fd4e28a18be777521ee4e705275fc0f4d670e92f9a4625fb37a47aedf5bdbd7357723714a9b2421396cc9379cb1ad2832090da9d785b1738d'
 }
 
 # Use the database for sessions instead of the cookie-based default,

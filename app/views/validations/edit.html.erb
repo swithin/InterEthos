@@ -1,15 +1,13 @@
-<h1>Editing validation</h1>
+<% @title = 'Edit Validation' %>
 
 <% form_for(@validation) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+  <p><%= f.label :name %><br />
+    <%= f.text_field :name %></p>
+  
+  <p><%= f.submit 'Update' %></p>
+
 <% end %>
 
 <%= link_to 'Show', @validation %> |

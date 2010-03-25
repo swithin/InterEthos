@@ -1,15 +1,13 @@
-<h1>New validation</h1>
+<% @title = 'New Validation' %>
 
 <% form_for(@validation) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
+  <p><%= f.label :name %><br />
+    <%= f.text_field :name %></p>
+
+  <p><%= f.submit 'Create' %></p>
+
 <% end %>
 
 <%= link_to 'Back', validations_path %>

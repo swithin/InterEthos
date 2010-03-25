@@ -3,25 +3,20 @@
 <% form_for(@user) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name %>
-  </p>
-  <p>
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= label(:validation, :id, 'validation') %>
-    <%= collection_select(:user, :validation_id, Validation.find(:all), :id, :name, options = {}, html_options = {}) %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
+  <p><%= f.label :first_name %><br />
+    <%= f.text_field :first_name %></p>
+
+  <p><%= f.label :last_name %><br />
+    <%= f.text_field :last_name %></p>
+
+  <p><%= f.label :email %><br />
+    <%= f.text_field :email %></p>
+
+  <p><%= label(:validation, :id, 'validation') %>
+    <%= collection_select(:user, :validation_id, Validation.find(:all), :id, :name, options = {}, html_options = {}) %></p>
+
+  <p><%= f.submit 'Update' %></p>
+
 <% end %>
 
 <%= link_to 'Show', @user %> |

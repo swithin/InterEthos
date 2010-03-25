@@ -1,5 +1,9 @@
 # SQLite version 3.x
 #   gem install sqlite3-ruby (not necessary on OS X Leopard)
+
+# For go-LIVE on RailsPlayground, just copy-and-paste the 
+# "production" settings from the bottom of the page, up and
+# over-write the "development" and "test" settings below.
 development:
   adapter: sqlite3
   database: db/development.sqlite3

@@ -1,15 +1,35 @@
 ActionController::Routing::Routes.draw do |map|
+
+  map.logout '/logout', :controller => 'sessions', :action => 'destroy'
+  map.login '/login', :controller => 'sessions', :action => 'new'
+  map.register '/register', :controller => 'users', :action => 'create'
+  map.signup '/signup', :controller => 'users', :action => 'new'
+  # map.resources :users, :member => { :suspend => :put, :unsuspend => :put, :purge => :delete } 
+  map.resources :users
+  
+  map.resources :collections_users
+
+  map.resources :collections_taxonomies
+
+  map.resources :collections
+
+  map.resources :taxonomies_users
+
+  map.resources :taxonomies
+
   map.resources :relationships
 
   map.resources :users_teams
 
   map.resources :teams
 
-  map.resources :users
+  map.resources :teams_users
 
   map.resources :validations
 
   map.resources :categories
+
+  map.activate '/activate/:id', :controller => 'users', :action => 'activate'
 
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'  
   map.resource :session 
@@ -53,5 +73,8 @@ ActionController::Routing::Routes.draw do |map|
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
   map.connect ':controller/:action/:id'
+  
+  # InterEthos note: The following enables ":format => :xml" calls
   map.connect ':controller/:action/:id.:format'
+
 end

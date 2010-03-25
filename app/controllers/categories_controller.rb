@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_filter :login_required
   # GET /categories
   # GET /categories.xml
   helper CategoriesHelper
@@ -34,6 +35,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1.xml
   def show
     @category = Category.find(params[:id])
+    session[:current_location] = categories_path
 
     respond_to do |format|
       format.html # show.html.erb

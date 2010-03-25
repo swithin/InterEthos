@@ -14,6 +14,7 @@
     <td><%=h user.last_name %></td>
     <td><%=h user.email %></td>
     <td><%=h user.validation.name %></td>
+    <td><%= indent %><%= link_to '<img src="/images/eye.jpg" border="0">', user %></td>
     <td><%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', edit_user_path(user) %></td>
     <td><%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', user, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

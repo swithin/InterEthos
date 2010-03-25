@@ -1,23 +1,54 @@
+<% @title = 'User' %>
+
+<p><b>First name:</b>
+  <%=h @user.first_name %></p>
+
+<p><b>Last name:</b>
+  <%=h @user.last_name %></p>
+
+<p><b>Email:</b>
+  <%=h @user.email %></p>
+
+<p><b>Validation:</b>
+  <%=h @user.validation.name %></p>
+
 <p>
-  <b>First name:</b>
-  <%=h @user.first_name %>
+  <b>Collections:</b>
+  <% if @user.collections(@user).empty? %>
+	  <em>(none found)</em>
+  <% else %>
+	  <ul>
+		<% for collection in @user.collections %>
+		  <li><%=h collection.name %> <em>(<%=h collection.role %>)</em>
+		  <%= link_to '<img src="/images/eye.jpg" border="0">', collection %>
+    	  <%= link_to '<img src="/images/delta.jpg" border="0">', edit_collections_user_path(collection.id) %>
+		  <%= link_to '<img src="/images/remove.jpg" border="0">', collections_user_path(collection.id), :confirm => 'Are you sure?', :method => :delete %></li>
+		<% end %>
+	  </ul>
+  <% end %>
+
+  <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_collections_user_path(:user_id => @user.id) %>
 </p>
 
 <p>
-  <b>Last name:</b>
-  <%=h @user.last_name %>
+  <b>Taxonomies:</b>
+  <% if @user.taxonomies(@user).empty? %>
+	  <em>(none found)</em>
+  <% else %>
+	  <ul>
+		<% for taxonomy in @user.taxonomies %>
+		  <li><%=h taxonomy.name %> <em>(<%=h taxonomy.role %>)</em>
+		  <%= link_to '<img src="/images/eye.jpg" border="0">', taxonomy %>
+    	  <%= link_to '<img src="/images/delta.jpg" border="0">', edit_taxonomies_user_path(taxonomy.id) %>
+		  <%= link_to '<img src="/images/remove.jpg" border="0">', taxonomies_user_path(taxonomy.id), :confirm => 'Are you sure?', :method => :delete %></li>
+		<% end %>
+	  </ul>
+  <% end %>
+
+  <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_taxonomies_user_path(:user_id => @user.id) %>
 </p>
 
 <p>
-  <b>Email:</b>
-  <%=h @user.email %>
+	<%= link_to 'Edit', edit_user_path(@user) %> |
+	<%= link_to 'Back', users_path %>
 </p>
-
-<p>
-  <b>Validation:</b>
-  <%=h @user.validation.name %>
-</p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

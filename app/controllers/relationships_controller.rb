@@ -1,4 +1,5 @@
 class RelationshipsController < ApplicationController
+  before_filter :login_required
   def index
     @relationships = Relationship.all
   end

@@ -1,4 +1,5 @@
 class ValidationsController < ApplicationController
+  before_filter :login_required
   # GET /validations
   # GET /validations.xml
   def index

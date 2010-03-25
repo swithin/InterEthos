@@ -4,7 +4,7 @@
 
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
-	<title>Shared Taxonomy - <%= @title %></title>
+	<title>InterEthos - <%= @title %></title>
   	<%= stylesheet_link_tag 'scaffold' %>
   	<%= javascript_include_tag :defaults %>
 </head>
@@ -17,44 +17,49 @@
 		<table bgcolor="#BCFCC1" align="center" cellpadding="0" cellspacing="0" border="0">
 			<tr>
 				<td valign="top" align="center">
-					<%# if authorized? %>
-						<table bgcolor="#BCFCC1" align="center" cellpadding="10" cellspacing="0" border="0" height="500">
-							<% navbar_link_array = Array.new %>
-							<% navbar_link_array = ["about", categories_path, users_path, validations_path] %>
-							<% cell_height = 100/navbar_link_array.length %>
-							<tr height="<%= cell_height %>%">
-								<td align="left" valign="middle" <% if session[:current_location] == "welcome" %> bgcolor="#FFFFFF"<% end %>>
-									<%= link_to "Home", :controller => :welcome %>
-								</td>
-							</tr>
-							<%# "Users" have many Groups, Happenings, and Issues %>
-							<tr height="<%= cell_height %>%" <%# if session[:current_location]["users_"] == "users_" % bgcolor="#FFFFFF"><%# end %>>
+					<table bgcolor="#BCFCC1" align="center" cellpadding="10" cellspacing="0" border="0" height="500">
+						<% navbar_link_array = Array.new %>
+						<% navbar_link_array = ["about", categories_path, users_path, validations_path] %>
+						<% cell_height = 100/navbar_link_array.length %>
+						<tr height="<%= cell_height %>%">
+							<td align="left" valign="middle" <% if session[:current_location] == "welcome" %> bgcolor="#FFFFFF"<% end %>>
+								<%= link_to "Home", :controller => :welcome %>
+							</td>
+						</tr>
+						<%# "Users" have many Collections, Taxonomies, and Teams %>
+						<% if authorized? %>
+							<tr height="<%= cell_height %>" <% if session[:current_location] == users_path %> bgcolor="#FFFFFF"<% end %>>
 								<td align="left" valign="middle">
-									<%# link_to "Users&nbsp;&<br />Groups", users_groups_path %>
+									<% link_to "Users&nbsp;&<br />Teams", teams_users_path %>
 									<%# if session[:current_location]["users_"] == "users_" %>
 										<%#= link_to "Users", session[:current_location] %>
 									<%# else %>
 										<%# if session[:last_location_users] %>
 											<%#= link_to "Users", session[:last_location_users] %>
 										<%# else %>
-											<%#= link_to "Users", users_path %>
+											<%= link_to "Users", users_path %>
 										<%# end %>
 									<%# end %>
-									<%# link_to "<strong>Users</strong>&nbsp;&<br />Issues&nbsp;&<br /><strong>Passions</strong>", users_issues_path %>
+									<% link_to "<strong>Users</strong>&nbsp;&<br />Collections&nbsp;&<br /><strong>Taxonomies</strong>", collections_taxonomies_path %>
 								</td>
 							</tr>
-							<tr height="<%= cell_height %>%" <% if session[:current_location] == categories_path %> bgcolor="#FFFFFF"<% end %>>
+							<tr height="<%= cell_height %>%" <% if session[:current_location] == collections_path %> bgcolor="#FFFFFF"<% end %>>
 								<td>
-									<%= link_to "<strong>Categories</strong>", categories_path %>
+									<%= link_to "<strong>Collections</strong>", collections_path %>
+								</td>
+							</tr>
+							<tr height="<%= cell_height %>%" <% if session[:current_location] == taxonomies_path %> bgcolor="#FFFFFF"<% end %>>
+								<td>
+									<%= link_to "<strong>Taxonomies</strong>", taxonomies_path %>
 								</td>
 							</tr>
 							<tr height="<%= cell_height %>%">
 								<td>
-									<%#= link_to "Logout", logout_path %>
+									<%= link_to "Logout", logout_path %>
 								</td>
 							</tr>
-						</table>
-					<%# end %>
+						<% end %>
+					</table>
 				</td>
 				<td bgcolor="#FFFFFF" valign="top" align="left" width="610">
 					<table cellpadding="10" cellspacing="0" border="0">

@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  
+  # Be sure to include AuthenticatedSystem in Application Controller instead
+  include AuthenticatedSystem
+
 end
