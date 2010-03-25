@@ -1,0 +1,30 @@
+
+<!--<table cellpadding="20" cellspacing="0" border="0">
+<tr><td> -->
+<% @title = 'Log In' %>
+
+<% form_tag session_path do -%>
+<p><%= label_tag 'login' %><br />
+<%= text_field_tag 'login', @login %></p>
+
+<p><%= label_tag 'password' %><br/>
+<%= password_field_tag 'password', nil %></p>
+
+<!-- Uncomment this if you want this functionality -->
+<p><%= label_tag 'remember_me', 'Remember me' %>
+<%= check_box_tag 'remember_me', '1', @remember_me %></p>
+
+<p><%= submit_tag 'Log in' %></p>
+<% end -%>
+
+<%= javascript_tag "$('login').focus()" %>
+<%= link_to 'Sign up', :signup %> 
+
+<!--</td><td>
+
+<p>Please check your email.</p>
+
+An email has just been sent to you, which will need to verify receipt of, in order to login.
+
+
+</td></tr></table> -->

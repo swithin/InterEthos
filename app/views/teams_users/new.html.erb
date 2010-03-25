@@ -1,0 +1,16 @@
+<% @title = 'New User Team' %>
+
+<% form_for(@teams_user) do |f| %>
+  <%= f.error_messages %>
+
+  <p><%= f.label :team %><br />
+    <%= f.text_field :team %></p>
+
+  <p><%= f.label :user %><br />
+    <%= f.text_field :user %></p>
+
+  <p><%= f.submit 'Create' %></p>
+
+<% end %>
+
+<%= link_to 'Back', teams_users_path %>

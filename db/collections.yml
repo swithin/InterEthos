@@ -1,0 +1,13 @@
+--- 
+- !ruby/object:Collection 
+  attributes: 
+    name: The Boston Indicators Project
+    status: Active
+    updated_at: 2010-03-12 20:30:23
+    id: "1"
+    notes: ""
+    contact_info: ""
+    organization: Boston Foundation
+    created_at: 2010-03-12 18:48:54
+  attributes_cache: {}
+

@@ -1,0 +1,13 @@
+<% @title = 'Taxonomy for a Collection' %>
+
+<p><b>Collection:</b>
+  <%=h @collections_taxonomy.collection %></p>
+
+<p><b>Taxonomy:</b>
+  <%=h @collections_taxonomy.taxonomy %></p>
+
+<p><b>Status:</b>
+  <%=h @collections_taxonomy.status %></p>
+
+<%= link_to 'Edit', edit_collections_taxonomy_path(@collections_taxonomy) %> |
+<%= link_to 'Back', collections_taxonomies_path %>

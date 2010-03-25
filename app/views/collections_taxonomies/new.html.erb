@@ -1,0 +1,20 @@
+<% @title = 'New Taxonomy for a Collection' %>
+
+<% form_for(@collections_taxonomy) do |f| %>
+  <%= f.error_messages %>
+
+  <p><%= label(:collection, :id, 'Collection') %><br />
+  	<strong><%= @collection.name %></strong>
+	<%= hidden_field_tag("collections_taxonomy[collection_id]", @collection.id) %></p>
+
+  <p><%= label(:taxonomy, :id, 'Taxonomy') %><br />
+    <%= collection_select(:collections_taxonomy, :taxonomy_id, Taxonomy.find(:all), :id, :name, options = {}, html_options = {}) %></p>
+  
+  <p><%= f.label :status %><br />
+	<%= f.select("status", %w[Live Replaced Prospective], {}, {}) %></p>
+
+  <p><%= f.submit 'Create' %></p>
+
+<% end %>
+
+<%= link_to 'Back', collections_taxonomies_path %>

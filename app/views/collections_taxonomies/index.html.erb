@@ -1,0 +1,24 @@
+<% @title = 'Listing Taxonomies for Collection' %>
+
+<table>
+  <tr>
+    <th>Collection</th>
+    <th>Taxonomy</th>
+    <th>Status</th>
+  </tr>
+
+<% @collections_taxonomies.each do |collections_taxonomy| %>
+  <tr>
+    <td><%=h collections_taxonomy.collection %></td>
+    <td><%=h collections_taxonomy.taxonomy %></td>
+    <td><%=h collections_taxonomy.status %></td>
+    <td><%= link_to 'Show', collections_taxonomy %></td>
+    <td><%= link_to 'Edit', edit_collections_taxonomy_path(collections_taxonomy) %></td>
+    <td><%= link_to 'Destroy', collections_taxonomy, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New collections_taxonomy', new_collections_taxonomy_path %>

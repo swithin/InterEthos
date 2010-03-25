@@ -1,0 +1,24 @@
+<% @title = 'User Collections' %>
+
+<table>
+  <tr>
+    <th>Collection</th>
+    <th>User</th>
+    <th>Role</th>
+  </tr>
+
+<% @collections_users.each do |collections_user| %>
+  <tr>
+    <td><%=h collections_user.collection %></td>
+    <td><%=h collections_user.user %></td>
+    <td><%=h collections_user.role %></td>
+    <td><%= link_to 'Show', collections_user %></td>
+    <td><%= link_to 'Edit', edit_collections_user_path(collections_user) %></td>
+    <td><%= link_to 'Destroy', collections_user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New collections_user', new_collections_user_path %>

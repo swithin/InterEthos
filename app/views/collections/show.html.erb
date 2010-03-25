@@ -1,0 +1,39 @@
+<% @title = 'Collection' %>
+
+<p><b>Name:</b>
+  <%=h @collection.name %></p>
+
+<p><b>Organization:</b>
+  <%=h @collection.organization %></p>
+
+<p><b>Status:</b>
+  <%=h @collection.status %></p>
+
+<p><b>Notes:</b>
+  <%=h @collection.notes %></p>
+
+<p><b>Contact Info:</b>
+  <%=h @collection.contact_info %></p>
+  
+<p>
+  <b>Taxonomies:</b>
+  <% if @collection.taxonomies(@collection).empty? %>
+	  <em>(none found)</em>
+  <% else %>
+	  <ul>
+		<% for taxonomy in @collection.taxonomies %>
+		  <li><%=h taxonomy.name %> 
+		  <%= link_to '<img src="/images/eye.jpg" border="0">', collections_taxonomy_path %>
+    	  <%= link_to '<img src="/images/delta.jpg" border="0">', edit_collections_taxonomy_path(@collection) %>
+		  <%= link_to '<img src="/images/remove.jpg" border="0">', collections_taxonomy_path(taxonomy.id), :confirm => 'Are you sure?', :method => :delete %></li>
+		<% end %>
+	  </ul>
+  <% end %>
+
+  <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_collections_taxonomy_path(:collection_id => @collection.id) %>
+</p>
+
+<p>
+	<%= link_to 'Edit', edit_collection_path(@collection) %> |
+	<%= link_to 'Back', collections_path %>
+</p>

@@ -1,0 +1,20 @@
+<% @title = 'New User Collection' %>
+
+<% form_for(@collections_user) do |f| %>
+  <%= f.error_messages %>
+
+  <p><%= label(:user, :id, 'User') %><br />
+  	<strong><%= @user.full_name %></strong>
+	<%= hidden_field_tag("collections_user[user_id]", @user.id) %></p>
+
+  <p><%= label(:collection, :id, 'Collection') %><br />
+    <%= collection_select(:collections_user, :collection_id, Collection.find(:all), :id, :name, options = {}, html_options = {}) %></p>
+  
+  <p><%= f.label :role %><br />
+	<%= f.select("role", %w[Read Modify Admin], {}, {}) %></p>
+
+  <p><%= f.submit 'Create' %></p>
+
+<% end %>
+
+<%= link_to 'Back', collections_users_path %>

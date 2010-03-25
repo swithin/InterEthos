@@ -1,0 +1,15 @@
+<% @title = 'User Team' %>
+
+<p>
+  <b>Team:</b>
+  <%=h @teams_user.team %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @teams_user.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_teams_user_path(@teams_user) %> |
+<%= link_to 'Back', teams_users_path %>

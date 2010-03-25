@@ -1,0 +1,18 @@
+<% @title = 'Taxonomy' %>
+
+<p><b>Name:</b>
+  <%=h @taxonomy.name %></p>
+
+<p><b>Status:</b>
+  <%=h @taxonomy.status %></p>
+
+<p><b>URL for HTML searches:</b>
+  <%=h @taxonomy.url_category_html %></p>
+
+<p><b>URL for XML searches:</b>
+  <%=h @taxonomy.url_category_xml %></p>
+
+
+
+<%= link_to 'Edit', edit_taxonomy_path(@taxonomy) %> |
+<%= link_to 'Back', taxonomies_path %>
