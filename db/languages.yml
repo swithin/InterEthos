@@ -1,0 +1,5821 @@
+--- 
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Afar
+    id: "1"
+    french_name: afar
+    digit2_code: aa
+    bibliographic_code: aar
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Abkhazian
+    id: "2"
+    french_name: abkhaze
+    digit2_code: ab
+    bibliographic_code: abk
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Achinese
+    id: "3"
+    french_name: aceh
+    digit2_code: 
+    bibliographic_code: ace
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Acoli
+    id: "4"
+    french_name: acoli
+    digit2_code: 
+    bibliographic_code: ach
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Adangme
+    id: "5"
+    french_name: adangme
+    digit2_code: 
+    bibliographic_code: ada
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Adyghe; Adygei
+    id: "6"
+    french_name: adyghé
+    digit2_code: 
+    bibliographic_code: ady
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Afro-Asiatic languages
+    id: "7"
+    french_name: afro-asiatiques, langues
+    digit2_code: 
+    bibliographic_code: afa
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Afrihili
+    id: "8"
+    french_name: afrihili
+    digit2_code: 
+    bibliographic_code: afh
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Afrikaans
+    id: "9"
+    french_name: afrikaans
+    digit2_code: af
+    bibliographic_code: afr
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ainu
+    id: "10"
+    french_name: "a\xEF\xBF\xBDnou"
+    digit2_code: 
+    bibliographic_code: ain
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Akan
+    id: "11"
+    french_name: akan
+    digit2_code: ak
+    bibliographic_code: aka
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Akkadian
+    id: "12"
+    french_name: akkadien
+    digit2_code: 
+    bibliographic_code: akk
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: sqi
+    updated_at: 
+    english_name: Albanian
+    id: "13"
+    french_name: albanais
+    digit2_code: sq
+    bibliographic_code: alb
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Aleut
+    id: "14"
+    french_name: "al\xEF\xBF\xBDoute"
+    digit2_code: 
+    bibliographic_code: ale
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Algonquian languages
+    id: "15"
+    french_name: algonquines, langues
+    digit2_code: 
+    bibliographic_code: alg
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Southern Altai
+    id: "16"
+    french_name: altai du Sud
+    digit2_code: 
+    bibliographic_code: alt
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Amharic
+    id: "17"
+    french_name: amharique
+    digit2_code: am
+    bibliographic_code: amh
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: English, Old (ca.450-1100)
+    id: "18"
+    french_name: anglo-saxon (ca.450-1100)
+    digit2_code: 
+    bibliographic_code: ang
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Angika
+    id: "19"
+    french_name: angika
+    digit2_code: 
+    bibliographic_code: anp
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Apache languages
+    id: "20"
+    french_name: apaches, langues
+    digit2_code: 
+    bibliographic_code: apa
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Arabic
+    id: "21"
+    french_name: arabe
+    digit2_code: ar
+    bibliographic_code: ara
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Official Aramaic (700-300 BCE); Imperial Aramaic (700-300 BCE)
+    id: "22"
+    french_name: "aram\xEF\xBF\xBDen d'empire (700-300 BCE)"
+    digit2_code: 
+    bibliographic_code: arc
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Aragonese
+    id: "23"
+    french_name: aragonais
+    digit2_code: an
+    bibliographic_code: arg
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: hye
+    updated_at: 
+    english_name: Armenian
+    id: "24"
+    french_name: "arm\xEF\xBF\xBDnien"
+    digit2_code: hy
+    bibliographic_code: arm
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Mapudungun; Mapuche
+    id: "25"
+    french_name: mapudungun; mapuche; mapuce
+    digit2_code: 
+    bibliographic_code: arn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Arapaho
+    id: "26"
+    french_name: arapaho
+    digit2_code: 
+    bibliographic_code: arp
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Artificial languages
+    id: "27"
+    french_name: artificielles, langues
+    digit2_code: 
+    bibliographic_code: art
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Arawak
+    id: "28"
+    french_name: arawak
+    digit2_code: 
+    bibliographic_code: arw
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Assamese
+    id: "29"
+    french_name: assamais
+    digit2_code: as
+    bibliographic_code: asm
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Asturian; Bable; Leonese; Asturleonese
+    id: "30"
+    french_name: "asturien; bable; l\xEF\xBF\xBDonais; asturol\xEF\xBF\xBDonais"
+    digit2_code: 
+    bibliographic_code: ast
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Athapascan languages
+    id: "31"
+    french_name: athapascanes, langues
+    digit2_code: 
+    bibliographic_code: ath
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Australian languages
+    id: "32"
+    french_name: australiennes, langues
+    digit2_code: 
+    bibliographic_code: aus
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Avaric
+    id: "33"
+    french_name: avar
+    digit2_code: av
+    bibliographic_code: ava
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Avestan
+    id: "34"
+    french_name: avestique
+    digit2_code: ae
+    bibliographic_code: ave
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Awadhi
+    id: "35"
+    french_name: awadhi
+    digit2_code: 
+    bibliographic_code: awa
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Aymara
+    id: "36"
+    french_name: aymara
+    digit2_code: ay
+    bibliographic_code: aym
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Azerbaijani
+    id: "37"
+    french_name: "az\xEF\xBF\xBDri"
+    digit2_code: az
+    bibliographic_code: aze
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Banda languages
+    id: "38"
+    french_name: banda, langues
+    digit2_code: 
+    bibliographic_code: bad
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Bamileke languages
+    id: "39"
+    french_name: "bamil\xEF\xBF\xBDk\xEF\xBF\xBD, langues"
+    digit2_code: 
+    bibliographic_code: bai
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Bashkir
+    id: "40"
+    french_name: bachkir
+    digit2_code: ba
+    bibliographic_code: bak
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Baluchi
+    id: "41"
+    french_name: baloutchi
+    digit2_code: 
+    bibliographic_code: bal
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Bambara
+    id: "42"
+    french_name: bambara
+    digit2_code: bm
+    bibliographic_code: bam
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Balinese
+    id: "43"
+    french_name: balinais
+    digit2_code: 
+    bibliographic_code: ban
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: eus
+    updated_at: 
+    english_name: Basque
+    id: "44"
+    french_name: basque
+    digit2_code: eu
+    bibliographic_code: baq
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Basa
+    id: "45"
+    french_name: basa
+    digit2_code: 
+    bibliographic_code: bas
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Baltic languages
+    id: "46"
+    french_name: baltes, langues
+    digit2_code: 
+    bibliographic_code: bat
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Beja; Bedawiyet
+    id: "47"
+    french_name: bedja
+    digit2_code: 
+    bibliographic_code: bej
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Belarusian
+    id: "48"
+    french_name: "bi\xEF\xBF\xBDlorusse"
+    digit2_code: be
+    bibliographic_code: bel
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Bemba
+    id: "49"
+    french_name: bemba
+    digit2_code: 
+    bibliographic_code: bem
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Bengali
+    id: "50"
+    french_name: bengali
+    digit2_code: bn
+    bibliographic_code: ben
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Berber languages
+    id: "51"
+    french_name: "berb\xEF\xBF\xBDres, langues"
+    digit2_code: 
+    bibliographic_code: ber
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Bhojpuri
+    id: "52"
+    french_name: bhojpuri
+    digit2_code: 
+    bibliographic_code: bho
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Bihari languages
+    id: "53"
+    french_name: langues biharis
+    digit2_code: bh
+    bibliographic_code: bih
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Bikol
+    id: "54"
+    french_name: bikol
+    digit2_code: 
+    bibliographic_code: bik
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Bini; Edo
+    id: "55"
+    french_name: bini; edo
+    digit2_code: 
+    bibliographic_code: bin
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Bislama
+    id: "56"
+    french_name: bichlamar
+    digit2_code: bi
+    bibliographic_code: bis
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Siksika
+    id: "57"
+    french_name: blackfoot
+    digit2_code: 
+    bibliographic_code: bla
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Bantu (Other)
+    id: "58"
+    french_name: bantoues, autres langues
+    digit2_code: 
+    bibliographic_code: bnt
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Bosnian
+    id: "59"
+    french_name: bosniaque
+    digit2_code: bs
+    bibliographic_code: bos
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Braj
+    id: "60"
+    french_name: braj
+    digit2_code: 
+    bibliographic_code: bra
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Breton
+    id: "61"
+    french_name: breton
+    digit2_code: br
+    bibliographic_code: bre
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Batak languages
+    id: "62"
+    french_name: batak, langues
+    digit2_code: 
+    bibliographic_code: btk
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Buriat
+    id: "63"
+    french_name: bouriate
+    digit2_code: 
+    bibliographic_code: bua
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Buginese
+    id: "64"
+    french_name: bugi
+    digit2_code: 
+    bibliographic_code: bug
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Bulgarian
+    id: "65"
+    french_name: bulgare
+    digit2_code: bg
+    bibliographic_code: bul
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: mya
+    updated_at: 
+    english_name: Burmese
+    id: "66"
+    french_name: birman
+    digit2_code: my
+    bibliographic_code: bur
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Blin; Bilin
+    id: "67"
+    french_name: blin; bilen
+    digit2_code: 
+    bibliographic_code: byn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Caddo
+    id: "68"
+    french_name: caddo
+    digit2_code: 
+    bibliographic_code: cad
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Central American Indian languages
+    id: "69"
+    french_name: "am\xEF\xBF\xBDrindiennes de L'Am\xEF\xBF\xBDrique centrale, langues"
+    digit2_code: 
+    bibliographic_code: cai
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Galibi Carib
+    id: "70"
+    french_name: karib; galibi; carib
+    digit2_code: 
+    bibliographic_code: car
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Catalan; Valencian
+    id: "71"
+    french_name: catalan; valencien
+    digit2_code: ca
+    bibliographic_code: cat
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Caucasian languages
+    id: "72"
+    french_name: caucasiennes, langues
+    digit2_code: 
+    bibliographic_code: cau
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Cebuano
+    id: "73"
+    french_name: cebuano
+    digit2_code: 
+    bibliographic_code: ceb
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Celtic languages
+    id: "74"
+    french_name: celtiques, langues; celtes, langues
+    digit2_code: 
+    bibliographic_code: cel
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Chamorro
+    id: "75"
+    french_name: chamorro
+    digit2_code: ch
+    bibliographic_code: cha
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Chibcha
+    id: "76"
+    french_name: chibcha
+    digit2_code: 
+    bibliographic_code: chb
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Chechen
+    id: "77"
+    french_name: "tch\xEF\xBF\xBDtch\xEF\xBF\xBDne"
+    digit2_code: ce
+    bibliographic_code: che
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Chagatai
+    id: "78"
+    french_name: "djaghata\xEF\xBF\xBD"
+    digit2_code: 
+    bibliographic_code: chg
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: zho
+    updated_at: 
+    english_name: Chinese
+    id: "79"
+    french_name: chinois
+    digit2_code: zh
+    bibliographic_code: chi
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Chuukese
+    id: "80"
+    french_name: chuuk
+    digit2_code: 
+    bibliographic_code: chk
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Mari
+    id: "81"
+    french_name: mari
+    digit2_code: 
+    bibliographic_code: chm
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Chinook jargon
+    id: "82"
+    french_name: chinook, jargon
+    digit2_code: 
+    bibliographic_code: chn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Choctaw
+    id: "83"
+    french_name: choctaw
+    digit2_code: 
+    bibliographic_code: cho
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Chipewyan; Dene Suline
+    id: "84"
+    french_name: chipewyan
+    digit2_code: 
+    bibliographic_code: chp
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Cherokee
+    id: "85"
+    french_name: cherokee
+    digit2_code: 
+    bibliographic_code: chr
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Church Slavic; Old Slavonic; Church Slavonic; Old Bulgarian; Old Church Slavonic
+    id: "86"
+    french_name: "slavon d'\xEF\xBF\xBDglise; vieux slave; slavon liturgique; vieux bulgare"
+    digit2_code: cu
+    bibliographic_code: chu
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Chuvash
+    id: "87"
+    french_name: tchouvache
+    digit2_code: cv
+    bibliographic_code: chv
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Cheyenne
+    id: "88"
+    french_name: cheyenne
+    digit2_code: 
+    bibliographic_code: chy
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Chamic languages
+    id: "89"
+    french_name: chames, langues
+    digit2_code: 
+    bibliographic_code: cmc
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Coptic
+    id: "90"
+    french_name: copte
+    digit2_code: 
+    bibliographic_code: cop
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Cornish
+    id: "91"
+    french_name: cornique
+    digit2_code: kw
+    bibliographic_code: cor
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Corsican
+    id: "92"
+    french_name: corse
+    digit2_code: co
+    bibliographic_code: cos
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Creoles and pidgins, English based
+    id: "93"
+    french_name: "cr\xEF\xBF\xBDoles et pidgins bas\xEF\xBF\xBDs sur l'anglais"
+    digit2_code: 
+    bibliographic_code: cpe
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: "Creoles and pidgins, French-based "
+    id: "94"
+    french_name: "cr\xEF\xBF\xBDoles et pidgins bas\xEF\xBF\xBDs sur le fran\xEF\xBF\xBDais"
+    digit2_code: 
+    bibliographic_code: cpf
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: "Creoles and pidgins, Portuguese-based "
+    id: "95"
+    french_name: "cr\xEF\xBF\xBDoles et pidgins bas\xEF\xBF\xBDs sur le portugais"
+    digit2_code: 
+    bibliographic_code: cpp
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Cree
+    id: "96"
+    french_name: cree
+    digit2_code: cr
+    bibliographic_code: cre
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Crimean Tatar; Crimean Turkish
+    id: "97"
+    french_name: "tatar de Crim\xEF\xBF\xBD"
+    digit2_code: 
+    bibliographic_code: crh
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: "Creoles and pidgins "
+    id: "98"
+    french_name: "cr\xEF\xBF\xBDoles et pidgins"
+    digit2_code: 
+    bibliographic_code: crp
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kashubian
+    id: "99"
+    french_name: kachoube
+    digit2_code: 
+    bibliographic_code: csb
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Cushitic languages
+    id: "100"
+    french_name: couchitiques, langues
+    digit2_code: 
+    bibliographic_code: cus
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: ces
+    updated_at: 
+    english_name: Czech
+    id: "101"
+    french_name: "tch\xEF\xBF\xBDque"
+    digit2_code: cs
+    bibliographic_code: cze
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Dakota
+    id: "102"
+    french_name: dakota
+    digit2_code: 
+    bibliographic_code: dak
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Danish
+    id: "103"
+    french_name: danois
+    digit2_code: da
+    bibliographic_code: dan
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Dargwa
+    id: "104"
+    french_name: dargwa
+    digit2_code: 
+    bibliographic_code: dar
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Land Dayak languages
+    id: "105"
+    french_name: dayak, langues
+    digit2_code: 
+    bibliographic_code: day
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Delaware
+    id: "106"
+    french_name: delaware
+    digit2_code: 
+    bibliographic_code: del
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Slave (Athapascan)
+    id: "107"
+    french_name: esclave (athapascan)
+    digit2_code: 
+    bibliographic_code: den
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Dogrib
+    id: "108"
+    french_name: dogrib
+    digit2_code: 
+    bibliographic_code: dgr
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Dinka
+    id: "109"
+    french_name: dinka
+    digit2_code: 
+    bibliographic_code: din
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Divehi; Dhivehi; Maldivian
+    id: "110"
+    french_name: maldivien
+    digit2_code: dv
+    bibliographic_code: div
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Dogri
+    id: "111"
+    french_name: dogri
+    digit2_code: 
+    bibliographic_code: doi
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Dravidian languages
+    id: "112"
+    french_name: dravidiennes, langues
+    digit2_code: 
+    bibliographic_code: dra
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Lower Sorbian
+    id: "113"
+    french_name: bas-sorabe
+    digit2_code: 
+    bibliographic_code: dsb
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Duala
+    id: "114"
+    french_name: douala
+    digit2_code: 
+    bibliographic_code: dua
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Dutch, Middle (ca.1050-1350)
+    id: "115"
+    french_name: "n\xEF\xBF\xBDerlandais moyen (ca. 1050-1350)"
+    digit2_code: 
+    bibliographic_code: dum
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: nld
+    updated_at: 
+    english_name: Dutch; Flemish
+    id: "116"
+    french_name: "n\xEF\xBF\xBDerlandais; flamand"
+    digit2_code: nl
+    bibliographic_code: dut
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Dyula
+    id: "117"
+    french_name: dioula
+    digit2_code: 
+    bibliographic_code: dyu
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Dzongkha
+    id: "118"
+    french_name: dzongkha
+    digit2_code: dz
+    bibliographic_code: dzo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Efik
+    id: "119"
+    french_name: efik
+    digit2_code: 
+    bibliographic_code: efi
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Egyptian (Ancient)
+    id: "120"
+    french_name: "\xEF\xBF\xBDgyptien"
+    digit2_code: 
+    bibliographic_code: egy
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ekajuk
+    id: "121"
+    french_name: ekajuk
+    digit2_code: 
+    bibliographic_code: eka
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Elamite
+    id: "122"
+    french_name: "\xEF\xBF\xBDlamite"
+    digit2_code: 
+    bibliographic_code: elx
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: English
+    id: "123"
+    french_name: anglais
+    digit2_code: en
+    bibliographic_code: eng
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: English, Middle (1100-1500)
+    id: "124"
+    french_name: anglais moyen (1100-1500)
+    digit2_code: 
+    bibliographic_code: enm
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Esperanto
+    id: "125"
+    french_name: "esp\xEF\xBF\xBDranto"
+    digit2_code: eo
+    bibliographic_code: epo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Estonian
+    id: "126"
+    french_name: estonien
+    digit2_code: et
+    bibliographic_code: est
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ewe
+    id: "127"
+    french_name: "\xEF\xBF\xBDw\xEF\xBF\xBD"
+    digit2_code: ee
+    bibliographic_code: ewe
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ewondo
+    id: "128"
+    french_name: "\xEF\xBF\xBDwondo"
+    digit2_code: 
+    bibliographic_code: ewo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Fang
+    id: "129"
+    french_name: fang
+    digit2_code: 
+    bibliographic_code: fan
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Faroese
+    id: "130"
+    french_name: "f\xEF\xBF\xBDro\xEF\xBF\xBDen"
+    digit2_code: fo
+    bibliographic_code: fao
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Fanti
+    id: "131"
+    french_name: fanti
+    digit2_code: 
+    bibliographic_code: fat
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Fijian
+    id: "132"
+    french_name: fidjien
+    digit2_code: fj
+    bibliographic_code: fij
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Filipino; Pilipino
+    id: "133"
+    french_name: filipino; pilipino
+    digit2_code: 
+    bibliographic_code: fil
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Finnish
+    id: "134"
+    french_name: finnois
+    digit2_code: fi
+    bibliographic_code: fin
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Finno-Ugrian languages
+    id: "135"
+    french_name: finno-ougriennes, langues
+    digit2_code: 
+    bibliographic_code: fiu
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Fon
+    id: "136"
+    french_name: fon
+    digit2_code: 
+    bibliographic_code: fon
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: fra
+    updated_at: 
+    english_name: French
+    id: "137"
+    french_name: "fran\xEF\xBF\xBDais"
+    digit2_code: fr
+    bibliographic_code: fre
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: French, Middle (ca.1400-1600)
+    id: "138"
+    french_name: "fran\xEF\xBF\xBDais moyen (1400-1600)"
+    digit2_code: 
+    bibliographic_code: frm
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: French, Old (842-ca.1400)
+    id: "139"
+    french_name: "fran\xEF\xBF\xBDais ancien (842-ca.1400)"
+    digit2_code: 
+    bibliographic_code: fro
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Northern Frisian
+    id: "140"
+    french_name: frison septentrional
+    digit2_code: 
+    bibliographic_code: frr
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Eastern Frisian
+    id: "141"
+    french_name: frison oriental
+    digit2_code: 
+    bibliographic_code: frs
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Western Frisian
+    id: "142"
+    french_name: frison occidental
+    digit2_code: fy
+    bibliographic_code: fry
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Fulah
+    id: "143"
+    french_name: peul
+    digit2_code: ff
+    bibliographic_code: ful
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Friulian
+    id: "144"
+    french_name: frioulan
+    digit2_code: 
+    bibliographic_code: fur
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ga
+    id: "145"
+    french_name: ga
+    digit2_code: 
+    bibliographic_code: gaa
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Gayo
+    id: "146"
+    french_name: gayo
+    digit2_code: 
+    bibliographic_code: gay
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Gbaya
+    id: "147"
+    french_name: gbaya
+    digit2_code: 
+    bibliographic_code: gba
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Germanic languages
+    id: "148"
+    french_name: germaniques, langues
+    digit2_code: 
+    bibliographic_code: gem
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: kat
+    updated_at: 
+    english_name: Georgian
+    id: "149"
+    french_name: "g\xEF\xBF\xBDorgien"
+    digit2_code: ka
+    bibliographic_code: geo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: deu
+    updated_at: 
+    english_name: German
+    id: "150"
+    french_name: allemand
+    digit2_code: de
+    bibliographic_code: ger
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Geez
+    id: "151"
+    french_name: "gu\xEF\xBF\xBDze"
+    digit2_code: 
+    bibliographic_code: gez
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Gilbertese
+    id: "152"
+    french_name: kiribati
+    digit2_code: 
+    bibliographic_code: gil
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Gaelic; Scottish Gaelic
+    id: "153"
+    french_name: "ga\xEF\xBF\xBDlique; ga\xEF\xBF\xBDlique \xEF\xBF\xBDcossais"
+    digit2_code: gd
+    bibliographic_code: gla
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Irish
+    id: "154"
+    french_name: irlandais
+    digit2_code: ga
+    bibliographic_code: gle
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Galician
+    id: "155"
+    french_name: galicien
+    digit2_code: gl
+    bibliographic_code: glg
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Manx
+    id: "156"
+    french_name: manx; mannois
+    digit2_code: gv
+    bibliographic_code: glv
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: German, Middle High (ca.1050-1500)
+    id: "157"
+    french_name: allemand, moyen haut (ca. 1050-1500)
+    digit2_code: 
+    bibliographic_code: gmh
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: German, Old High (ca.750-1050)
+    id: "158"
+    french_name: allemand, vieux haut (ca. 750-1050)
+    digit2_code: 
+    bibliographic_code: goh
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Gondi
+    id: "159"
+    french_name: gond
+    digit2_code: 
+    bibliographic_code: gon
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Gorontalo
+    id: "160"
+    french_name: gorontalo
+    digit2_code: 
+    bibliographic_code: gor
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Gothic
+    id: "161"
+    french_name: gothique
+    digit2_code: 
+    bibliographic_code: got
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Grebo
+    id: "162"
+    french_name: grebo
+    digit2_code: 
+    bibliographic_code: grb
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Greek, Ancient (to 1453)
+    id: "163"
+    french_name: "grec ancien (jusqu'\xEF\xBF\xBD 1453)"
+    digit2_code: 
+    bibliographic_code: grc
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: ell
+    updated_at: 
+    english_name: Greek, Modern (1453-)
+    id: "164"
+    french_name: "grec moderne (apr\xEF\xBF\xBDs 1453)"
+    digit2_code: el
+    bibliographic_code: gre
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Guarani
+    id: "165"
+    french_name: guarani
+    digit2_code: gn
+    bibliographic_code: grn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Swiss German; Alemannic; Alsatian
+    id: "166"
+    french_name: "suisse al\xEF\xBF\xBDmanique; al\xEF\xBF\xBDmanique; alsacien"
+    digit2_code: 
+    bibliographic_code: gsw
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Gujarati
+    id: "167"
+    french_name: goudjrati
+    digit2_code: gu
+    bibliographic_code: guj
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Gwich'in
+    id: "168"
+    french_name: gwich'in
+    digit2_code: 
+    bibliographic_code: gwi
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Haida
+    id: "169"
+    french_name: haida
+    digit2_code: 
+    bibliographic_code: hai
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Haitian; Haitian Creole
+    id: "170"
+    french_name: "ha\xEF\xBF\xBDtien; cr\xEF\xBF\xBDole ha\xEF\xBF\xBDtien"
+    digit2_code: ht
+    bibliographic_code: hat
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Hausa
+    id: "171"
+    french_name: haoussa
+    digit2_code: ha
+    bibliographic_code: hau
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Hawaiian
+    id: "172"
+    french_name: "hawa\xEF\xBF\xBDen"
+    digit2_code: 
+    bibliographic_code: haw
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Hebrew
+    id: "173"
+    french_name: "h\xEF\xBF\xBDbreu"
+    digit2_code: he
+    bibliographic_code: heb
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Herero
+    id: "174"
+    french_name: herero
+    digit2_code: hz
+    bibliographic_code: her
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Hiligaynon
+    id: "175"
+    french_name: hiligaynon
+    digit2_code: 
+    bibliographic_code: hil
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Himachali languages; Western Pahari languages
+    id: "176"
+    french_name: langues himachalis; langues paharis occidentales
+    digit2_code: 
+    bibliographic_code: him
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Hindi
+    id: "177"
+    french_name: hindi
+    digit2_code: hi
+    bibliographic_code: hin
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Hittite
+    id: "178"
+    french_name: hittite
+    digit2_code: 
+    bibliographic_code: hit
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Hmong
+    id: "179"
+    french_name: hmong
+    digit2_code: 
+    bibliographic_code: hmn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Hiri Motu
+    id: "180"
+    french_name: hiri motu
+    digit2_code: ho
+    bibliographic_code: hmo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Croatian
+    id: "181"
+    french_name: croate
+    digit2_code: hr
+    bibliographic_code: hrv
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Upper Sorbian
+    id: "182"
+    french_name: haut-sorabe
+    digit2_code: 
+    bibliographic_code: hsb
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Hungarian
+    id: "183"
+    french_name: hongrois
+    digit2_code: hu
+    bibliographic_code: hun
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Hupa
+    id: "184"
+    french_name: hupa
+    digit2_code: 
+    bibliographic_code: hup
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Iban
+    id: "185"
+    french_name: iban
+    digit2_code: 
+    bibliographic_code: iba
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Igbo
+    id: "186"
+    french_name: igbo
+    digit2_code: ig
+    bibliographic_code: ibo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: isl
+    updated_at: 
+    english_name: Icelandic
+    id: "187"
+    french_name: islandais
+    digit2_code: is
+    bibliographic_code: ice
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ido
+    id: "188"
+    french_name: ido
+    digit2_code: io
+    bibliographic_code: ido
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sichuan Yi; Nuosu
+    id: "189"
+    french_name: yi de Sichuan
+    digit2_code: ii
+    bibliographic_code: iii
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ijo languages
+    id: "190"
+    french_name: ijo, langues
+    digit2_code: 
+    bibliographic_code: ijo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Inuktitut
+    id: "191"
+    french_name: inuktitut
+    digit2_code: iu
+    bibliographic_code: iku
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Interlingue; Occidental
+    id: "192"
+    french_name: interlingue
+    digit2_code: ie
+    bibliographic_code: ile
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Iloko
+    id: "193"
+    french_name: ilocano
+    digit2_code: 
+    bibliographic_code: ilo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Interlingua (International Auxiliary Language Association)
+    id: "194"
+    french_name: interlingua (langue auxiliaire internationale)
+    digit2_code: ia
+    bibliographic_code: ina
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Indic languages
+    id: "195"
+    french_name: indo-aryennes, langues
+    digit2_code: 
+    bibliographic_code: inc
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Indonesian
+    id: "196"
+    french_name: "indon\xEF\xBF\xBDsien"
+    digit2_code: id
+    bibliographic_code: ind
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Indo-European languages
+    id: "197"
+    french_name: "indo-europ\xEF\xBF\xBDennes, langues"
+    digit2_code: 
+    bibliographic_code: ine
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ingush
+    id: "198"
+    french_name: ingouche
+    digit2_code: 
+    bibliographic_code: inh
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Inupiaq
+    id: "199"
+    french_name: inupiaq
+    digit2_code: ik
+    bibliographic_code: ipk
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Iranian languages
+    id: "200"
+    french_name: iraniennes, langues
+    digit2_code: 
+    bibliographic_code: ira
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Iroquoian languages
+    id: "201"
+    french_name: iroquoises, langues
+    digit2_code: 
+    bibliographic_code: iro
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Italian
+    id: "202"
+    french_name: italien
+    digit2_code: it
+    bibliographic_code: ita
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Javanese
+    id: "203"
+    french_name: javanais
+    digit2_code: jv
+    bibliographic_code: jav
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Lojban
+    id: "204"
+    french_name: lojban
+    digit2_code: 
+    bibliographic_code: jbo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Japanese
+    id: "205"
+    french_name: japonais
+    digit2_code: ja
+    bibliographic_code: jpn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Judeo-Persian
+    id: "206"
+    french_name: "jud\xEF\xBF\xBDo-persan"
+    digit2_code: 
+    bibliographic_code: jpr
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Judeo-Arabic
+    id: "207"
+    french_name: "jud\xEF\xBF\xBDo-arabe"
+    digit2_code: 
+    bibliographic_code: jrb
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kara-Kalpak
+    id: "208"
+    french_name: karakalpak
+    digit2_code: 
+    bibliographic_code: kaa
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kabyle
+    id: "209"
+    french_name: kabyle
+    digit2_code: 
+    bibliographic_code: kab
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kachin; Jingpho
+    id: "210"
+    french_name: kachin; jingpho
+    digit2_code: 
+    bibliographic_code: kac
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kalaallisut; Greenlandic
+    id: "211"
+    french_name: groenlandais
+    digit2_code: kl
+    bibliographic_code: kal
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kamba
+    id: "212"
+    french_name: kamba
+    digit2_code: 
+    bibliographic_code: kam
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kannada
+    id: "213"
+    french_name: kannada
+    digit2_code: kn
+    bibliographic_code: kan
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Karen languages
+    id: "214"
+    french_name: karen, langues
+    digit2_code: 
+    bibliographic_code: kar
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kashmiri
+    id: "215"
+    french_name: kashmiri
+    digit2_code: ks
+    bibliographic_code: kas
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kanuri
+    id: "216"
+    french_name: kanouri
+    digit2_code: kr
+    bibliographic_code: kau
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kawi
+    id: "217"
+    french_name: kawi
+    digit2_code: 
+    bibliographic_code: kaw
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kazakh
+    id: "218"
+    french_name: kazakh
+    digit2_code: kk
+    bibliographic_code: kaz
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kabardian
+    id: "219"
+    french_name: kabardien
+    digit2_code: 
+    bibliographic_code: kbd
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Khasi
+    id: "220"
+    french_name: khasi
+    digit2_code: 
+    bibliographic_code: kha
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Khoisan languages
+    id: "221"
+    french_name: "kho\xEF\xBF\xBDsan, langues"
+    digit2_code: 
+    bibliographic_code: khi
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Central Khmer
+    id: "222"
+    french_name: khmer central
+    digit2_code: km
+    bibliographic_code: khm
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Khotanese; Sakan
+    id: "223"
+    french_name: khotanais; sakan
+    digit2_code: 
+    bibliographic_code: kho
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kikuyu; Gikuyu
+    id: "224"
+    french_name: kikuyu
+    digit2_code: ki
+    bibliographic_code: kik
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kinyarwanda
+    id: "225"
+    french_name: rwanda
+    digit2_code: rw
+    bibliographic_code: kin
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kirghiz; Kyrgyz
+    id: "226"
+    french_name: kirghiz
+    digit2_code: ky
+    bibliographic_code: kir
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kimbundu
+    id: "227"
+    french_name: kimbundu
+    digit2_code: 
+    bibliographic_code: kmb
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Konkani
+    id: "228"
+    french_name: konkani
+    digit2_code: 
+    bibliographic_code: kok
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Komi
+    id: "229"
+    french_name: kom
+    digit2_code: kv
+    bibliographic_code: kom
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kongo
+    id: "230"
+    french_name: kongo
+    digit2_code: kg
+    bibliographic_code: kon
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Korean
+    id: "231"
+    french_name: "cor\xEF\xBF\xBDen"
+    digit2_code: ko
+    bibliographic_code: kor
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kosraean
+    id: "232"
+    french_name: kosrae
+    digit2_code: 
+    bibliographic_code: kos
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kpelle
+    id: "233"
+    french_name: "kpell\xEF\xBF\xBD"
+    digit2_code: 
+    bibliographic_code: kpe
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Karachay-Balkar
+    id: "234"
+    french_name: karatchai balkar
+    digit2_code: 
+    bibliographic_code: krc
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Karelian
+    id: "235"
+    french_name: "car\xEF\xBF\xBDlien"
+    digit2_code: 
+    bibliographic_code: krl
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kru languages
+    id: "236"
+    french_name: krou, langues
+    digit2_code: 
+    bibliographic_code: kro
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kurukh
+    id: "237"
+    french_name: kurukh
+    digit2_code: 
+    bibliographic_code: kru
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kuanyama; Kwanyama
+    id: "238"
+    french_name: kuanyama; kwanyama
+    digit2_code: kj
+    bibliographic_code: kua
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kumyk
+    id: "239"
+    french_name: koumyk
+    digit2_code: 
+    bibliographic_code: kum
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kurdish
+    id: "240"
+    french_name: kurde
+    digit2_code: ku
+    bibliographic_code: kur
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kutenai
+    id: "241"
+    french_name: kutenai
+    digit2_code: 
+    bibliographic_code: kut
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ladino
+    id: "242"
+    french_name: "jud\xEF\xBF\xBDo-espagnol"
+    digit2_code: 
+    bibliographic_code: lad
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Lahnda
+    id: "243"
+    french_name: lahnda
+    digit2_code: 
+    bibliographic_code: lah
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Lamba
+    id: "244"
+    french_name: lamba
+    digit2_code: 
+    bibliographic_code: lam
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Lao
+    id: "245"
+    french_name: lao
+    digit2_code: lo
+    bibliographic_code: lao
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Latin
+    id: "246"
+    french_name: latin
+    digit2_code: la
+    bibliographic_code: lat
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Latvian
+    id: "247"
+    french_name: letton
+    digit2_code: lv
+    bibliographic_code: lav
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Lezghian
+    id: "248"
+    french_name: lezghien
+    digit2_code: 
+    bibliographic_code: lez
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Limburgan; Limburger; Limburgish
+    id: "249"
+    french_name: limbourgeois
+    digit2_code: li
+    bibliographic_code: lim
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Lingala
+    id: "250"
+    french_name: lingala
+    digit2_code: ln
+    bibliographic_code: lin
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Lithuanian
+    id: "251"
+    french_name: lituanien
+    digit2_code: lt
+    bibliographic_code: lit
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Mongo
+    id: "252"
+    french_name: mongo
+    digit2_code: 
+    bibliographic_code: lol
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Lozi
+    id: "253"
+    french_name: lozi
+    digit2_code: 
+    bibliographic_code: loz
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Luxembourgish; Letzeburgesch
+    id: "254"
+    french_name: luxembourgeois
+    digit2_code: lb
+    bibliographic_code: ltz
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Luba-Lulua
+    id: "255"
+    french_name: luba-lulua
+    digit2_code: 
+    bibliographic_code: lua
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Luba-Katanga
+    id: "256"
+    french_name: luba-katanga
+    digit2_code: lu
+    bibliographic_code: lub
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ganda
+    id: "257"
+    french_name: ganda
+    digit2_code: lg
+    bibliographic_code: lug
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Luiseno
+    id: "258"
+    french_name: luiseno
+    digit2_code: 
+    bibliographic_code: lui
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Lunda
+    id: "259"
+    french_name: lunda
+    digit2_code: 
+    bibliographic_code: lun
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Luo (Kenya and Tanzania)
+    id: "260"
+    french_name: luo (Kenya et Tanzanie)
+    digit2_code: 
+    bibliographic_code: luo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Lushai
+    id: "261"
+    french_name: lushai
+    digit2_code: 
+    bibliographic_code: lus
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: mkd
+    updated_at: 
+    english_name: Macedonian
+    id: "262"
+    french_name: "mac\xEF\xBF\xBDdonien"
+    digit2_code: mk
+    bibliographic_code: mac
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Madurese
+    id: "263"
+    french_name: madourais
+    digit2_code: 
+    bibliographic_code: mad
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Magahi
+    id: "264"
+    french_name: magahi
+    digit2_code: 
+    bibliographic_code: mag
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Marshallese
+    id: "265"
+    french_name: marshall
+    digit2_code: mh
+    bibliographic_code: mah
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Maithili
+    id: "266"
+    french_name: maithili
+    digit2_code: 
+    bibliographic_code: mai
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Makasar
+    id: "267"
+    french_name: makassar
+    digit2_code: 
+    bibliographic_code: mak
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Malayalam
+    id: "268"
+    french_name: malayalam
+    digit2_code: ml
+    bibliographic_code: mal
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Mandingo
+    id: "269"
+    french_name: mandingue
+    digit2_code: 
+    bibliographic_code: man
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: mri
+    updated_at: 
+    english_name: Maori
+    id: "270"
+    french_name: maori
+    digit2_code: mi
+    bibliographic_code: mao
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Austronesian languages
+    id: "271"
+    french_name: "austron\xEF\xBF\xBDsiennes, langues"
+    digit2_code: 
+    bibliographic_code: map
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Marathi
+    id: "272"
+    french_name: marathe
+    digit2_code: mr
+    bibliographic_code: mar
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Masai
+    id: "273"
+    french_name: "massa\xEF\xBF\xBD"
+    digit2_code: 
+    bibliographic_code: mas
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: msa
+    updated_at: 
+    english_name: Malay
+    id: "274"
+    french_name: malais
+    digit2_code: ms
+    bibliographic_code: may
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Moksha
+    id: "275"
+    french_name: moksa
+    digit2_code: 
+    bibliographic_code: mdf
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Mandar
+    id: "276"
+    french_name: mandar
+    digit2_code: 
+    bibliographic_code: mdr
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Mende
+    id: "277"
+    french_name: "mend\xEF\xBF\xBD"
+    digit2_code: 
+    bibliographic_code: men
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Irish, Middle (900-1200)
+    id: "278"
+    french_name: irlandais moyen (900-1200)
+    digit2_code: 
+    bibliographic_code: mga
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Mi'kmaq; Micmac
+    id: "279"
+    french_name: mi'kmaq; micmac
+    digit2_code: 
+    bibliographic_code: mic
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Minangkabau
+    id: "280"
+    french_name: minangkabau
+    digit2_code: 
+    bibliographic_code: min
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Uncoded languages
+    id: "281"
+    french_name: "langues non cod\xEF\xBF\xBDes"
+    digit2_code: 
+    bibliographic_code: mis
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Mon-Khmer languages
+    id: "282"
+    french_name: "m\xEF\xBF\xBDn-khmer, langues"
+    digit2_code: 
+    bibliographic_code: mkh
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Malagasy
+    id: "283"
+    french_name: malgache
+    digit2_code: mg
+    bibliographic_code: mlg
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Maltese
+    id: "284"
+    french_name: maltais
+    digit2_code: mt
+    bibliographic_code: mlt
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Manchu
+    id: "285"
+    french_name: mandchou
+    digit2_code: 
+    bibliographic_code: mnc
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Manipuri
+    id: "286"
+    french_name: manipuri
+    digit2_code: 
+    bibliographic_code: mni
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Manobo languages
+    id: "287"
+    french_name: manobo, langues
+    digit2_code: 
+    bibliographic_code: mno
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Mohawk
+    id: "288"
+    french_name: mohawk
+    digit2_code: 
+    bibliographic_code: moh
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Mongolian
+    id: "289"
+    french_name: mongol
+    digit2_code: mn
+    bibliographic_code: mon
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Mossi
+    id: "290"
+    french_name: "mor\xEF\xBF\xBD"
+    digit2_code: 
+    bibliographic_code: mos
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Multiple languages
+    id: "291"
+    french_name: multilingue
+    digit2_code: 
+    bibliographic_code: mul
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Munda languages
+    id: "292"
+    french_name: mounda, langues
+    digit2_code: 
+    bibliographic_code: mun
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Creek
+    id: "293"
+    french_name: muskogee
+    digit2_code: 
+    bibliographic_code: mus
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Mirandese
+    id: "294"
+    french_name: mirandais
+    digit2_code: 
+    bibliographic_code: mwl
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Marwari
+    id: "295"
+    french_name: marvari
+    digit2_code: 
+    bibliographic_code: mwr
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Mayan languages
+    id: "296"
+    french_name: maya, langues
+    digit2_code: 
+    bibliographic_code: myn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Erzya
+    id: "297"
+    french_name: erza
+    digit2_code: 
+    bibliographic_code: myv
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Nahuatl languages
+    id: "298"
+    french_name: nahuatl, langues
+    digit2_code: 
+    bibliographic_code: nah
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: North American Indian languages
+    id: "299"
+    french_name: "nord-am\xEF\xBF\xBDrindiennes, langues"
+    digit2_code: 
+    bibliographic_code: nai
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Neapolitan
+    id: "300"
+    french_name: napolitain
+    digit2_code: 
+    bibliographic_code: nap
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Nauru
+    id: "301"
+    french_name: nauruan
+    digit2_code: na
+    bibliographic_code: nau
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Navajo; Navaho
+    id: "302"
+    french_name: navaho
+    digit2_code: nv
+    bibliographic_code: nav
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ndebele, South; South Ndebele
+    id: "303"
+    french_name: "nd\xEF\xBF\xBDb\xEF\xBF\xBDl\xEF\xBF\xBD du Sud"
+    digit2_code: nr
+    bibliographic_code: nbl
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ndebele, North; North Ndebele
+    id: "304"
+    french_name: "nd\xEF\xBF\xBDb\xEF\xBF\xBDl\xEF\xBF\xBD du Nord"
+    digit2_code: nd
+    bibliographic_code: nde
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ndonga
+    id: "305"
+    french_name: ndonga
+    digit2_code: ng
+    bibliographic_code: ndo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Low German; Low Saxon; German, Low; Saxon, Low
+    id: "306"
+    french_name: bas allemand; bas saxon; allemand, bas; saxon, bas
+    digit2_code: 
+    bibliographic_code: nds
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Nepali
+    id: "307"
+    french_name: "n\xEF\xBF\xBDpalais"
+    digit2_code: ne
+    bibliographic_code: nep
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Nepal Bhasa; Newari
+    id: "308"
+    french_name: nepal bhasa; newari
+    digit2_code: 
+    bibliographic_code: new
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Nias
+    id: "309"
+    french_name: nias
+    digit2_code: 
+    bibliographic_code: nia
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Niger-Kordofanian languages
+    id: "310"
+    french_name: "nig\xEF\xBF\xBDro-kordofaniennes, langues"
+    digit2_code: 
+    bibliographic_code: nic
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Niuean
+    id: "311"
+    french_name: "niu\xEF\xBF\xBD"
+    digit2_code: 
+    bibliographic_code: niu
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Norwegian Nynorsk; Nynorsk, Norwegian
+    id: "312"
+    french_name: "norv\xEF\xBF\xBDgien nynorsk; nynorsk, norv\xEF\xBF\xBDgien"
+    digit2_code: nn
+    bibliographic_code: nno
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: "Bokm\xEF\xBF\xBDl, Norwegian; Norwegian Bokm\xEF\xBF\xBDl"
+    id: "313"
+    french_name: "norv\xEF\xBF\xBDgien bokm\xEF\xBF\xBDl"
+    digit2_code: nb
+    bibliographic_code: nob
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Nogai
+    id: "314"
+    french_name: "noga\xEF\xBF\xBD; nogay"
+    digit2_code: 
+    bibliographic_code: nog
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Norse, Old
+    id: "315"
+    french_name: norrois, vieux
+    digit2_code: 
+    bibliographic_code: non
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Norwegian
+    id: "316"
+    french_name: "norv\xEF\xBF\xBDgien"
+    digit2_code: "no"
+    bibliographic_code: nor
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: N'Ko
+    id: "317"
+    french_name: n'ko
+    digit2_code: 
+    bibliographic_code: nqo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Pedi; Sepedi; Northern Sotho
+    id: "318"
+    french_name: pedi; sepedi; sotho du Nord
+    digit2_code: 
+    bibliographic_code: nso
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Nubian languages
+    id: "319"
+    french_name: nubiennes, langues
+    digit2_code: 
+    bibliographic_code: nub
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Classical Newari; Old Newari; Classical Nepal Bhasa
+    id: "320"
+    french_name: newari classique
+    digit2_code: 
+    bibliographic_code: nwc
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Chichewa; Chewa; Nyanja
+    id: "321"
+    french_name: chichewa; chewa; nyanja
+    digit2_code: ny
+    bibliographic_code: nya
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Nyamwezi
+    id: "322"
+    french_name: nyamwezi
+    digit2_code: 
+    bibliographic_code: nym
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Nyankole
+    id: "323"
+    french_name: "nyankol\xEF\xBF\xBD"
+    digit2_code: 
+    bibliographic_code: nyn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Nyoro
+    id: "324"
+    french_name: nyoro
+    digit2_code: 
+    bibliographic_code: nyo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Nzima
+    id: "325"
+    french_name: nzema
+    digit2_code: 
+    bibliographic_code: nzi
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: "Occitan (post 1500); Proven\xEF\xBF\xBDal"
+    id: "326"
+    french_name: "occitan (apr\xEF\xBF\xBDs 1500); proven\xEF\xBF\xBDal"
+    digit2_code: oc
+    bibliographic_code: oci
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ojibwa
+    id: "327"
+    french_name: ojibwa
+    digit2_code: oj
+    bibliographic_code: oji
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Oriya
+    id: "328"
+    french_name: oriya
+    digit2_code: or
+    bibliographic_code: ori
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Oromo
+    id: "329"
+    french_name: galla
+    digit2_code: om
+    bibliographic_code: orm
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Osage
+    id: "330"
+    french_name: osage
+    digit2_code: 
+    bibliographic_code: osa
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ossetian; Ossetic
+    id: "331"
+    french_name: "oss\xEF\xBF\xBDte"
+    digit2_code: os
+    bibliographic_code: oss
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Turkish, Ottoman (1500-1928)
+    id: "332"
+    french_name: turc ottoman (1500-1928)
+    digit2_code: 
+    bibliographic_code: ota
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Otomian languages
+    id: "333"
+    french_name: otomi, langues
+    digit2_code: 
+    bibliographic_code: oto
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Papuan languages
+    id: "334"
+    french_name: papoues, langues
+    digit2_code: 
+    bibliographic_code: paa
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Pangasinan
+    id: "335"
+    french_name: pangasinan
+    digit2_code: 
+    bibliographic_code: pag
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Pahlavi
+    id: "336"
+    french_name: pahlavi
+    digit2_code: 
+    bibliographic_code: pal
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Pampanga; Kapampangan
+    id: "337"
+    french_name: pampangan
+    digit2_code: 
+    bibliographic_code: pam
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Panjabi; Punjabi
+    id: "338"
+    french_name: pendjabi
+    digit2_code: pa
+    bibliographic_code: pan
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Papiamento
+    id: "339"
+    french_name: papiamento
+    digit2_code: 
+    bibliographic_code: pap
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Palauan
+    id: "340"
+    french_name: palau
+    digit2_code: 
+    bibliographic_code: pau
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Persian, Old (ca.600-400 B.C.)
+    id: "341"
+    french_name: perse, vieux (ca. 600-400 av. J.-C.)
+    digit2_code: 
+    bibliographic_code: peo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: fas
+    updated_at: 
+    english_name: Persian
+    id: "342"
+    french_name: persan
+    digit2_code: fa
+    bibliographic_code: per
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Philippine languages
+    id: "343"
+    french_name: philippines, langues
+    digit2_code: 
+    bibliographic_code: phi
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Phoenician
+    id: "344"
+    french_name: "ph\xEF\xBF\xBDnicien"
+    digit2_code: 
+    bibliographic_code: phn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Pali
+    id: "345"
+    french_name: pali
+    digit2_code: pi
+    bibliographic_code: pli
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Polish
+    id: "346"
+    french_name: polonais
+    digit2_code: pl
+    bibliographic_code: pol
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Pohnpeian
+    id: "347"
+    french_name: pohnpei
+    digit2_code: 
+    bibliographic_code: pon
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Portuguese
+    id: "348"
+    french_name: portugais
+    digit2_code: pt
+    bibliographic_code: por
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Prakrit languages
+    id: "349"
+    french_name: "pr\xEF\xBF\xBDkrit, langues"
+    digit2_code: 
+    bibliographic_code: pra
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: "Proven\xEF\xBF\xBDal, Old (to 1500)"
+    id: "350"
+    french_name: "proven\xEF\xBF\xBDal ancien (jusqu'\xEF\xBF\xBD 1500)"
+    digit2_code: 
+    bibliographic_code: pro
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Pushto; Pashto
+    id: "351"
+    french_name: pachto
+    digit2_code: ps
+    bibliographic_code: pus
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Reserved for local use
+    id: "352"
+    french_name: "r\xEF\xBF\xBDserv\xEF\xBF\xBDe \xEF\xBF\xBD l'usage local"
+    digit2_code: 
+    bibliographic_code: qaa-qtz
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Quechua
+    id: "353"
+    french_name: quechua
+    digit2_code: qu
+    bibliographic_code: que
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Rajasthani
+    id: "354"
+    french_name: rajasthani
+    digit2_code: 
+    bibliographic_code: raj
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Rapanui
+    id: "355"
+    french_name: rapanui
+    digit2_code: 
+    bibliographic_code: rap
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Rarotongan; Cook Islands Maori
+    id: "356"
+    french_name: "rarotonga; maori des \xEF\xBF\xBDles Cook"
+    digit2_code: 
+    bibliographic_code: rar
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Romance languages
+    id: "357"
+    french_name: romanes, langues
+    digit2_code: 
+    bibliographic_code: roa
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Romansh
+    id: "358"
+    french_name: romanche
+    digit2_code: rm
+    bibliographic_code: roh
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Romany
+    id: "359"
+    french_name: tsigane
+    digit2_code: 
+    bibliographic_code: rom
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: ron
+    updated_at: 
+    english_name: Romanian; Moldavian; Moldovan
+    id: "360"
+    french_name: roumain; moldave
+    digit2_code: ro
+    bibliographic_code: rum
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Rundi
+    id: "361"
+    french_name: rundi
+    digit2_code: rn
+    bibliographic_code: run
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Aromanian; Arumanian; Macedo-Romanian
+    id: "362"
+    french_name: "aroumain; mac\xEF\xBF\xBDdo-roumain"
+    digit2_code: 
+    bibliographic_code: rup
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Russian
+    id: "363"
+    french_name: russe
+    digit2_code: ru
+    bibliographic_code: rus
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sandawe
+    id: "364"
+    french_name: sandawe
+    digit2_code: 
+    bibliographic_code: sad
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sango
+    id: "365"
+    french_name: sango
+    digit2_code: sg
+    bibliographic_code: sag
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Yakut
+    id: "366"
+    french_name: iakoute
+    digit2_code: 
+    bibliographic_code: sah
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: South American Indian (Other)
+    id: "367"
+    french_name: "indiennes d'Am\xEF\xBF\xBDrique du Sud, autres langues"
+    digit2_code: 
+    bibliographic_code: sai
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Salishan languages
+    id: "368"
+    french_name: salishennes, langues
+    digit2_code: 
+    bibliographic_code: sal
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Samaritan Aramaic
+    id: "369"
+    french_name: samaritain
+    digit2_code: 
+    bibliographic_code: sam
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sanskrit
+    id: "370"
+    french_name: sanskrit
+    digit2_code: sa
+    bibliographic_code: san
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sasak
+    id: "371"
+    french_name: sasak
+    digit2_code: 
+    bibliographic_code: sas
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Santali
+    id: "372"
+    french_name: santal
+    digit2_code: 
+    bibliographic_code: sat
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sicilian
+    id: "373"
+    french_name: sicilien
+    digit2_code: 
+    bibliographic_code: scn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Scots
+    id: "374"
+    french_name: "\xEF\xBF\xBDcossais"
+    digit2_code: 
+    bibliographic_code: sco
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Selkup
+    id: "375"
+    french_name: selkoupe
+    digit2_code: 
+    bibliographic_code: sel
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Semitic languages
+    id: "376"
+    french_name: "s\xEF\xBF\xBDmitiques, langues"
+    digit2_code: 
+    bibliographic_code: sem
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Irish, Old (to 900)
+    id: "377"
+    french_name: "irlandais ancien (jusqu'\xEF\xBF\xBD 900)"
+    digit2_code: 
+    bibliographic_code: sga
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sign Languages
+    id: "378"
+    french_name: langues des signes
+    digit2_code: 
+    bibliographic_code: sgn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Shan
+    id: "379"
+    french_name: chan
+    digit2_code: 
+    bibliographic_code: shn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sidamo
+    id: "380"
+    french_name: sidamo
+    digit2_code: 
+    bibliographic_code: sid
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sinhala; Sinhalese
+    id: "381"
+    french_name: singhalais
+    digit2_code: si
+    bibliographic_code: sin
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Siouan languages
+    id: "382"
+    french_name: sioux, langues
+    digit2_code: 
+    bibliographic_code: sio
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sino-Tibetan languages
+    id: "383"
+    french_name: "sino-tib\xEF\xBF\xBDtaines, langues"
+    digit2_code: 
+    bibliographic_code: sit
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Slavic languages
+    id: "384"
+    french_name: slaves, langues
+    digit2_code: 
+    bibliographic_code: sla
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: slk
+    updated_at: 
+    english_name: Slovak
+    id: "385"
+    french_name: slovaque
+    digit2_code: sk
+    bibliographic_code: slo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Slovenian
+    id: "386"
+    french_name: "slov\xEF\xBF\xBDne"
+    digit2_code: sl
+    bibliographic_code: slv
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Southern Sami
+    id: "387"
+    french_name: sami du Sud
+    digit2_code: 
+    bibliographic_code: sma
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Northern Sami
+    id: "388"
+    french_name: sami du Nord
+    digit2_code: se
+    bibliographic_code: sme
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sami languages
+    id: "389"
+    french_name: sames, langues
+    digit2_code: 
+    bibliographic_code: smi
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Lule Sami
+    id: "390"
+    french_name: sami de Lule
+    digit2_code: 
+    bibliographic_code: smj
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Inari Sami
+    id: "391"
+    french_name: sami d'Inari
+    digit2_code: 
+    bibliographic_code: smn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Samoan
+    id: "392"
+    french_name: samoan
+    digit2_code: sm
+    bibliographic_code: smo
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Skolt Sami
+    id: "393"
+    french_name: sami skolt
+    digit2_code: 
+    bibliographic_code: sms
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Shona
+    id: "394"
+    french_name: shona
+    digit2_code: sn
+    bibliographic_code: sna
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sindhi
+    id: "395"
+    french_name: sindhi
+    digit2_code: sd
+    bibliographic_code: snd
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Soninke
+    id: "396"
+    french_name: "sonink\xEF\xBF\xBD"
+    digit2_code: 
+    bibliographic_code: snk
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sogdian
+    id: "397"
+    french_name: sogdien
+    digit2_code: 
+    bibliographic_code: sog
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Somali
+    id: "398"
+    french_name: somali
+    digit2_code: so
+    bibliographic_code: som
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Songhai languages
+    id: "399"
+    french_name: songhai, langues
+    digit2_code: 
+    bibliographic_code: son
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sotho, Southern
+    id: "400"
+    french_name: sotho du Sud
+    digit2_code: st
+    bibliographic_code: sot
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Spanish; Castilian
+    id: "401"
+    french_name: espagnol; castillan
+    digit2_code: es
+    bibliographic_code: spa
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sardinian
+    id: "402"
+    french_name: sarde
+    digit2_code: sc
+    bibliographic_code: srd
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sranan Tongo
+    id: "403"
+    french_name: sranan tongo
+    digit2_code: 
+    bibliographic_code: srn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Serbian
+    id: "404"
+    french_name: serbe
+    digit2_code: sr
+    bibliographic_code: srp
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Serer
+    id: "405"
+    french_name: "s\xEF\xBF\xBDr\xEF\xBF\xBDre"
+    digit2_code: 
+    bibliographic_code: srr
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Nilo-Saharan languages
+    id: "406"
+    french_name: nilo-sahariennes, langues
+    digit2_code: 
+    bibliographic_code: ssa
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Swati
+    id: "407"
+    french_name: swati
+    digit2_code: ss
+    bibliographic_code: ssw
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sukuma
+    id: "408"
+    french_name: sukuma
+    digit2_code: 
+    bibliographic_code: suk
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sundanese
+    id: "409"
+    french_name: soundanais
+    digit2_code: su
+    bibliographic_code: sun
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Susu
+    id: "410"
+    french_name: soussou
+    digit2_code: 
+    bibliographic_code: sus
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sumerian
+    id: "411"
+    french_name: "sum\xEF\xBF\xBDrien"
+    digit2_code: 
+    bibliographic_code: sux
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Swahili
+    id: "412"
+    french_name: swahili
+    digit2_code: sw
+    bibliographic_code: swa
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Swedish
+    id: "413"
+    french_name: "su\xEF\xBF\xBDdois"
+    digit2_code: sv
+    bibliographic_code: swe
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Classical Syriac
+    id: "414"
+    french_name: syriaque classique
+    digit2_code: 
+    bibliographic_code: syc
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Syriac
+    id: "415"
+    french_name: syriaque
+    digit2_code: 
+    bibliographic_code: syr
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tahitian
+    id: "416"
+    french_name: tahitien
+    digit2_code: ty
+    bibliographic_code: tah
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tai languages
+    id: "417"
+    french_name: tai, langues
+    digit2_code: 
+    bibliographic_code: tai
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tamil
+    id: "418"
+    french_name: tamoul
+    digit2_code: ta
+    bibliographic_code: tam
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tatar
+    id: "419"
+    french_name: tatar
+    digit2_code: tt
+    bibliographic_code: tat
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Telugu
+    id: "420"
+    french_name: "t\xEF\xBF\xBDlougou"
+    digit2_code: te
+    bibliographic_code: tel
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Timne
+    id: "421"
+    french_name: temne
+    digit2_code: 
+    bibliographic_code: tem
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tereno
+    id: "422"
+    french_name: tereno
+    digit2_code: 
+    bibliographic_code: ter
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tetum
+    id: "423"
+    french_name: tetum
+    digit2_code: 
+    bibliographic_code: tet
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tajik
+    id: "424"
+    french_name: tadjik
+    digit2_code: tg
+    bibliographic_code: tgk
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tagalog
+    id: "425"
+    french_name: tagalog
+    digit2_code: tl
+    bibliographic_code: tgl
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Thai
+    id: "426"
+    french_name: "tha\xEF\xBF\xBD"
+    digit2_code: th
+    bibliographic_code: tha
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: bod
+    updated_at: 
+    english_name: Tibetan
+    id: "427"
+    french_name: "tib\xEF\xBF\xBDtain"
+    digit2_code: bo
+    bibliographic_code: tib
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tigre
+    id: "428"
+    french_name: "tigr\xEF\xBF\xBD"
+    digit2_code: 
+    bibliographic_code: tig
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tigrinya
+    id: "429"
+    french_name: tigrigna
+    digit2_code: ti
+    bibliographic_code: tir
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tiv
+    id: "430"
+    french_name: tiv
+    digit2_code: 
+    bibliographic_code: tiv
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tokelau
+    id: "431"
+    french_name: tokelau
+    digit2_code: 
+    bibliographic_code: tkl
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Klingon; tlhIngan-Hol
+    id: "432"
+    french_name: klingon
+    digit2_code: 
+    bibliographic_code: tlh
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tlingit
+    id: "433"
+    french_name: tlingit
+    digit2_code: 
+    bibliographic_code: tli
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tamashek
+    id: "434"
+    french_name: tamacheq
+    digit2_code: 
+    bibliographic_code: tmh
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tonga (Nyasa)
+    id: "435"
+    french_name: tonga (Nyasa)
+    digit2_code: 
+    bibliographic_code: tog
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tonga (Tonga Islands)
+    id: "436"
+    french_name: "tongan (\xEF\xBF\xBDles Tonga)"
+    digit2_code: to
+    bibliographic_code: ton
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tok Pisin
+    id: "437"
+    french_name: tok pisin
+    digit2_code: 
+    bibliographic_code: tpi
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tsimshian
+    id: "438"
+    french_name: tsimshian
+    digit2_code: 
+    bibliographic_code: tsi
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tswana
+    id: "439"
+    french_name: tswana
+    digit2_code: tn
+    bibliographic_code: tsn
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tsonga
+    id: "440"
+    french_name: tsonga
+    digit2_code: ts
+    bibliographic_code: tso
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Turkmen
+    id: "441"
+    french_name: "turkm\xEF\xBF\xBDne"
+    digit2_code: tk
+    bibliographic_code: tuk
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tumbuka
+    id: "442"
+    french_name: tumbuka
+    digit2_code: 
+    bibliographic_code: tum
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tupi languages
+    id: "443"
+    french_name: tupi, langues
+    digit2_code: 
+    bibliographic_code: tup
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Turkish
+    id: "444"
+    french_name: turc
+    digit2_code: tr
+    bibliographic_code: tur
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Altaic languages
+    id: "445"
+    french_name: "alta\xEF\xBF\xBDques, langues"
+    digit2_code: 
+    bibliographic_code: tut
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tuvalu
+    id: "446"
+    french_name: tuvalu
+    digit2_code: 
+    bibliographic_code: tvl
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Twi
+    id: "447"
+    french_name: twi
+    digit2_code: tw
+    bibliographic_code: twi
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Tuvinian
+    id: "448"
+    french_name: touva
+    digit2_code: 
+    bibliographic_code: tyv
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Udmurt
+    id: "449"
+    french_name: oudmourte
+    digit2_code: 
+    bibliographic_code: udm
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ugaritic
+    id: "450"
+    french_name: ougaritique
+    digit2_code: 
+    bibliographic_code: uga
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Uighur; Uyghur
+    id: "451"
+    french_name: "ou\xEF\xBF\xBDgour"
+    digit2_code: ug
+    bibliographic_code: uig
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Ukrainian
+    id: "452"
+    french_name: ukrainien
+    digit2_code: uk
+    bibliographic_code: ukr
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Umbundu
+    id: "453"
+    french_name: umbundu
+    digit2_code: 
+    bibliographic_code: umb
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Undetermined
+    id: "454"
+    french_name: "ind\xEF\xBF\xBDtermin\xEF\xBF\xBDe"
+    digit2_code: 
+    bibliographic_code: und
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Urdu
+    id: "455"
+    french_name: ourdou
+    digit2_code: ur
+    bibliographic_code: urd
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Uzbek
+    id: "456"
+    french_name: ouszbek
+    digit2_code: uz
+    bibliographic_code: uzb
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Vai
+    id: "457"
+    french_name: "va\xEF\xBF\xBD"
+    digit2_code: 
+    bibliographic_code: vai
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Venda
+    id: "458"
+    french_name: venda
+    digit2_code: ve
+    bibliographic_code: ven
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Vietnamese
+    id: "459"
+    french_name: vietnamien
+    digit2_code: vi
+    bibliographic_code: vie
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: "Volap\xEF\xBF\xBDk"
+    id: "460"
+    french_name: "volap\xEF\xBF\xBDk"
+    digit2_code: vo
+    bibliographic_code: vol
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Votic
+    id: "461"
+    french_name: vote
+    digit2_code: 
+    bibliographic_code: vot
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Wakashan languages
+    id: "462"
+    french_name: wakashanes, langues
+    digit2_code: 
+    bibliographic_code: wak
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Walamo
+    id: "463"
+    french_name: walamo
+    digit2_code: 
+    bibliographic_code: wal
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Waray
+    id: "464"
+    french_name: waray
+    digit2_code: 
+    bibliographic_code: war
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Washo
+    id: "465"
+    french_name: washo
+    digit2_code: 
+    bibliographic_code: was
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: cym
+    updated_at: 
+    english_name: Welsh
+    id: "466"
+    french_name: gallois
+    digit2_code: cy
+    bibliographic_code: wel
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Sorbian languages
+    id: "467"
+    french_name: sorabes, langues
+    digit2_code: 
+    bibliographic_code: wen
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Walloon
+    id: "468"
+    french_name: wallon
+    digit2_code: wa
+    bibliographic_code: wln
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Wolof
+    id: "469"
+    french_name: wolof
+    digit2_code: wo
+    bibliographic_code: wol
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Kalmyk; Oirat
+    id: "470"
+    french_name: "kalmouk; o\xEF\xBF\xBDrat"
+    digit2_code: 
+    bibliographic_code: xal
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Xhosa
+    id: "471"
+    french_name: xhosa
+    digit2_code: xh
+    bibliographic_code: xho
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Yao
+    id: "472"
+    french_name: yao
+    digit2_code: 
+    bibliographic_code: yao
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Yapese
+    id: "473"
+    french_name: yapois
+    digit2_code: 
+    bibliographic_code: yap
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Yiddish
+    id: "474"
+    french_name: yiddish
+    digit2_code: yi
+    bibliographic_code: yid
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Yoruba
+    id: "475"
+    french_name: yoruba
+    digit2_code: yo
+    bibliographic_code: yor
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Yupik languages
+    id: "476"
+    french_name: yupik, langues
+    digit2_code: 
+    bibliographic_code: ypk
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Zapotec
+    id: "477"
+    french_name: "zapot\xEF\xBF\xBDque"
+    digit2_code: 
+    bibliographic_code: zap
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Blissymbols; Blissymbolics; Bliss
+    id: "478"
+    french_name: symboles Bliss; Bliss
+    digit2_code: 
+    bibliographic_code: zbl
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Zenaga
+    id: "479"
+    french_name: zenaga
+    digit2_code: 
+    bibliographic_code: zen
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Zhuang; Chuang
+    id: "480"
+    french_name: zhuang; chuang
+    digit2_code: za
+    bibliographic_code: zha
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Zande languages
+    id: "481"
+    french_name: "zand\xEF\xBF\xBD, langues"
+    digit2_code: 
+    bibliographic_code: znd
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Zulu
+    id: "482"
+    french_name: zoulou
+    digit2_code: zu
+    bibliographic_code: zul
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Zuni
+    id: "483"
+    french_name: zuni
+    digit2_code: 
+    bibliographic_code: zun
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: No linguistic content; Not applicable
+    id: "484"
+    french_name: pas de contenu linguistique; non applicable
+    digit2_code: 
+    bibliographic_code: zxx
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+
+- !ruby/object:Language 
+  attributes: 
+    terminologic_code: 
+    updated_at: 
+    english_name: Zaza; Dimili; Dimli; Kirdki; Kirmanjki; Zazaki
+    id: "485"
+    french_name: zaza; dimili; dimli; kirdki; kirmanjki; zazaki
+    digit2_code: 
+    bibliographic_code: zza
+    created_at: 2010-03-26 15:14:00
+  attributes_cache: {}
+

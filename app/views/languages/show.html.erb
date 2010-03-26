@@ -1,0 +1,28 @@
+<p>
+  <b>Bibliographic code:</b>
+  <%=h @language.bibliographic_code %>
+</p>
+
+<p>
+  <b>Terminologic code:</b>
+  <%=h @language.terminologic_code %>
+</p>
+
+<p>
+  <b>Digit2 code:</b>
+  <%=h @language.digit2_code %>
+</p>
+
+<p>
+  <b>English name:</b>
+  <%=h @language.english_name %>
+</p>
+
+<p>
+  <b>French name:</b>
+  <%=h @language.french_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_language_path(@language) %> |
+<%= link_to 'Back', languages_path %>

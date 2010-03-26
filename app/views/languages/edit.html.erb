@@ -1,0 +1,32 @@
+<h1>Editing language</h1>
+
+<% form_for(@language) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :bibliographic_code %><br />
+    <%= f.text_field :bibliographic_code %>
+  </p>
+  <p>
+    <%= f.label :terminologic_code %><br />
+    <%= f.text_field :terminologic_code %>
+  </p>
+  <p>
+    <%= f.label :digit2_code %><br />
+    <%= f.text_field :digit2_code %>
+  </p>
+  <p>
+    <%= f.label :english_name %><br />
+    <%= f.text_field :english_name %>
+  </p>
+  <p>
+    <%= f.label :french_name %><br />
+    <%= f.text_field :french_name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @language %> |
+<%= link_to 'Back', languages_path %>
