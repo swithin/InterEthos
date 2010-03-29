@@ -17,14 +17,13 @@ Rails::Initializer.run do |config|
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
    # G I T   H U B   (Erase all other email server settings before uploading to / making public on GitHub)
-   # The settings below will cause an error. Users should use their own email settings, or
-   # contact Josh Shortlidge at http://swithin.com
-   :enable_starttls_auto => true,
-    :address => '[server here]',
-    :port => [port],
-    :authentication => :login,
-    :user_name => '[usernaem@domain]',
-    :password => '[password]'
+   # Users should use their own email settings, or contact Josh Shortlidge at http://swithin.com
+    # :enable_starttls_auto => true,
+    # :address => '[server here]',
+    # :port => [port],
+    # :authentication => :login,
+    # :user_name => '[usernaem@domain]',
+    # :password => '[password]'
   }
 
   # Settings in config/environments/* take precedence over those specified here.
