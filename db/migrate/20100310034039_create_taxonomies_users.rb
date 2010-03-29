@@ -3,6 +3,7 @@ class CreateTaxonomiesUsers < ActiveRecord::Migration
     create_table :taxonomies_users do |t|
       t.references :taxonomy
       t.references :user
+      t.references :language
       t.string :role
 
       t.timestamps

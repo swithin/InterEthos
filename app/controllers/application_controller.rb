@@ -10,5 +10,13 @@ class ApplicationController < ActionController::Base
   
   # Be sure to include AuthenticatedSystem in Application Controller instead
   include AuthenticatedSystem
+  
+  after_filter :set_charset
+  def set_charset
+    unless headers["Content-Type" ] =~ /charset/i
+      headers["Content-Type" ] ||= ""
+      headers["Content-Type" ] += "; charset=utf-8"
+    end
+  end
 
 end

@@ -46,6 +46,16 @@ ActiveRecord::Schema.define(:version => 20100310034704) do
     t.datetime "updated_at"
   end
 
+  create_table "languages", :force => true do |t|
+    t.string   "bibliographic_code", :limit => 3, :null => false
+    t.string   "terminologic_code"
+    t.string   "digit2_code"
+    t.string   "english_name",                    :null => false
+    t.string   "french_name",                     :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "relationships", :force => true do |t|
     t.integer  "category_id"
     t.integer  "synonym_id"
@@ -58,6 +68,7 @@ ActiveRecord::Schema.define(:version => 20100310034704) do
     t.string   "status"
     t.string   "url_category_html"
     t.string   "url_category_xml"
+    t.integer  "language_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -65,6 +76,7 @@ ActiveRecord::Schema.define(:version => 20100310034704) do
   create_table "taxonomies_users", :force => true do |t|
     t.integer  "taxonomy_id"
     t.integer  "user_id"
+    t.integer  "language_id"
     t.string   "role"
     t.datetime "created_at"
     t.datetime "updated_at"

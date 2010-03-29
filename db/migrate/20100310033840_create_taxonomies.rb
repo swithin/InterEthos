@@ -5,6 +5,7 @@ class CreateTaxonomies < ActiveRecord::Migration
       t.string :status
       t.string :url_category_html
       t.string :url_category_xml
+      t.references :language
 
       t.timestamps
     end
