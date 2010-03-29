@@ -16,7 +16,9 @@ Rails::Initializer.run do |config|
   config.gem 'rubyist-aasm', :lib => 'aasm', :source => 'http://gems.github.com'
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-   G I T   H U B   (Erase all other settings above before uploading to / making public on GitHub)
+   # G I T   H U B   (Erase all other email server settings before uploading to / making public on GitHub)
+   # The settings below will cause an error. Users should use their own email settings, or
+   # contact Josh Shortlidge at http://swithin.com
    :enable_starttls_auto => true,
     :address => '[server here]',
     :port => [port],
