@@ -7,27 +7,27 @@ ActionController::Routing::Routes.draw do |map|
   # map.resources :users, :member => { :suspend => :put, :unsuspend => :put, :purge => :delete } 
   map.resources :users
   
+  map.resources :categories
+
+  map.resources :collections
+
   map.resources :collections_users
 
   map.resources :collections_taxonomies
 
-  map.resources :collections
-
-  map.resources :taxonomies_users
-
-  map.resources :taxonomies
+  map.resources :languages
 
   map.resources :relationships
 
-  map.resources :users_teams
+  map.resources :taxonomies
+
+  map.resources :taxonomies_users
 
   map.resources :teams
 
   map.resources :teams_users
 
   map.resources :validations
-
-  map.resources :categories
 
   map.activate '/activate/:id', :controller => 'users', :action => 'activate'
 
