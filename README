@@ -1,26 +1,17 @@
 Welcome to InterEthos!
 
-Goal
-Create a common repository where taxonomies can be 1. shared across different internet applications and/or 2. cross-referenced with other taxonomies.
+Feature Set
 
- 
-
-Description of Proposed Feature Set
-
-   1. Users can share certain taxonomies and/or cross-reference multiple disparate taxonomies.
-   2. Websites can utilize those common taxonomy categories to classify and share their data to searches done across multiple sites.
-   3. Numeric, multi-decimal, or GUID indices will be assigned to each "node", ("branch" or "leaf").
-   4. Meta data can be assigned to each "node" enabling users to more quickly search for nodes matching their targeted subjects.
-   5. The numeric indices will allow internationalization of taxonomy terms and meta data into an unlimited number of languages (i.e. Content on a Spanish site can be searched upon with English terms, and so on).
-   6. This system must be XML and API friendly. Details forthcoming.
-   7. System logins for "owners" and "trusted editors" of taxonomies will provide a "trail" of who made what modifications, and a standardized approval process.
-   8. Privacy settings to define who can use different taxonomies, and for what purposes.
-   9. Users must register their use of a particular taxonomy, so that people interested in mining content indexed under the leaves of that taxonomy will have a ready-made list of sites where they will find the taxonomy used.
-  10. Versioning of shared taxonomies over time will allow them to be modified, while allowing users of older versions to know how their version differs.
-  11. Forking of shared taxonomies must be allowable.
-  12. Users must be able to add detail "leaves" and "branches" to specific points within broad taxonomies.
-  13. Common ownership - The most valuable and most publicly-used taxonomies should be held in a common ownership. While the owners of some private taxonomies may desire to regulate use, the owners of publicly-shared taxonomies need to have an assured sense of trust that no large entity will suddenly become "pirate" the ownership of their system.
-  14. The system should enable of special kinds of taxonomies to be handled in different ways (i.e. maintaining taxonomies used to classify the human gnome, or biological diversity, requires much different expertise and functionalities than maintaining taxonomies about non-profits business structures).
+   1. Users can share cross-reference and/or internationalize taxonomies.
+   2. Websites can utilize common taxonomy categories to (classify and) share their data to searches done on third-party sites.
+   3. Meta data can be assigned to each "leaf" of taxonomies enabling users to more easily search.
+   4. Internationalization (ie. language translation) of taxonomy categories and meta data into an unlimited number of languages (i.e. Content on an English site can be searched upon with Spanish or Swahili terms, etc).
+   5. Sophistacated XML integrations.
+   6. System logins for "owners" and "trusted editors" of taxonomies will provide a "trail" of who made what modifications, as well as a structured team approval process.
+   7. Privacy settings to define who can use different taxonomies, and for what purposes.
+   8. Users register their use of a particular taxonomy, so that people interested in mining content indexed under the leaves of that taxonomy will have a ready-made list of sites where they will find the taxonomy used.
+   9. Versioning of shared taxonomies will allow them to be modified over time, while allowing users of older versions to know how their versions differ.
+  10. System customizations enable different kinds of taxonomies to be handled in different ways (i.e. maintaining taxonomies used to classify the human gnome, or biological diversity, requires much different handling than maintaining taxonomies about non-profit business structures).
 
 Contact Info:
 Josh Shortlidge | http://swithin.com (and click on the logo!) | 781-724-1326 | 132 Bay State Road, Melrose, MA 02176 
