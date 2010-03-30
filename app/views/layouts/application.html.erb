@@ -24,7 +24,8 @@
 					<table bgcolor="#BCFCC1" align="center" cellpadding="10" cellspacing="0" border="0" height="500">
 						<% navbar_link_array = Array.new %>
 						<% navbar_link_array = ["about", categories_path, users_path, validations_path] %>
-						<% cell_height = 100/navbar_link_array.length %>
+						<%# cell_height = 100/navbar_link_array.length %>
+						<% cell_height = 100/5 %>
 						<tr height="<%= cell_height %>%">
 							<td align="left" valign="middle" <% if session[:current_location] == "welcome" %> bgcolor="#FFFFFF"<% end %>>
 								<%= link_to "Home", :controller => :welcome %>
@@ -55,6 +56,11 @@
 							<tr height="<%= cell_height %>%" <% if session[:current_location] == taxonomies_path %> bgcolor="#FFFFFF"<% end %>>
 								<td>
 									<%= link_to "<strong>Taxonomies</strong>", taxonomies_path %>
+								</td>
+							</tr>
+							<tr height="<%= cell_height %>%" <% if session[:current_location] == categories_path %> bgcolor="#FFFFFF"<% end %>>
+								<td>
+									<%= link_to "<strong>Categories</strong>", categories_path %>
 								</td>
 							</tr>
 							<tr height="<%= cell_height %>%">
