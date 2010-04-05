@@ -1,4 +1,5 @@
 class Category < ActiveRecord::Base
+	belongs_to :taxonomy
 	has_many :relationships
 	has_many :synonyms, :through => :relationships
 	has_many :inverse_relationships, :class_name => "Relationship", :foreign_key => "synonym_id"

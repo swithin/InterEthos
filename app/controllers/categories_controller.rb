@@ -46,6 +46,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new
   # GET /categories/new.xml
   def new
+    @taxonomy = Taxonomy.find(params[:taxonomy_id])
     @category = Category.new
     @parent_id = params[:parent_id].to_i
     session[:uroot_id] = params[:uroot_id].to_i
