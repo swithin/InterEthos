@@ -24,7 +24,7 @@
 		<% for category in @taxonomy.categories %>
 		  <li><%=h category.name %> 
 		  <%= link_to '<img src="/images/eye.jpg" border="0">', category_path %>
-    	  <%= link_to '<img src="/images/delta.jpg" border="0">', edit_category_path(category.id) %>
+		  <%= link_to '<img src="/images/delta.jpg" border="0">', edit_category_path(category.id) %>
 		  <%= link_to '<img src="/images/remove.jpg" border="0">', category_path(category.id), :confirm => 'Are you sure?', :method => :delete %></li>
 		<% end %>
 	  </ul>
