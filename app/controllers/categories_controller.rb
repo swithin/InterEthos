@@ -48,7 +48,6 @@ class CategoriesController < ApplicationController
   def new
     @category = Category.new
     @parent_id = params[:parent_id].to_i
-	@category.parent = Category.find(params[:parent_id])
     @taxonomy = Category.find(params[:uroot_id]).taxonomy
     session[:uroot_id] = params[:uroot_id].to_i
 
