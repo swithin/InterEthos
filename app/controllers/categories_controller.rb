@@ -46,9 +46,10 @@ class CategoriesController < ApplicationController
   # GET /categories/new
   # GET /categories/new.xml
   def new
-    @taxonomy = Taxonomy.find(params[:taxonomy_id])
     @category = Category.new
     @parent_id = params[:parent_id].to_i
+	@category.parent = Category.find(params[:parent_id])
+    @taxonomy = Category.find(params[:uroot_id]).taxonomy
     session[:uroot_id] = params[:uroot_id].to_i
 
     respond_to do |format|
@@ -60,6 +61,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])
+    @taxonomy = Category.find(params[:uroot_id]).taxonomy
     session[:uroot_id] = params[:uroot_id].to_i
   end
 
