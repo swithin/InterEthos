@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
 
   # render new.rhtml
   def new
+    session[:current_location] = "login"
   end
 
   def create

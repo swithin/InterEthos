@@ -23,50 +23,23 @@
 				<td valign="top" align="center">
 					<table bgcolor="#BCFCC1" align="center" cellpadding="10" cellspacing="0" border="0" height="500">
 						<% navbar_link_array = Array.new %>
-						<% navbar_link_array = ["about", categories_path, users_path, validations_path] %>
-						<%# cell_height = 100/navbar_link_array.length %>
-						<% cell_height = 100/5 %>
-						<tr height="<%= cell_height %>%">
-							<td align="left" valign="middle" <% if session[:current_location] == "welcome" %> bgcolor="#FFFFFF"<% end %>>
-								<%= link_to "Home", :controller => :welcome %>
-							</td>
-						</tr>
-						<%# "Users" have many Collections, Taxonomies, and Teams %>
 						<% if authorized? %>
-							<tr height="<%= cell_height %>" <% if session[:current_location] == users_path %> bgcolor="#FFFFFF"<% end %>>
-								<td align="left" valign="middle">
-									<% link_to "Users&nbsp;&<br />Teams", teams_users_path %>
-									<%# if session[:current_location]["users_"] == "users_" %>
-										<%#= link_to "Users", session[:current_location] %>
-									<%# else %>
-										<%# if session[:last_location_users] %>
-											<%#= link_to "Users", session[:last_location_users] %>
-										<%# else %>
-											<%= link_to "Users", users_path %>
-										<%# end %>
-									<%# end %>
-									<% link_to "<strong>Users</strong>&nbsp;&<br />Collections&nbsp;&<br /><strong>Taxonomies</strong>", collections_taxonomies_path %>
-								</td>
-							</tr>
-							<tr height="<%= cell_height %>%" <% if session[:current_location] == collections_path %> bgcolor="#FFFFFF"<% end %>>
-								<td>
-									<%= link_to "<strong>Collections</strong>", collections_path %>
-								</td>
-							</tr>
-							<tr height="<%= cell_height %>%" <% if session[:current_location] == taxonomies_path %> bgcolor="#FFFFFF"<% end %>>
-								<td>
-									<%= link_to "<strong>Taxonomies</strong>", taxonomies_path %>
-								</td>
-							</tr>
-							<tr height="<%= cell_height %>%" <% if session[:current_location] == categories_path %> bgcolor="#FFFFFF"<% end %>>
-								<td>
-									<%= link_to "<strong>Categories</strong>", categories_path %>
-								</td>
-							</tr>
+							<% navbar_link_array = [root_path, collections_path, taxonomies_path, categories_path, logout_path] %>
+						<% else %>
+							<% navbar_link_array = [root_path, login_path] %>
+						<% end %>
+						<% cell_height = 100/navbar_link_array.length %>
+						<% for navbar_link in navbar_link_array %>
 							<tr height="<%= cell_height %>%">
-								<td>
-									<%= link_to "Logout", logout_path %>
-								</td>
+								<% if navbar_link.length == 1 %>
+									<td align="left" valign="middle" <% if session[:current_location] == "welcome" %> bgcolor="#FFFFFF"<% end %>>
+										<%= link_to "Home", :controller => :welcome %><br />
+									</td>
+								<% else %>
+									<td align="left" valign="middle" <% if session[:current_location].delete("/") == navbar_link.delete("/") %> bgcolor="#FFFFFF"<% end %>>
+										<%= link_to navbar_link.delete("/"), navbar_link %>
+									</td>
+								<% end %>
 							</tr>
 						<% end %>
 					</table>
