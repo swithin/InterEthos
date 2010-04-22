@@ -1,5 +1,0 @@
-
-
-  <p><%= label(:taxonomy, :id, 'Taxonomy') %><br />
-    <%= collection_select(:collections_taxonomy, :taxonomy_id, Taxonomy.find(:all), :id, :name, options = {}, html_options = {}) %></p>
-

@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20100310034704) do
     t.string   "name"
     t.string   "meta"
     t.integer  "parent_id"
-    t.integer  "taxonomy_id"
+    t.integer  "ontology_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -30,9 +30,9 @@ ActiveRecord::Schema.define(:version => 20100310034704) do
     t.datetime "updated_at"
   end
 
-  create_table "collections_taxonomies", :force => true do |t|
+  create_table "collections_ontologies", :force => true do |t|
     t.integer  "collection_id"
-    t.integer  "taxonomy_id"
+    t.integer  "ontology_id"
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(:version => 20100310034704) do
     t.datetime "updated_at"
   end
 
-  create_table "taxonomies", :force => true do |t|
+  create_table "ontologies", :force => true do |t|
     t.string   "name"
     t.string   "status"
     t.string   "url_category_html"
@@ -73,8 +73,8 @@ ActiveRecord::Schema.define(:version => 20100310034704) do
     t.datetime "updated_at"
   end
 
-  create_table "taxonomies_users", :force => true do |t|
-    t.integer  "taxonomy_id"
+  create_table "ontologies_users", :force => true do |t|
+    t.integer  "ontology_id"
     t.integer  "user_id"
     t.integer  "language_id"
     t.string   "role"

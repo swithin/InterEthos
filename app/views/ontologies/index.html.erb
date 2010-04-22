@@ -1,0 +1,22 @@
+<% @title = 'Ontologies' %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Status</th>
+  </tr>
+
+<% @ontologies.each do |ontology| %>
+  <tr>
+    <td><%=h ontology.name %></td>
+    <td><%=h ontology.status %></td>
+    <td><%= link_to '<img src="/images/eye.jpg" border="0">', ontology %></td>
+    <td><%= link_to '<img src="/images/delta.jpg" border="0">', edit_ontology_path(ontology) %></td>
+    <td><%= link_to '<img src="/images/remove.jpg" border="0">', ontology, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New ontology', new_ontology_path %>

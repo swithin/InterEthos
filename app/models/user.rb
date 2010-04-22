@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   belongs_to :validation
   has_and_belongs_to_many :teams
   has_and_belongs_to_many :collections
-  has_and_belongs_to_many :taxonomies
+  has_and_belongs_to_many :ontologies
   
   include Authentication
   include Authentication::ByPassword

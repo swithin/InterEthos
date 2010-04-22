@@ -1,0 +1,21 @@
+<% @title = 'Edit User Ontology' %>
+
+<% form_for(@ontologies_user) do |f| %>
+  <%= f.error_messages %>
+
+  <p><%= label(:user, :id, 'User') %><br />
+  	<strong><%= @user.full_name %></strong>
+	<%= hidden_field_tag("ontologies_user[user_id]", @user.id) %></p>
+
+  <p><%= label(:collection, :id, 'Collection') %><br />
+    <%= collection_select(:ontologies_user, :ontology_id, Ontology.find(:all), :id, :name, options = {}, html_options = {}) %></p>
+  
+  <p><%= f.label :role %><br />
+	<%= f.select("role", %w[Read Modify Admin], {}, {}) %></p>
+
+  <p><%= f.submit 'Update' %></p>
+
+<% end %>
+
+<%= link_to 'Show', @ontologies_user %> |
+<%= link_to 'Back', ontologies_users_path %>

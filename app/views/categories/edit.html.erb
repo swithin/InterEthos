@@ -3,9 +3,9 @@
 <% form_for(@category) do |f| %>
   <%= f.error_messages %>
 
-  <p><%= label(:taxonomy, :id, 'Taxonomy') %><br />
-  	<strong><%= @taxonomy.name %></strong>
-	<%= hidden_field_tag("taxonomies_category[taxonomy_id]", @category.taxonomy_id) %></p>
+  <p><%= label(:ontology, :id, 'Ontology') %><br />
+  	<strong><%= @ontology.name %></strong>
+	<%= hidden_field_tag("ontologies_category[ontology_id]", @category.ontology_id) %></p>
 
   <p><%= f.label :parent_category %><br />
     <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"), 'category', 'parent_id', @category.parent) %></p>

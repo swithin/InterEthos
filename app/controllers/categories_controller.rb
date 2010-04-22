@@ -48,7 +48,7 @@ class CategoriesController < ApplicationController
   def new
     @category = Category.new
     @parent_id = params[:parent_id].to_i
-    @taxonomy = Category.find(params[:uroot_id]).taxonomy
+    @ontology = Category.find(params[:uroot_id]).ontology
     session[:uroot_id] = params[:uroot_id].to_i
 
     respond_to do |format|
@@ -60,7 +60,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])
-    @taxonomy = Category.find(params[:uroot_id]).taxonomy
+    @ontology = Category.find(params[:uroot_id]).ontology
     session[:uroot_id] = params[:uroot_id].to_i
   end
 

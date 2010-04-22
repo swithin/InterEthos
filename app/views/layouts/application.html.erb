@@ -24,7 +24,7 @@
 					<table bgcolor="#BCFCC1" align="center" cellpadding="10" cellspacing="0" border="0" height="500">
 						<% navbar_link_array = Array.new %>
 						<% if authorized? %>
-							<% navbar_link_array = [root_path, collections_path, taxonomies_path, categories_path, logout_path] %>
+							<% navbar_link_array = [root_path, collections_path, ontologies_path, categories_path, logout_path] %>
 						<% else %>
 							<% navbar_link_array = [root_path, login_path] %>
 						<% end %>

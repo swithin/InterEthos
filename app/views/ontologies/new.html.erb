@@ -1,27 +1,27 @@
-<% @title = 'Edit Taxonomy' %>
+<% @title = 'New Ontology' %>
 
-<% form_for(@taxonomy) do |f| %>
+<% form_for(@ontology) do |f| %>
 	<%= f.error_messages %>
 
 	<p><%= f.label :name %><br />
-		<%= f.text_field :name, :size => 70 %></p>
+		<%= f.text_field :name %></p>
 	
 	<p><%= f.label :status %><br />
 		<%= f.select("status", %w[Stable Beta Deprecated], {}, {}) %></p>
 	
 	<p><%= label(:language, :id, 'Language') %><br />
-		<%= collection_select(:taxonomy, :language_id, Language.find(:all), :id, :english_name, options = {}, html_options = {}) %></p>
+		<%= collection_select(:ontology, :language_id, Language.find(:all), :id, :english_name, options = {}, html_options = {}) %></p>
 	
 	<p><%= f.label :url_category_html, 'URL for HTML searches (add [category] marker)' %><br />
 		<%= f.text_field :url_category_html, :size => 80 %><br />
-		<%= f.label :url_category_html, 'Include [category] marker if available.<br />ex. http://www.bostonindicators.org/Indicators2008/[category]' %></p>
+	<%= f.label :url_category_html, 'Include [category] marker if available.<br />ex. http://www.bostonindicators.org/Indicators2008/[category]' %></p>
 	
 	<p><%= f.label :url_category_xml, 'URL for XML searches' %><br />
 		<%= f.text_field :url_category_xml, :size => 80 %><br />
 	<%= f.label :url_category_xml, 'Include [category] marker if available.<br />ex. http://www.bostonindicators.org/Indicators2008/[category]' %></p>
 	
-	<p><%= f.submit 'Update' %></p>
+	<p><%= f.submit 'Create' %></p>
+
 <% end %>
 
-<%= link_to 'Show', @taxonomy %> |
-<%= link_to 'Back', taxonomies_path %>
+<%= link_to 'Back', ontologies_path %>

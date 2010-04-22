@@ -1,6 +1,6 @@
-class CreateTaxonomies < ActiveRecord::Migration
+class CreateOntologies < ActiveRecord::Migration
   def self.up
-    create_table :taxonomies do |t|
+    create_table :ontologies do |t|
       t.string :name
       t.string :status
       t.string :url_category_html
@@ -12,6 +12,6 @@ class CreateTaxonomies < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :taxonomies
+    drop_table :ontologies
   end
 end

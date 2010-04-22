@@ -1,4 +1,4 @@
-class Taxonomy < ActiveRecord::Base
+class Ontology < ActiveRecord::Base
   belongs_to :language
   has_and_belongs_to_many :collections
   has_and_belongs_to_many :users

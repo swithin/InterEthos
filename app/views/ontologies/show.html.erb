@@ -1,27 +1,27 @@
-<% @title = 'Taxonomy' %>
+<% @title = 'Ontology' %>
 
 <p><b>Name:</b>
-  <%=h @taxonomy.name %></p>
+  <%=h @ontology.name %></p>
 
 <p><b>Status:</b>
-  <%=h @taxonomy.status %></p>
+  <%=h @ontology.status %></p>
 
 <p><strong>Language:</strong>
-  <%=h @taxonomy.language.english_name %></p>
+  <%=h @ontology.language.english_name %></p>
 	
 <p><b>URL for HTML searches:</b>
-  <%=h @taxonomy.url_category_html %></p>
+  <%=h @ontology.url_category_html %></p>
 
 <p><b>URL for XML searches:</b>
-  <%=h @taxonomy.url_category_xml %></p>
+  <%=h @ontology.url_category_xml %></p>
 
 <p>
   <b>Category Trees:</b>
-  <% if @taxonomy.categories(@collection).empty? %>
+  <% if @ontology.categories(@collection).empty? %>
 	  <em>(none found)</em>
   <% else %>
 	  <ul>
-		<% for category in @taxonomy.categories %>
+		<% for category in @ontology.categories %>
 		  <li><%=h category.name %> 
 		  <%= link_to '<img src="/images/eye.jpg" border="0">', category_path %>
 		  <%= link_to '<img src="/images/delta.jpg" border="0">', edit_category_path(category.id) %>
@@ -30,10 +30,10 @@
 	  </ul>
   <% end %>
 
-  <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:taxonomy_id => @taxonomy.id) %>
+  <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:ontology_id => @ontology.id) %>
 </p>
 
 
 
-<%= link_to 'Edit', edit_taxonomy_path(@taxonomy) %> |
-<%= link_to 'Back', taxonomies_path %>
+<%= link_to 'Edit', edit_ontology_path(@ontology) %> |
+<%= link_to 'Back', ontologies_path %>

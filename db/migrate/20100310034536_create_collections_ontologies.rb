@@ -1,4 +1,4 @@
-class CreateCollectionsTaxonomies < ActiveRecord::Migration
+class CreateCollectionsOntologies < ActiveRecord::Migration
   def self.up
     create_table :collections_ontologies do |t|
       t.references :collection

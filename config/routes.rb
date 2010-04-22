@@ -13,15 +13,15 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :collections_users
 
-  map.resources :collections_taxonomies
+  map.resources :collections_ontologies
 
   map.resources :languages
 
   map.resources :relationships
 
-  map.resources :taxonomies
+  map.resources :ontologies
 
-  map.resources :taxonomies_users
+  map.resources :ontologies_users
 
   map.resources :teams
 
