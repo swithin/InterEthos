@@ -1,11 +1,24 @@
 <p style="font-weight:bold">Welcome to InterEthos!</p>
 
 
-<p style="font-weight:bold">Mission</p>
-
-Create and maintain a common repository where data sets can be cataloged and easily accessed by different internet applications, via cross-referencing and internationalization.
+<p><strong>Mission</strong>
+	<blockquote>Create and maintain a common repository where data sets can be cataloged and easily accessed by different internet applications, via cross-referencing and internationalization.</blockquote>
+</p>
 
 <p>&nbsp;</p>
+<% if !authorized? %>
+	<p><strong>Demo Login:</strong>
+		<blockquote>To take a peek, you can access the system via "username=<strong>test</strong>" and "password=<strong>tester</strong>". Or you can <a href="/signup" title="Sign Up">create your own login and start using InterEthos right now</a>.</blockquote>
+	</p>
+	<p>&nbsp;</p>
+<% else %>
+	<% if self.current_user.email == "test@interethos.net" %>
+		<p><strong>Register when ready to sign up:</strong>
+			<blockquote>You can <a href="/signup" title="Sign Up">create your own login and start using InterEthos right now</a>.</blockquote>
+		</p>
+		<p>&nbsp;</p>
+	<% end %>
+<% end %>
 
 <p style="font-weight:bold">Description of Proposed Feature Set</p>
 <ol>
