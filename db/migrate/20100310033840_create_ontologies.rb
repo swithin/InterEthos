@@ -3,6 +3,9 @@ class CreateOntologies < ActiveRecord::Migration
     create_table :ontologies do |t|
       t.string :name
       t.string :status
+      t.string :privacy
+      t.string :meta
+      t.string :url_about
       t.string :url_category_html
       t.string :url_category_xml
       t.references :language

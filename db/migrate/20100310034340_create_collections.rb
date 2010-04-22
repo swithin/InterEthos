@@ -4,6 +4,9 @@ class CreateCollections < ActiveRecord::Migration
       t.string :name
       t.string :status
       t.string :organization
+      t.string :privacy
+      t.string :meta
+      t.string :url_about
       t.text :contact_info
       t.text :notes
 

@@ -1,0 +1,31 @@
+--- 
+- !ruby/object:Ontology 
+  attributes: 
+    name: Master Ontology - Philanthropy
+    status: Stable
+    updated_at: 2010-04-22 11:36:10
+    id: "1"
+    meta: Used to catalog all non-profit organizations in Massachusetts in 2002.
+    url_category_html: ""
+    url_category_xml: ""
+    language_id: "1"
+    url_about: http://www.catalogueforphilanthropy.org/ma/2007/05_taxonomic_tree_of_philanthropy.html
+    privacy: Public
+    created_at: 2010-04-22 11:26:55
+  attributes_cache: {}
+
+- !ruby/object:Ontology 
+  attributes: 
+    name: Big Five Personality Traits
+    status: Stable
+    updated_at: 2010-04-22 11:47:37
+    id: "2"
+    meta: ""
+    url_category_html: ""
+    url_category_xml: ""
+    language_id: "123"
+    url_about: http://en.wikipedia.org/wiki/Big_Five_personality_traits
+    privacy: Public
+    created_at: 2010-04-22 11:47:37
+  attributes_cache: {}
+

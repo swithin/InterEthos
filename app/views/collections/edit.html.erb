@@ -1,24 +1,33 @@
 <% @title = 'Edit Collections' %>
 
 <% form_for(@collection) do |f| %>
-  <%= f.error_messages %>
+	<%= f.error_messages %>
 
-  <p><%= f.label :name %><br />
-    <%= f.text_field :name %></p>
+	<p><%= f.label :name %><br />
+		<%= f.text_field :name %></p>
 	
-  <p><%= f.label :organization %><br />
-    <%= f.text_field :organization %></p>
-  
-  <p><%= f.label :status %><br />
-	<%= f.select("status", %w[Active OffLine Unavailable], {}, {}) %></p>
+	<p><%= f.label :organization %><br />
+		<%= f.text_field :organization %></p>
+	
+	<p><%= f.label :status %><br />
+		<%= f.select("status", %w[Active OffLine Unavailable], {}, {}) %></p>
+	
+	<p><%= f.label :privacy %><br />
+		<%= f.select("privacy", %w[Public Personal Registered-Users-Only IP-Only SOAP-Only], {}, {}) %></p>
+	
+	<p><%= f.label :meta %><br />
+		<%= f.text_area :meta, :rows => 4, :cols => 45 %></p>
 
-  <p><%= f.label :contact_info %><br />
-    <%= f.text_area :contact_info, :cols => 50, :rows => 3 %></p>
-  
-  <p><%= f.label :notes, "Notes about the Collection" %><br />
-    <%= f.text_area :notes, :cols => 50, :rows => 3 %></p>
+	<p><%= f.label :url_about, 'URL for a descriptive overview about the Collection' %><br />
+		<%= f.text_field :url_about, :size => 80 %></p>
 	
-  <p><%= f.submit 'Update' %></p>
+	<p><%= f.label :contact_info %><br />
+		<%= f.text_area :contact_info, :cols => 50, :rows => 3 %></p>
+	
+	<p><%= f.label :notes, "Notes about the Collection" %><br />
+		<%= f.text_area :notes, :cols => 50, :rows => 3 %></p>
+	
+	<p><%= f.submit 'Update' %></p>
   
 <% end %>
 
