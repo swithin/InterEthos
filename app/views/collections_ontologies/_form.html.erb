@@ -1,0 +1,5 @@
+
+
+  <p><%= label(:ontology, :id, 'Ontology') %><br />
+    <%= collection_select(:collections_ontology, :ontology_id, Ontology.find(:all), :id, :name, options = {}, html_options = {}) %></p>
+
