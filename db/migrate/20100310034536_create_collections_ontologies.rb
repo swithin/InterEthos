@@ -1,8 +1,8 @@
 class CreateCollectionsTaxonomies < ActiveRecord::Migration
   def self.up
-    create_table :collections_taxonomies do |t|
+    create_table :collections_ontologies do |t|
       t.references :collection
-      t.references :taxonomy
+      t.references :ontology
       t.string :status
 
       t.timestamps
@@ -10,6 +10,6 @@ class CreateCollectionsTaxonomies < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :collections_taxonomies
+    drop_table :collections_ontologies
   end
 end
