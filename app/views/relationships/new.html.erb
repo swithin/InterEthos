@@ -1,5 +1,17 @@
 <% @title = 'New Relationship' %>
 
-<%= render :partial => 'form' %>
+<% form_for @relationship do |f| %>
+  <%= f.error_messages %>
+  <p><%= label(:collection, :id, 'Category') %><br />
+	<strong><%= @category.name %></strong>
+	<%= hidden_field_tag("relationship[category_id]", @category.id) %></p>
+
+  <p>
+    <%= label(:synonym, :id, 'Synonym') %><br />
+    <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"),
+                        'relationship', 'synonym_id',  @category) %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>
 
 <p><%= link_to "Back to List", relationships_path %></p>

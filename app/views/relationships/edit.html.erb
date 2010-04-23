@@ -1,6 +1,18 @@
 <% @title = 'Edit Relationship' %>
 
-<%= render :partial => 'form' %>
+<% form_for @relationship do |f| %>
+  <%= f.error_messages %>
+  <p><%= label(:collection, :id, 'Category') %><br />
+	<strong><%= @relationship.category.name %></strong>
+	<%= hidden_field_tag("relationship[relationship_id]", @relationship.id) %></p>
+
+  <p>
+    <%= label(:synonym, :id, 'Synonym') %><br />
+    <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"),
+                        'relationship', 'synonym_id',  @relationship.synonym) %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>
 
 <p><%= link_to "Show", @relationship %> |
-  <%= link_to "View All", relationships_path %></p>
+	<%= link_to "View All", relationships_path %></p>
