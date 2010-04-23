@@ -32,11 +32,11 @@
 						<% for navbar_link in navbar_link_array %>
 							<tr height="<%= cell_height %>%">
 								<% if navbar_link.length == 1 %>
-									<td align="left" valign="middle" <% if session[:current_location] == "welcome" %> bgcolor="#FFFFFF"<% end %>>
+									<td align="left" valign="middle" <% if session[:current_location] == "welcome" %> bgcolor="#F3FFCE"<% end %>>
 										<%= link_to "Home", :controller => :welcome %><br />
 									</td>
 								<% else %>
-									<td align="left" valign="middle" <% if session[:current_location].delete("/") == navbar_link.delete("/") %> bgcolor="#FFFFFF"<% end %>>
+									<td align="left" valign="middle" <% if session[:current_location].delete("/") == navbar_link.delete("/") %> bgcolor="#F3FFCE"<% end %>>
 										<%= link_to navbar_link.delete("/"), navbar_link %>
 									</td>
 								<% end %>
@@ -55,7 +55,7 @@
 						<%# M A I N   B O D Y   O F   P A G E %>
 						<tr>
 							<td>
-								<p style="color: green"><%= flash[:notice] %></p>
+								<p style="color:green; background-color:#F3FFCE"><%= flash[:notice] %></p>
 								<%= yield  %>
 								<% if session[:branch_clicks] != nil %>
 									<% if session[:branch_clicks] > 0 %>
