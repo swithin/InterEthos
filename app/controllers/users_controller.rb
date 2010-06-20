@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
+  before_filter :set_domain
   # before_filter :login_required
+  # DO NOT enable the following "filter_resource_access" as it prevents new Users from "signup"
+  # filter_resource_access
   # GET /users
   # GET /users.xml
   def index
@@ -37,11 +40,38 @@ class UsersController < ApplicationController
   # render new.rhtml
   def new
     @user = User.new
+	if authorized?
+		current_user_roles = @current_user.roles.find(:all)
+		if current_user_roles.include?("admin")
+			@roles_assignable = ["admin","owner","editor"]
+		else
+			@roles_assignable = ["owner","editor"]
+		end
+	else
+      @roles_assignable = ["owner"]
+	end
   end
 
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
+	
+	@user_roles = Array.new
+	@user_roles = @user.roles
+	if authorized?
+		current_user_roles = @current_user.roles
+		if current_user_roles != nil 
+			if current_user_roles.include?("admin")
+				@roles_assignable = ["admin","owner","editor"]
+			else
+				@roles_assignable = ["owner","editor"]
+			end
+		else
+		      @roles_assignable = ["owner"]
+		end
+	else
+		@roles_assignable = ["owner"]
+	end
   end
 
   def create
@@ -61,6 +91,8 @@ class UsersController < ApplicationController
   def activate
     logout_keeping_session!
     user = User.find_by_activation_code(params[:activation_code]) unless params[:activation_code].blank?
+    # All InterEthos users are set up as "owners" by default.
+	user.roles = ["owner"]
     case
     when (!params[:activation_code].blank?) && user && !user.active?
       user.activate!

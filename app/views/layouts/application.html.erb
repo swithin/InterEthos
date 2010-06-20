@@ -3,10 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-	<![[CDATA
-	<meta http-equiv="Content-Type"
-	content="text/html; charset=utf-8" >
-	]]>
 	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
 	<title>InterEthos - <%= @title %></title>
   	<%= stylesheet_link_tag 'scaffold' %>
@@ -26,14 +22,14 @@
 						<% if authorized? %>
 							<% navbar_link_array = [root_path, collections_path, ontologies_path, categories_path, logout_path] %>
 						<% else %>
-							<% navbar_link_array = [root_path, login_path] %>
+							<% navbar_link_array = [root_path, login_path, collections_path, ontologies_path, categories_path] %>
 						<% end %>
 						<% cell_height = 100/navbar_link_array.length %>
 						<% for navbar_link in navbar_link_array %>
 							<tr height="<%= cell_height %>%">
 								<% if navbar_link.length == 1 %>
 									<td align="left" valign="middle" <% if session[:current_location] == "welcome" %> bgcolor="#F3FFCE"<% end %>>
-										<%= link_to "Home", :controller => :welcome %><br />
+										<% if session[:current_location] == "welcome" %><%= link_to '<img src="/images/InterEthos.gif" border="0">', :controller => :welcome %><% else %><%= link_to '<img src="/images/InterEthos_whiter.gif" border="0">', :controller => :welcome %><% end %><br />
 									</td>
 								<% else %>
 									<td align="left" valign="middle" <% if session[:current_location].delete("/") == navbar_link.delete("/") %> bgcolor="#F3FFCE"<% end %>>

@@ -4,8 +4,13 @@
   <%= f.error_messages %>
 
   <p><%= label(:ontology, :id, 'Ontology') %><br />
-  	<strong><%= @ontology.name %></strong>
-	<%= hidden_field_tag("ontologies_category[ontology_id]", @ontology.id) %></p>
+	<% if params[:parent_id].to_i == 0 %>
+      <strong><%= "New Root Ontology" %></strong>
+      <%= hidden_field_tag("ontologies_category[ontology_id]", 0) %></p>
+	<% else %>
+      <strong><%= @ontology.name %></strong>
+      <%= hidden_field_tag("ontologies_category[ontology_id]", @ontology.id) %></p>
+	<% end %>
 
   <p><%= f.label :parent_category %><br />
     <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"), 'category', 'parent_id', @category) %></p>

@@ -4,14 +4,12 @@
   <tr>
     <th>Ontology</th>
     <th>User</th>
-    <th>Role</th>
   </tr>
 
 <% @ontologies_users.each do |ontologies_user| %>
   <tr>
     <td><%=h ontologies_user.ontology %></td>
     <td><%=h ontologies_user.user %></td>
-    <td><%=h ontologies_user.role %></td>
     <td><%= link_to 'Show', ontologies_user %></td>
     <td><%= link_to 'Edit', edit_ontologies_user_path(ontologies_user) %></td>
     <td><%= link_to 'Destroy', ontologies_user, :confirm => 'Are you sure?', :method => :delete %></td>

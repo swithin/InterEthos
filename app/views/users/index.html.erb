@@ -14,13 +14,13 @@
     <td><%=h user.last_name %></td>
     <td><%=h user.email %></td>
     <td><%=h user.validation.name %></td>
-    <td><%= indent %><%= link_to '<img src="/images/eye.jpg" border="0">', user %></td>
-    <td><%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', edit_user_path(user) %></td>
-    <td><%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= indent %><%= link_to '<img src="/images/eye.jpg" border="0">', user if permitted_to? :show %></td>
+    <td><%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', edit_user_path(user) if permitted_to? :edit %></td>
+    <td><%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', user if permitted_to? :delete, user, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New user', new_user_path %>
+<%= link_to 'New user', new_user_path if permitted_to? :create %>

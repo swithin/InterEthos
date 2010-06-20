@@ -10,9 +10,6 @@
   <p><%= label(:collection, :id, 'Collection') %><br />
     <%= collection_select(:collections_user, :collection_id, Collection.find(:all), :id, :name, options = {}, html_options = {}) %></p>
   
-  <p><%= f.label :role %><br />
-	<%= f.select("role", %w[Read Modify Admin], {}, {}) %></p>
-
   <p><%= f.submit 'Update' %></p>
 
 <% end %>

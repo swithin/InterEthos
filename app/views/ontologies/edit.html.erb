@@ -32,5 +32,5 @@
 	<p><%= f.submit 'Update' %></p>
 <% end %>
 
-<%= link_to 'Show', @ontology %> |
+<%= link_to 'Show', @ontology  if permitted_to? :show, :collections %> |
 <%= link_to 'Back', ontologies_path %>

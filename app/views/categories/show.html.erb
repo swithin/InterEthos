@@ -22,7 +22,7 @@
 	  </ul>
   <% end %>
 
-  <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_relationship_path(:category_id => @category.id) %>
+  <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_relationship_path(:category_id => @category.id) if permitted_to? :create, :relationships %>
 </p>
 
 <p>
@@ -39,5 +39,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<%= link_to 'Edit', edit_category_path(@category) if permitted_to? :edit, :categories %> |
+<%= link_to 'Back', ontologies_path %>

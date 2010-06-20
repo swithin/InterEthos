@@ -12,6 +12,25 @@
   <p><%= f.label :email %><br />
     <%= f.text_field :email %></p>
 
+  <p>
+    <%= f.label :roles %><br />
+    <%= f.select :roles, (controller.authorization_engine.roles + (@user.roles.to_a || [])).uniq, {}, {:multiple => true} %>
+  </p>
+
+  <p>
+    <%# for role in @roles_assignable %>
+      <div>
+	    <%# if @roles_assignable.length >= 2 %>
+	      <%#= check_box_tag "user[roles][]", role, @user_roles.include?(role) %>
+        <%# else %>
+		  <%# Note: The "disabled" status of checkbox means that no form variable gets transferred, which is okay, as we do not want to update that field anyway. %>
+	      <%#= check_box_tag "user[roles][]", role, @user_roles.include?(role), :disabled => true %>
+        <%# end %>
+        <%#= role %>
+      <%# end %>
+	</div>
+  </p>
+
   <p><%= label(:validation, :id, 'validation') %>
     <%= collection_select(:user, :validation_id, Validation.find(:all), :id, :name, options = {}, html_options = {}) %></p>
 

@@ -32,9 +32,9 @@
 	  <ul>
 		<% for category in @ontology.categories %>
 		  <li><%=h category.name %> 
-		  <%= link_to '<img src="/images/eye.jpg" border="0">', category_path(category.id) %>
-		  <%= link_to '<img src="/images/delta.jpg" border="0">', edit_category_path(category.id) %>
-		  <%= link_to '<img src="/images/remove.jpg" border="0">', category_path(category.id), :confirm => 'Are you sure?', :method => :delete %></li>
+		  <%= link_to '<img src="/images/eye.jpg" border="0">', category_path(category.id) if permitted_to? :show, :categories %>
+		  <%= link_to '<img src="/images/delta.jpg" border="0">', edit_category_path(category.id) if permitted_to? :edit, :categories %>
+		  <%= link_to '<img src="/images/remove.jpg" border="0">', category_path(category.id) if permitted_to? :delete, :categories, :confirm => 'Are you sure?', :method => :delete %></li>
 		<% end %>
 	  </ul>
   <% end %>
@@ -44,5 +44,5 @@
 
 
 
-<%= link_to 'Edit', edit_ontology_path(@ontology) %> |
+<%= link_to 'Edit', edit_ontology_path(@ontology) if permitted_to? :create, :ontologies %> |
 <%= link_to 'Back', ontologies_path %>

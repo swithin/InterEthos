@@ -9,5 +9,5 @@
 <p><b>Status:</b>
   <%=h @collections_ontology.status %></p>
 
-<%= link_to 'Edit', edit_collections_ontology_path(@collections_ontology) %> |
-<%= link_to 'Back', collections_ontologies_path %>
+<%= link_to 'Edit', edit_collections_ontology_path(@collections_ontology) if permitted_to? :edit, :collections_ontologies %> |
+<%= link_to 'Back', collections_path %>

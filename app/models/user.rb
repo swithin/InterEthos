@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :first_name, :last_name, :login, :email, :name, :password, :password_confirmation, :validation_id
+  attr_accessible :first_name, :last_name, :login, :email, :name, :password, :password_confirmation, :validation_id, :roles
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   #
@@ -49,6 +49,20 @@ class User < ActiveRecord::Base
     u && u.authenticated?(password) ? u : nil
   end
 
+  # Start of code needed for the declarative_authorization plugin
+  # 
+  # Roles are stored in a serialized field of the User model.
+  # For many applications a separate UserRole model might be a
+  # better choice.
+  serialize :roles, Array
+
+  def role_symbols
+     (roles || []).map {|r| r.to_sym}
+  # roles.map do |role|
+		# role.underscore.to_sym
+	#end
+  end
+  
   def login=(value)
     write_attribute :login, (value ? value.downcase : nil)
   end

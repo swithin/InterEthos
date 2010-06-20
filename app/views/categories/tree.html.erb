@@ -7,7 +7,7 @@
 
 
 <!-- Level ONE -->
-<% for category in Category.find_all_by_parent_id(@category_root_id, :order => "name") %>
+<% for category in @Category_tree %>
 
 <strong><%= h(category.name) -%></strong> <%#= h(category.id) -%><br />
 	<% render_tree(category) do |branch| %>

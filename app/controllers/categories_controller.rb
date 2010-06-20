@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
-  before_filter :login_required
+  # before_filter :login_required
+  filter_resource_access
   # GET /categories
   # GET /categories.xml
   helper CategoriesHelper
@@ -21,6 +22,7 @@ class CategoriesController < ApplicationController
     @categories = Category.find(:all)
 	@category_root_id = Category.find(params[:id])
 	@tree = @category_root_id.children
+	@Category_tree = Category.find_all_by_parent_id(@category_root_id, :order => "name")
 	# "branch_clicks" are incremented for each click on a non-navbar link 
 	session[:branch_clicks] = 1
     session[:current_location] = categories_path

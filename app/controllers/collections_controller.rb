@@ -1,5 +1,7 @@
 class CollectionsController < ApplicationController
-  before_filter :login_required
+  # before_filter :login_required
+  # the ":nested_in" parameters can be used to further filter the results
+  filter_resource_access #:nested_in => :ontologies
   # GET /collections
   # GET /collections.xml
   def index

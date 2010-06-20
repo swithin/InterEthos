@@ -1,5 +1,6 @@
 class OntologiesController < ApplicationController
-  before_filter :login_required
+  # before_filter :login_required
+  filter_resource_access
   # GET /ontologies
   # GET /ontologies.xml
   def index
