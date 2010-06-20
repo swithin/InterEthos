@@ -7,6 +7,8 @@ RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
+  config.gem "declarative_authorization", :source => "http://gems.rubyforge.org"
+
   config.active_record.observers = :user_observer
   config.gem 'rubyist-aasm', :lib => 'aasm', :source => 'http://gems.github.com'
   config.action_mailer.delivery_method = :smtp
