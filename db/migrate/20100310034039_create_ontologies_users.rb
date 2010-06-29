@@ -4,7 +4,6 @@ class CreateOntologiesUsers < ActiveRecord::Migration
       t.references :ontology
       t.references :user
       t.references :language
-      t.string :role
 
       t.timestamps
     end

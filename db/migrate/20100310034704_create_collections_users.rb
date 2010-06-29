@@ -3,7 +3,6 @@ class CreateCollectionsUsers < ActiveRecord::Migration
     create_table :collections_users do |t|
       t.references :collection
       t.references :user
-      t.string :role
 
       t.timestamps
     end
