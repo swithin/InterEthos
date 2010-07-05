@@ -9,6 +9,7 @@ class CreateCollections < ActiveRecord::Migration
       t.string :url_about
       t.text :contact_info
       t.text :notes
+      t.references :user
 
       t.timestamps
     end

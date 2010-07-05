@@ -3,7 +3,8 @@ require 'digest/sha1'
 class User < ActiveRecord::Base
   belongs_to :validation
   has_and_belongs_to_many :teams
-  has_and_belongs_to_many :collections
+  has_many :collection_users
+  has_many :collections, :through => :collection_users
   has_and_belongs_to_many :ontologies
   
   include Authentication

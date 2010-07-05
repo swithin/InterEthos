@@ -1,6 +1,6 @@
-class CreateTeamsUsers < ActiveRecord::Migration
+class CreateTeamUsers < ActiveRecord::Migration
   def self.up
-    create_table :teams_users do |t|
+    create_table :team_users do |t|
       t.references :team
       t.references :user
 
@@ -9,6 +9,6 @@ class CreateTeamsUsers < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :teams_users
+    drop_table :team_users
   end
 end

@@ -1,6 +1,6 @@
-class CreateCollectionsOntologies < ActiveRecord::Migration
+class CreateCollectionOntologies < ActiveRecord::Migration
   def self.up
-    create_table :collections_ontologies do |t|
+    create_table :collection_ontologies do |t|
       t.references :collection
       t.references :ontology
       t.string :status
@@ -10,6 +10,6 @@ class CreateCollectionsOntologies < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :collections_ontologies
+    drop_table :collection_ontologies
   end
 end

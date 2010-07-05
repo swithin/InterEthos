@@ -1,6 +1,6 @@
-class CreateOntologiesUsers < ActiveRecord::Migration
+class CreateOntologyUsers < ActiveRecord::Migration
   def self.up
-    create_table :ontologies_users do |t|
+    create_table :ontology_users do |t|
       t.references :ontology
       t.references :user
       t.references :language
@@ -10,6 +10,6 @@ class CreateOntologiesUsers < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :ontologies_users
+    drop_table :ontology_users
   end
 end

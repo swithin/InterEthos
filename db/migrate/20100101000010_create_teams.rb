@@ -4,6 +4,7 @@ class CreateTeams < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.integer :privacy
+      t.references :user
 
       t.timestamps
     end
