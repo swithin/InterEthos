@@ -47,7 +47,7 @@ class TeamsController < ApplicationController
     respond_to do |format|
       if @team.save
         flash[:notice] = 'Team was successfully created.'
-        format.html { redirect_to(@team) }
+        format.html { redirect_to(teams_path) }
         format.xml  { render :xml => @team, :status => :created, :location => @team }
       else
         format.html { render :action => "new" }
@@ -64,7 +64,7 @@ class TeamsController < ApplicationController
     respond_to do |format|
       if @team.update_attributes(params[:team])
         flash[:notice] = 'Team was successfully updated.'
-        format.html { redirect_to(@team) }
+        format.html { redirect_to(teams_path) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
