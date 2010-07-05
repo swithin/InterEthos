@@ -3,20 +3,21 @@
 <% form_for(@ontology) do |f| %>
 	<%= f.error_messages %>
 
-	<p><%= f.label :name %><br />
-		<%= f.text_field :name, :size => 70 %></p>
-	
-	<p><%= f.label :status %><br />
-		<%= f.select("status", %w[Stable Beta Deprecated], {}, {}) %></p>
-	
-	<p><%= f.label :privacy %><br />
-		<%= f.select("privacy", %w[Public Personal Registered-Users-Only IP-Only SOAP-Only], {}, {}) %></p>
-	
-	<p><%= f.label :meta %><br />
-		<%= f.text_area :meta, :rows => 4, :cols => 45 %></p>
-
+    <table width=100%>
+	  <tr>
+	    <td>
+	      <%= f.label :name %><br />
+		    <%= f.text_field :name %>
+        </td>
+		
+        <td width=10%>&nbsp;</td>
+		
+        <td>
 	<p><%= label(:language, :id, 'Language') %><br />
 		<%= collection_select(:ontology, :language_id, Language.find(:all), :id, :english_name, options = {}, html_options = {}) %></p>
+        </td>
+      </tr>
+    </table>
 	
 	<p><%= f.label :url_about, 'URL for a descriptive overview about the Ontology' %><br />
 		<%= f.text_field :url_about, :size => 80 %></p>
@@ -29,8 +30,35 @@
 		<%= f.text_field :url_category_xml, :size => 80 %><br />
 	<%= f.label :url_category_xml, 'Include [category] marker if available.<br />ex. http://www.bostonindicators.org/Indicators2008/[category]' %></p>
 	
-	<p><%= f.submit 'Update' %></p>
-<% end %>
+    <table width=100%>
+      <tr>
+        <td>
+          <%= f.label :status %><br />
+		<%= f.select("status", %w[Stable Beta Deprecated], {}, {}) %>
+        </td>
+		
+        <td width=10%>&nbsp;</td>
+		
+        <td>
+          <%= f.label :privacy %><br />
+		    <%= f.select("privacy", %w[Public Personal Registered-Users-Only IP-Only SOAP-Only], {}, {}) %>
+        </td>
 
-<%= link_to 'Show', @ontology  if permitted_to? :show, :collections %> |
-<%= link_to 'Back', ontologies_path %>
+        <td width=10%>&nbsp;</td>
+		
+        <td>
+          <%= f.label :owner %><br />
+            <%= select :ontology, :user_id, [ ["Me",current_user.id]] %>
+            <!-- User.find_by_id(session[:user_id]).id.to_i -->
+            <%#= hidden_field "user_id", User.find_by_id(session[:user_id]).id.to_i %>
+            <%#= f.hidden_field :user_id, current_user.id %>
+            <%#= hidden_field "ontology[user_id]", current_user.id %>
+        </td>
+      </tr>
+    </table>
+	<p><%= f.label :meta %><br />
+		<%= f.text_area :meta, :rows => 4, :cols => 45 %></p>
+	
+	<p><%= f.submit 'Update' %>
+<% end %>
+&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'Back', ontologies_path %></p>

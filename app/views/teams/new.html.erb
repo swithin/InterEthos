@@ -3,21 +3,32 @@
 <% form_for(@team) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.label :privacy %><br />
-    <%= f.text_field :privacy %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
+  <p><%= f.label :name %><br />
+    <%= f.text_field :name %></p>
 
-<%= link_to 'Back', teams_path %>
+  <p><%= f.label :description %><br />
+    <%= f.text_area :description %></p>
+
+    <table width=100%>
+      <tr>
+        <td>
+          <%= f.label :privacy %><br />
+		    <%= f.select("privacy", %w[Public Personal Registered-Users-Only IP-Only SOAP-Only], {}, {}) %>
+        </td>
+
+        <td width=10%>&nbsp;</td>
+		
+        <td>
+          <%= f.label :owner %><br />
+            <%= select :team, :user_id, [ ["Me",current_user.id]] %>
+            <!-- User.find_by_id(session[:user_id]).id.to_i -->
+            <%#= hidden_field "user_id", User.find_by_id(session[:user_id]).id.to_i %>
+            <%#= f.hidden_field :user_id, current_user.id %>
+            <%#= hidden_field "team[user_id]", current_user.id %>
+        </td>
+      </tr>
+    </table>
+    <p><%= f.submit 'Create' %>
+
+<% end %>
+&nbsp;&nbsp;|&nbsp;&nbsp;<%= link_to 'Back', teams_path %></p>
