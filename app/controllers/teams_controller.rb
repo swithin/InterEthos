@@ -1,9 +1,10 @@
 class TeamsController < ApplicationController
-  before_filter :login_required
+  filter_resource_access
+  
   # GET /teams
   # GET /teams.xml
   def index
-    @teams = Team.all
+    @teams = Team.with_permissions_to(:read)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +15,7 @@ class TeamsController < ApplicationController
   # GET /teams/1
   # GET /teams/1.xml
   def show
-    @team = Team.find(params[:id])
+    # @team is loaded in before_filter
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,7 +26,7 @@ class TeamsController < ApplicationController
   # GET /teams/new
   # GET /teams/new.xml
   def new
-    @team = Team.new
+    # @team is created in before_filter
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,13 +36,13 @@ class TeamsController < ApplicationController
 
   # GET /teams/1/edit
   def edit
-    @team = Team.find(params[:id])
+    # @team is loaded in before_filter
   end
 
   # POST /teams
   # POST /teams.xml
   def create
-    @team = Team.new(params[:team])
+    # @team is created in before_filter
 
     respond_to do |format|
       if @team.save
@@ -58,7 +59,7 @@ class TeamsController < ApplicationController
   # PUT /teams/1
   # PUT /teams/1.xml
   def update
-    @team = Team.find(params[:id])
+    # @team is loaded in before_filter
 
     respond_to do |format|
       if @team.update_attributes(params[:team])
@@ -75,7 +76,7 @@ class TeamsController < ApplicationController
   # DELETE /teams/1
   # DELETE /teams/1.xml
   def destroy
-    @team = Team.find(params[:id])
+    # @team is loaded in before_filter
     @team.destroy
 
     respond_to do |format|

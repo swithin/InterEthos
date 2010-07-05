@@ -1,10 +1,11 @@
 class OntologiesController < ApplicationController
   # before_filter :login_required
   filter_resource_access
+
   # GET /ontologies
   # GET /ontologies.xml
   def index
-    @ontologies = Ontology.all
+    @ontologies = Ontology.with_permissions_to(:read)
     session[:current_location] = ontologies_path
 
     respond_to do |format|
@@ -16,7 +17,7 @@ class OntologiesController < ApplicationController
   # GET /ontologies/1
   # GET /ontologies/1.xml
   def show
-    @ontology = Ontology.find(params[:id])
+    # @ontology is loaded in before_filter
     session[:current_location] = ontologies_path
 
     respond_to do |format|
@@ -28,7 +29,7 @@ class OntologiesController < ApplicationController
   # GET /ontologies/new
   # GET /ontologies/new.xml
   def new
-    @ontology = Ontology.new
+    # @ontology is created in before_filter
 
     respond_to do |format|
       format.html # new.html.erb
@@ -38,13 +39,13 @@ class OntologiesController < ApplicationController
 
   # GET /ontologies/1/edit
   def edit
-    @ontology = Ontology.find(params[:id])
+    # @ontology is loaded in before_filter
   end
 
   # POST /ontologies
   # POST /ontologies.xml
   def create
-    @ontology = Ontology.new(params[:ontology])
+    # @ontology is created in before_filter
 
     respond_to do |format|
       if @ontology.save
@@ -61,7 +62,7 @@ class OntologiesController < ApplicationController
   # PUT /ontologies/1
   # PUT /ontologies/1.xml
   def update
-    @ontology = Ontology.find(params[:id])
+    # @ontology is loaded in before_filter
 
     respond_to do |format|
       if @ontology.update_attributes(params[:ontology])
@@ -78,7 +79,7 @@ class OntologiesController < ApplicationController
   # DELETE /ontologies/1
   # DELETE /ontologies/1.xml
   def destroy
-    @ontology = Ontology.find(params[:id])
+    # @ontology is loaded in before_filter
     @ontology.destroy
 
     respond_to do |format|
