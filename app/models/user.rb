@@ -2,10 +2,12 @@ require 'digest/sha1'
 
 class User < ActiveRecord::Base
   belongs_to :validation
-  has_and_belongs_to_many :teams
+  has_many :team_users
+    has_many :team, :through => :team_users
   has_many :collection_users
-  has_many :collections, :through => :collection_users
-  has_and_belongs_to_many :ontologies
+    has_many :collections, :through => :collection_users
+  has_many :ontology_users
+    has_many :ontologies, :through => :ontology_users
   
   include Authentication
   include Authentication::ByPassword
