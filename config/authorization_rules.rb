@@ -72,6 +72,24 @@ authorization do
 		# if_permitted_to :manage, :category
 	  # end
 	  
+	# =========
+	# T E A M S
+	# Owners can "create" any new team that they wish.
+      has_permission_on :teams, :to => :create do
+      end
+	  
+	# Owners can only "manage" the teams that they own.
+	  has_permission_on [:teams, :team_users] do
+		to :manage
+		if_attribute :user_id => is {user.id}
+		# | :team_users => is {user.team_users}
+	  end
+	
+	# Owners can only "manage" the team_users for which they own the team.
+	  has_permission_on :team_users, :to => :manage do
+		if_permitted_to :manage, :team
+	  end
+	  
   end
   
   role :admin do
