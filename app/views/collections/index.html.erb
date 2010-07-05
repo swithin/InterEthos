@@ -1,17 +1,18 @@
 <% @title = 'Collections' %>
 
-<table>
+<table border=0>
   <tr>
     <th>Name</th>
-    <th>Status</th>
+    <th width=10%>&nbsp;</th>
+    <th colspan=3>&nbsp;</th>
   </tr>
 
 <% @collections.each do |collection| %>
   <tr>
-    <td><%=h collection.name %></td>
-    <td><%=h collection.status %></td>
-    <td><%= link_to '<img src="/images/eye.jpg" border="0">', collection if permitted_to? :show, collection %></td>
-    <td><%= link_to '<img src="/images/delta.jpg" border="0">', edit_collection_path(collection) if permitted_to? :edit, collection%></td>
+    <td nowrap="nowrap"><%=h collection.name %></td>
+    <td><% if permitted_to? :show, collection %>&nbsp;<% else %><strong>(<%=h collection.status %>)<strong><% end %></td>
+    <td><%= link_to '<img src="/images/eye.jpg" border="0">', collection.url_about if permitted_to? :show, collection %></td>
+    <td><%= link_to '<img src="/images/delta.jpg" border="0">', edit_collection_path(collection) if permitted_to? :edit, collection %></td>
     <td><%= link_to '<img src="/images/remove.jpg" border="0">', collection if permitted_to? :delete, collection, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
