@@ -3,7 +3,7 @@ class CreateTeams < ActiveRecord::Migration
     create_table :teams do |t|
       t.string :name
       t.text :description
-      t.integer :privacy
+      t.string :privacy
       t.references :user
 
       t.timestamps
