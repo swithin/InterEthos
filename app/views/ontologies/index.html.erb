@@ -1,18 +1,19 @@
 <% @title = 'Ontologies' %>
 
-<table>
+<table border=0>
   <tr>
     <th>Name</th>
-    <th>Status</th>
+    <th width=10%>&nbsp;</th>
+    <th colspan=3>&nbsp;</th>
   </tr>
 
 <% @ontologies.each do |ontology| %>
   <tr>
-    <td><%=h ontology.name %></td>
-    <td><%=h ontology.status %></td>
-    <td><%= link_to '<img src="/images/eye.jpg" border="0">', ontology if permitted_to? :show, :ontologies %></td>
-    <td><%= link_to '<img src="/images/delta.jpg" border="0">', edit_ontology_path(ontology) if permitted_to? :edit, :ontologies %></td>
-    <td><%= link_to '<img src="/images/remove.jpg" border="0">', ontology if permitted_to? :delete, :ontologies, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td nowrap="nowrap"><%=h ontology.name %></td>
+    <td><% if permitted_to? :show, ontology %>&nbsp;<% else %><strong>(<%=h ontology.status %>)<strong><% end %></td>
+    <td><%= link_to '<img src="/images/eye.jpg" border="0">', ontology if permitted_to? :show, ontology %></td>
+    <td><%= link_to '<img src="/images/delta.jpg" border="0">', edit_ontology_path(ontology) if permitted_to? :edit, ontology %></td>
+    <td><%= link_to '<img src="/images/remove.jpg" border="0">', ontology if permitted_to? :delete, ontology, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
