@@ -9,6 +9,15 @@
   <p><%= f.label :last_name %><br />
     <%= f.text_field :last_name %></p>
 
+  <p><%= label_tag 'login', 'Username' %><br/>
+    <%= f.text_field :login %></p>
+
+  <p><%= label_tag 'password' %><br/>
+    <%= f.password_field :password %></p>
+
+  <p><%= label_tag 'password_confirmation', 'Confirm Password' %><br/>
+    <%= f.password_field :password_confirmation %></p>
+
   <p><%= f.label :email %><br />
     <%= f.text_field :email %></p>
 

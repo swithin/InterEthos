@@ -19,7 +19,7 @@
   <% else %>
 	  <ul>
 		<% for collection in @user.collections %>
-		  <li><%=h collection.name %> <em>(<%=h collection.role %>)</em>
+		  <li><%=h collection.name %>
 		  <%= link_to '<img src="/images/eye.jpg" border="0">', collection %>
     	  <%= link_to '<img src="/images/delta.jpg" border="0">', edit_collections_user_path(collection.id) %>
 		  <%= link_to '<img src="/images/remove.jpg" border="0">', collections_user_path(collection.id), :confirm => 'Are you sure?', :method => :delete %></li>
