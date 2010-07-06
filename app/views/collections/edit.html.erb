@@ -17,8 +17,14 @@
             <%= f.text_field :organization %>
         </td>
       </tr>
+      <tr>
+	    <td colspan=3>
+	      <%= f.label :Category %><br />
+            <%= select :collection, :category_ids, [@categories.id] %>
+        </td>
+      </tr>
     </table>
-	  
+	
 	<p><%= f.label :url_about, 'URL for a descriptive overview about the Collection' %><br />
 		<%= f.text_field :url_about, :size => 80 %></p>
 	
@@ -39,7 +45,7 @@
 		
         <td>
           <%= f.label :owner %><br />
-            <%= select :collection, :user_id, [ ["Me",current_user.id]] %>
+            <%= select :collection, :user_id, [["Me",current_user.id]] %>
         </td>
       </tr>
     </table>

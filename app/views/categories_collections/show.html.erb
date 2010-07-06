@@ -1,0 +1,13 @@
+<% @title = 'Category for a Collection' %>
+
+<p><b>Collection:</b>
+  <%=h @collections_category.collection.name %></p>
+
+<p><b>Category:</b>
+  <%=h @collections_category.category.name %></p>
+
+<p><b>Status:</b>
+  <%=h @collections_category.status %></p>
+
+<%= link_to 'Edit', edit_collections_category_path(@collections_category) if permitted_to? :edit, :collections_categories %> |
+<%= link_to 'Back', collections_path %>

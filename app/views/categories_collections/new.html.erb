@@ -1,0 +1,20 @@
+<% @title = 'New Category for a Collection' %>
+
+<% form_for(@collections_category) do |f| %>
+  <%= f.error_messages %>
+
+  <p><%= label(:collection, :id, 'Collection') %><br />
+  	<strong><%= @collection.name %></strong>
+	<%= hidden_field_tag("collections_category[collection_id]", @collection.id) %></p>
+
+  <p><%= label(:category, :id, 'Category') %><br />
+    <%= collection_select(:collections_category, :category_id, Category.find(:all), :id, :name, options = {}, html_options = {}) %></p>
+  
+  <p><%= f.label :status %><br />
+	<%= f.select("status", %w[Live Replaced Prospective], {}, {}) %></p>
+
+  <p><%= f.submit 'Create' %></p>
+
+<% end %>
+
+<%= link_to 'Back', collections_categories_path %>

@@ -1,0 +1,24 @@
+<% @title = 'Listing Categories for Collection' %>
+
+<table>
+  <tr>
+    <th>Collection</th>
+    <th>Category</th>
+    <th>Status</th>
+  </tr>
+
+<% @collections_categories.each do |collections_category| %>
+  <tr>
+    <td><%=h collections_category.collection %></td>
+    <td><%=h collections_category.category %></td>
+    <td><%=h collections_category.status %></td>
+    <td><%= link_to 'Show', collections_category if permitted_to? :show, :collections_category %></td>
+    <td><%= link_to 'Edit', edit_collections_category_path(collections_category) if permitted_to? :edit, :collections_category %></td>
+    <td><%= link_to 'Destroy', collections_category if permitted_to? :edit, :collections_category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New collections_category', new_collections_category_path if permitted_to? :create, :collections_categories %>

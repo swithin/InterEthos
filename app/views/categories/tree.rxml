@@ -6,5 +6,3 @@
       @xml.name(category.name)
     end
 }
-
-

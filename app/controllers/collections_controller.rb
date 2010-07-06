@@ -41,6 +41,7 @@ class CollectionsController < ApplicationController
   # GET /collections/1/edit
   def edit
     # @collection is loaded in before_filter
+	@categories = @collection.category_collections
   end
 
   # POST /collections
