@@ -9,18 +9,45 @@
 	      <%= f.label :name %><br />
 		    <%= f.text_field :name %>
         </td>
-		
-        <td width=10%>&nbsp;</td>
-		
-        <td>
+				
+        <td rowspan=5>
+		  <%= f.label "Categories" %>
+	      <%#= @collection.category_collections.id %><br />
+		    <%#= tree_select(Category.find(:all, :conditions => "parent_id = 170"),
+                        'collection', 'category_id', :category) %>
+						<!-- NEW "Multiple Select Helper"
+						The easiest way to port your code to the new version is change all call to
+						+multiple_select+, +collection_multiple_select+ and +tree_multiple_select+ -->
+						<%= tree_multiple_select('collection', 'category_ids', Category.find(:all, :conditions => "parent_id = 170"), :id, :name, :outer_class => 'multiple_select', :inner_class => 'multiple_select_checkbox') %>
+		    <%#= tree_select(Realm.find(:all, :conditions => "parent_id = 1"),
+                        'group', 'realm_id', @group.realm) %>
+
+			<%#= collection_select(:categories_collection, :category_id, Category.find(:all), :id, :name, options = {}, html_options = {}) %>
+            <%#= select :collection, :category_ids, [@category_ids] %>
+        </td>
+      </tr>
+      <tr>
+	    <td>
           <%= f.label :organization %><br />
             <%= f.text_field :organization %>
         </td>
       </tr>
       <tr>
-	    <td colspan=3>
-	      <%= f.label :Category %><br />
-            <%= select :collection, :category_ids, [@categories.id] %>
+        <td>
+          <%= f.label :status %><br />
+		    <%= f.select("status", %w[Active OffLine Unavailable], {}, {}) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :privacy %><br />
+		    <%= f.select("privacy", %w[Public Personal Registered-Users-Only IP-Only SOAP-Only], {}, {}) %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= f.label :owner %><br />
+            <%= select :collection, :user_id, [["Me",current_user.id]] %>
         </td>
       </tr>
     </table>
@@ -28,28 +55,6 @@
 	<p><%= f.label :url_about, 'URL for a descriptive overview about the Collection' %><br />
 		<%= f.text_field :url_about, :size => 80 %></p>
 	
-    <table width=100%>
-      <tr>
-        <td>
-          <%= f.label :status %><br />
-		    <%= f.select("status", %w[Active OffLine Unavailable], {}, {}) %>
-        </td>
-		
-        <td width=10%>&nbsp;</td>
-		
-        <td>
-          <%= f.label :privacy %><br />
-		    <%= f.select("privacy", %w[Public Personal Registered-Users-Only IP-Only SOAP-Only], {}, {}) %>
-        </td>
-        <td width=10%>&nbsp;</td>
-		
-        <td>
-          <%= f.label :owner %><br />
-            <%= select :collection, :user_id, [["Me",current_user.id]] %>
-        </td>
-      </tr>
-    </table>
-
 	<p><%= f.label :notes, "Notes" %><br />
 		<%= f.text_area :notes, :cols => 50, :rows => 3 %></p>
 	

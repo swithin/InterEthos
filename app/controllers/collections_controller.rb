@@ -41,7 +41,7 @@ class CollectionsController < ApplicationController
   # GET /collections/1/edit
   def edit
     # @collection is loaded in before_filter
-	@categories = @collection.category_collections
+ # ?? added for "Multiple Select Helper" @collection.category_ids = params[:collection][:category_ids]
   end
 
   # POST /collections
@@ -85,7 +85,7 @@ class CollectionsController < ApplicationController
     @collection.destroy
 
     respond_to do |format|
-      format.html { redirect_to(collections_url) }
+      format.html { redirect_to(collections_path) }
       format.xml  { head :ok }
     end
   end

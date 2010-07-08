@@ -5,20 +5,23 @@ authorization do
     # Then don't forget to change it back afterwards, or your permissions will be 
 	# wide open for non-logged in users!
 	
+  # =========
+  # G U E S T
   role :guest do
     # add permissions for guests here, e.g.
-    # has_permission_on :collections, :to => :read
     has_permission_on :collections, :to => :read do
       if_attribute :status => "Active"
     end
-   has_permission_on [:categories, :collections_ontologies, :languages, :ontologies, :relationships, :teams, :users, :validations], :to => :read
+   has_permission_on [:categories, :category_collections, :languages, :ontologies, :relationships, :teams, :users, :validations], :to => :read
   end
   
+  # =========
+  # O W N E R
   role :owner do
     # Owners inherit all the permissions of Guests.
 	includes :guest
     
-	# =====================
+	# ---------------------
 	# C O L L E C T I O N S
 	# Owners can "create" any new collection that they wish.
       has_permission_on :collections, :to => :create do
@@ -35,8 +38,14 @@ authorization do
 	  has_permission_on :collection_users, :to => :manage do
 		if_permitted_to :manage, :collection
 	  end
+	  
+   has_permission_on :category_collections, :to => :manage do
+		if_permitted_to :manage, :collection
+	end
+		
+   has_permission_on :category_collections, :to => :create
 	
-	# ===================
+	# -------------------
 	# O N T O L O G I E S
 	# Owners can "create" any new ontology that they wish.
       has_permission_on :ontologies, :to => :create do
@@ -54,7 +63,7 @@ authorization do
 		if_permitted_to :manage, :ontology
 	  end
 	
-	# ===================
+	# -------------------
 	# C A T E G O R I E S
 	# Owners can "create" any new category that they wish.
       has_permission_on :categories, :to => :create do
@@ -72,7 +81,7 @@ authorization do
 		# if_permitted_to :manage, :category
 	  # end
 	  
-	# =========
+	# ---------
 	# T E A M S
 	# Owners can "create" any new team that they wish.
       has_permission_on :teams, :to => :create do
@@ -92,8 +101,12 @@ authorization do
 	  
   end
   
+  # =========
+  # A D M I N
   role :admin do
-   has_permission_on [:categories, :collections, :collections_ontologies, :collection_users, :languages, :ontologies, :ontologies_users, :relationships, :teams, :teams_users, :users, :validations], :to => :manage
+    # Admins inherit all the permissions of Owners.
+	includes :guest
+   has_permission_on [:categories, :collections, :category_collections, :collection_users, :languages, :ontologies, :ontologies_users, :relationships, :teams, :teams_users, :users, :validations], :to => [:manage, :create]
    # Josh could not get the following working... 
        # documentation is at http://github.com/stffn/declarative_authorization
    # uncomment the following "has_permission_on" line, and 

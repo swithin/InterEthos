@@ -25,12 +25,12 @@
   <%=h @collection.contact_info %></p>
   
 <p>
-  <b>Ontologies:</b>
-  <% if @collection.ontologies(@collection).empty? %>
+  <b>Categories:</b>
+  <% if @collection.categories(@collection).empty? %>
 	  <em>(none found)</em>
   <% else %>
 	  <ul>
-		<% for ontology in @collection.ontologies %>
+		<% for ontology in @collection.categories %>
 		  <li><%=h ontology.name %> 
 		  <%= link_to '<img src="/images/eye.jpg" border="0">', collections_ontology_path if permitted_to? :show, ontology %>
     	  <%= link_to '<img src="/images/delta.jpg" border="0">', edit_collections_ontology_path(@collection) if permitted_to? :edit, ontology %>

@@ -11,9 +11,9 @@
   <tr>
     <td nowrap="nowrap"><%=h collection.name %></td>
     <td><% if permitted_to? :show, collection %>&nbsp;<% else %><strong>(<%=h collection.status %>)<strong><% end %></td>
-    <td><%= link_to '<img src="/images/eye.jpg" border="0">', collection.url_about if permitted_to? :show, collection %></td>
+    <td><%= link_to '<img src="/images/eye.jpg" border="0">', collection.url_about, {:target => "_blank"} if permitted_to? :show, collection %></td>
     <td><%= link_to '<img src="/images/delta.jpg" border="0">', edit_collection_path(collection) if permitted_to? :edit, collection %></td>
-    <td><%= link_to '<img src="/images/remove.jpg" border="0">', collection if permitted_to? :delete, collection, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to '<img src="/images/remove.jpg" border="0">', collection, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, collection %></td>
   </tr>
 <% end %>
 </table>
