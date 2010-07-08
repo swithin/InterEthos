@@ -52,3 +52,23 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 
+.multiple_select {
+  border: 1px solid #aaa;
+  height: 200px;
+  width: 300px;
+  padding: 2px;
+  margin: 1em;
+  overflow: auto;
+}
+
+.multiple_select, .multiple_select ul {
+  list-style-type: none;
+}
+
+.multiple_select_checkbox {
+  background: #fff;
+}
+
+.alt {
+  background: #eef;
+}
