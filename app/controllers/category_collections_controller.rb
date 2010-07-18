@@ -5,7 +5,7 @@ class CategoryCollectionsController < ApplicationController
   # GET /collection_categories
   # GET /collection_categories.xml
   def index
-    @collection_categories = CategoryCollection.all
+    @category_collections = CategoryCollection.all
     session[:current_location] = categories_path
 
     respond_to do |format|

@@ -8,7 +8,7 @@
 	<%= hidden_field_tag("ontologies_category[ontology_id]", @category.ontology_id) %></p>
 
   <p><%= f.label :parent_category %><br />
-    <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"), 'category', 'parent_id', @category.parent) %></p>
+  <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"), 'category', 'parent_id', @category) %></p>
 
   <p><%= f.label :category_name %><br />
     <%= f.text_field :name %></p>

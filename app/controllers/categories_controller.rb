@@ -36,7 +36,6 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.xml
   def show
-    @category = Category.find(params[:id])
     session[:current_location] = categories_path
 
     respond_to do |format|
@@ -48,7 +47,6 @@ class CategoriesController < ApplicationController
   # GET /categories/new
   # GET /categories/new.xml
   def new
-    @category = Category.new
     @parent_id = params[:parent_id].to_i
     @ontology = Category.find(params[:uroot_id]).ontology
     session[:uroot_id] = params[:uroot_id].to_i
@@ -61,16 +59,14 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1/edit
   def edit
-    @category = Category.find(params[:id])
     @ontology = Category.find(params[:uroot_id]).ontology
+	@synonyms = @category.synonyms
     session[:uroot_id] = params[:uroot_id].to_i
   end
 
   # POST /categories
   # POST /categories.xml
   def create
-    @category = Category.new(params[:category])
-
     respond_to do |format|
       if @category.save
         flash[:notice] = 'Category was successfully created.'
@@ -90,8 +86,6 @@ class CategoriesController < ApplicationController
   # PUT /categories/1
   # PUT /categories/1.xml
   def update
-    @category = Category.find(params[:id])
-
     respond_to do |format|
       if @category.update_attributes(params[:category])
         flash[:notice] = 'Category was successfully updated.'
@@ -107,7 +101,6 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1
   # DELETE /categories/1.xml
   def destroy
-    @category = Category.find(params[:id])
     @category.destroy
     # did not have time to add the "...&uroot_id=#" variable to the "destroy" links.
     # session[:uroot_id] = params[:uroot_id].to_i

@@ -11,11 +11,11 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :categories
 
+  # map.resources :category_collections
+
   map.resources :collections
 
   map.resources :collections_users
-
-  map.resources :collections_ontologies
 
   map.resources :languages
 
