@@ -1,5 +1,5 @@
-class CollectionsUsersController < ApplicationController
-  filter_resource_access :nested_in => :collections
+class CollectionUsersController < ApplicationController
+  filter_resource_access # :nested_in => :collections
   
   # GET /collections_users
   # GET /collections_users.xml
