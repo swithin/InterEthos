@@ -20,7 +20,11 @@
 					<table bgcolor="#BCFCC1" align="center" cellpadding="10" cellspacing="0" border="0" height="500">
 						<% navbar_link_array = Array.new %>
 						<% if authorized? %>
-							<% navbar_link_array = [root_path, collections_path, ontologies_path, categories_path, logout_path] %>
+							<% if current_user.roles.to_s == "admin" %>
+								<% navbar_link_array = [root_path, collections_path, ontologies_path, categories_path, users_path, logout_path] %>
+							<% else %>
+								<% navbar_link_array = [root_path, collections_path, ontologies_path, categories_path, logout_path] %>
+							<% end %>
 						<% else %>
 							<% navbar_link_array = [root_path, login_path, collections_path, ontologies_path, categories_path] %>
 						<% end %>
@@ -44,7 +48,22 @@
 					<table cellpadding="10" cellspacing="0" border="0" width=100%>
 						<tr>
 							<td align="left">
-								<span style="font-size:18px"><%= @title %></span>
+								<table border=0 width=100%>
+									<tr>
+										<td align="left">
+											<span style="font-size:18px"><%= @title %></span>
+										</td>
+										<td align="right">
+											<span style="font-size:12px; color:#CCCCCC; font-style:italic">user: 
+												<% if authorized? %>
+													<%= current_user.full_name %>
+												<% else %>
+													guest
+												<% end %>
+											</span>
+										</td>
+									</tr>
+								</table>
 							</td>
 						</tr>
 						

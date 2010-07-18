@@ -12,7 +12,12 @@ authorization do
     has_permission_on :collections, :to => :read do
       if_attribute :status => "Active"
     end
-   has_permission_on [:categories, :category_collections, :languages, :ontologies, :relationships, :teams, :users, :validations], :to => :read
+	
+    has_permission_on :ontologies, :to => :read do
+      if_attribute :privacy => "Public"
+    end
+	
+   has_permission_on [:categories, :category_collections, :collection_users, :languages, :relationships, :teams, :users, :validations], :to => :read
   end
   
   # =========
