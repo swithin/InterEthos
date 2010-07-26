@@ -6,6 +6,23 @@ body, p, ol, ul, td {
   line-height: 18px;
 }
 
+#horiz_pixel tr {
+  height:1px
+}
+
+#horiz_pixel td {
+  height:1px
+}
+
+#vert_pixel td {
+  width:1px
+}
+
+#horiz_and_vert_pixel td {
+  height:1px; 
+  width:1px
+}
+
 pre {
   background-color: #eee;
   padding: 10px;
