@@ -17,7 +17,8 @@ authorization do
       if_attribute :privacy => "Public"
     end
 	
-   has_permission_on [:categories, :category_collections, :collection_users, :languages, :relationships, :teams, :users, :validations], :to => :read
+   has_permission_on [:categories], :to => :read
+   # has_permission_on [:categories, :category_collections, :collection_users, :languages, :relationships, :teams, :users, :validations], :to => :read
   end
   
   # =========
