@@ -15,7 +15,8 @@ body, p, ol, ul, td {
 }
 
 #vert_pixel td {
-  width:1px
+  width:1px;
+  height:100%
 }
 
 #horiz_and_vert_pixel td {
