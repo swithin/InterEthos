@@ -14,94 +14,123 @@
 	<table bgcolor="#BCFCC1" align="center" cellpadding="20" cellspacing="0" border="0">
 	<tr>
 	<td valign="middle" align="center" style="width=99%">
-		<table bgcolor="#BCFCC1" align="center" cellpadding="0" cellspacing="0" border="0">
-			<!-- G R A D I E N T   " S H A D O W "   T O P -->
-			<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#006600" colspan="11"><img src="/images/pixel.gif"></td></tr>
-			<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#187918" colspan="10"><img src="/images/pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="pixel.gif"></td></tr>
-			<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#2f8c31" colspan="9"><img src="/images/pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#187918"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="pixel.gif"></td></tr>
-			<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#479f49" colspan="8"><img src="/images/pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#2f8c31"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#187918"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="pixel.gif"></td></tr>
-			<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#5fb261" colspan="7"><img src="/images/pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#479f49"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#2f8c31"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#187918"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="pixel.gif"></td></tr>
-			<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#76c479" colspan="6"><img src="/images/pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#5fb261"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#479f49"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#2f8c31"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#187918"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="pixel.gif"></td></tr>
-			<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#8ed792" colspan="5"><img src="/images/pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#76c479"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#5fb261"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#479f49"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#2f8c31"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#187918"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="pixel.gif"></td></tr>
-			<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#a5eaaa" colspan="4"><img src="/images/pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#8ed792"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#76c479"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#5fb261"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#479f49"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#2f8c31"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#187918"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="pixel.gif"></td></tr>
-			<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#bcfcc1" colspan="3"><img src="/images/pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#a5eaaa"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#8ed792"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#76c479"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#5fb261"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#479f49"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#2f8c31"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#187918"><img src="pixel.gif"></td>
-				<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="pixel.gif"></td></tr>
+		<table bgcolor="#BCFCC1" align="center" cellpadding="0" cellspacing="0" border="0" height="100%">
 			<tr>
 				<!-- L E F T   N A V B A R -->
-				<td valign="top" align="center">
-					<table bgcolor="#BCFCC1" align="center" cellpadding="10" cellspacing="0" border="0" height="500">
-						<% navbar_link_array = Array.new %>
-						<% if authorized? %>
-							<% if current_user.roles.to_s == "admin" %>
-								<% navbar_link_array = [root_path, collections_path, ontologies_path, categories_path, users_path, logout_path] %>
-							<% else %>
-								<% navbar_link_array = [root_path, collections_path, ontologies_path, categories_path, logout_path] %>
-							<% end %>
+				<td valign="top" align="center" height="500">
+					<%#   W H I C H   L I N K S   %>
+					<% navbar_link_array = Array.new %>
+					<% if authorized? %>
+						<% if current_user.roles.to_s == "admin" %>
+							<% navbar_link_array = [root_path, collections_path, ontologies_path, categories_path, users_path, logout_path] %>
 						<% else %>
-							<% navbar_link_array = [root_path, login_path, collections_path, ontologies_path, categories_path] %>
+							<% navbar_link_array = [root_path, collections_path, ontologies_path, categories_path, logout_path] %>
 						<% end %>
-						<% cell_height = 100/navbar_link_array.length %>
-						<% for navbar_link in navbar_link_array %>
-							<tr height="<%= cell_height %>%">
-								<% if navbar_link.length == 1 %>
-									<td align="left" valign="middle" <% if session[:current_location] == "welcome" %> bgcolor="#F3FFCE"<% end %>>
-										<% if session[:current_location] == "welcome" %><%= link_to '<img src="/images/Logo_Darker_w_High_Pass_Emboss.gif" border="0">', :controller => :welcome %><% else %><%= link_to '<img src="/images/Logo_Whiter_w_High_Pass_Emboss.gif" border="0">', :controller => :welcome %><% end %><br />
-									</td>
-								<% else %>
-									<td align="left" valign="middle" <% if session[:current_location].delete("/") == navbar_link.delete("/") %> bgcolor="#F3FFCE"<% end %>>
-										<%= link_to navbar_link.delete("/"), navbar_link %>
-									</td>
-								<% end %>
+					<% else %>
+						<% navbar_link_array = [root_path, login_path, collections_path, ontologies_path, categories_path] %>
+					<% end %>
+					<% cell_height = 600/navbar_link_array.length %>
+
+					<% for navbar_link in navbar_link_array %>
+						<table align="center" cellpadding="0" cellspacing="0" border="0" height="<%= cell_height %>" width="100%" <% if session[:current_location].delete("/") == navbar_link.delete("/") %> bgcolor="#F3FFCE"<% end %>>
+							<!-- G R A D I E N T   " S H A D O W "   T O P -->
+							<% if ((navbar_link.length == 1 && session[:current_location] == "welcome") || (navbar_link.length != 1 && session[:current_location].delete("/") == navbar_link.delete("/"))) %>
+								<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#006600"><img src="/images/pixel.gif"></td></tr>
+								<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#187918"><img src="/images/pixel.gif"></td></tr>
+								<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#2f8c31"><img src="/images/pixel.gif"></td></tr>
+								<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#479f49"><img src="/images/pixel.gif"></td></tr>
+								<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#5fb261"><img src="/images/pixel.gif"></td></tr>
+								<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#76c479"><img src="/images/pixel.gif"></td></tr>
+								<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#8ed792"><img src="/images/pixel.gif"></td></tr>
+								<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#a5eaaa"><img src="/images/pixel.gif"></td></tr>
+								<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#bcfcc1"><img src="/images/pixel.gif"></td></tr>
+							<% end %>
+							<tr height="100%">
+								<td>
+									<% if navbar_link.length == 1 %>
+										<table align="center" cellpadding="10" cellspacing="0" border="0" height="100%" width="100%">
+											<tr>
+												<td align="left" valign="middle" <% if session[:current_location] == "welcome" %> bgcolor="#F3FFCE"<% end %>>
+													<% if session[:current_location] == "welcome" %>
+														<%= link_to '<img src="/images/Logo_Darker_w_High_Pass_Emboss.gif" border="0">', :controller => :welcome %>
+													<% else %>
+														<%= link_to '<img src="/images/Logo_Whiter_w_High_Pass_Emboss.gif" border="0">', :controller => :welcome %>
+													<% end %><br />
+												</td>
+											</tr>
+										</table>
+									<% else %>
+										<table align="center" cellpadding="10" cellspacing="0" border="0" height="100%" width="100%">
+											<tr>
+												<td align="left" valign="middle">
+													<%= link_to navbar_link.delete("/"), navbar_link %>
+												</td>
+											</tr>
+										</table>
+									<% end %>
+								</td>
 							</tr>
-						<% end %>
-					</table>
+						</table>
+					<% end %>
+					
 				</td>
 				
 				<!-- M A I N   C O N T E N T -->
-				<td bgcolor="#FFFFFF" valign="top" align="left" width="610" height=100%>
+				<td bgcolor="#FFFFFF" valign="top" align="left" width="610" height="100%">
 					<%#= Following "color gradient" developed using "http://www.vex.net/~x/xfade/xpage.py?p=table_form" %>
-					<table cellpadding="0" cellspacing="0" border="0" width=100% height=100%>
-						<tr>
-							<td valign="top" align="left">
-								<table cellpadding="10" cellspacing="0" border="0" width=100%>
+					<table cellpadding="0" cellspacing="0" border="0" width="100%" height="100%">
+						<!-- G R A D I E N T   " S H A D O W "   T O P -->
+						<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#006600" colspan="10"><img src="/images/pixel.gif"></td></tr>
+						<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#187918" colspan="9"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="/images/pixel.gif"></td></tr>
+						<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#2f8c31" colspan="8"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#187918"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="/images/pixel.gif"></td></tr>
+						<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#479f49" colspan="7"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#2f8c31"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#187918"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="/images/pixel.gif"></td></tr>
+						<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#5fb261" colspan="6"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#479f49"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#2f8c31"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#187918"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="/images/pixel.gif"></td></tr>
+						<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#76c479" colspan="5"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#5fb261"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#479f49"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#2f8c31"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#187918"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="/images/pixel.gif"></td></tr>
+						<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#8ed792" colspan="4"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#76c479"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#5fb261"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#479f49"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#2f8c31"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#187918"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="/images/pixel.gif"></td></tr>
+						<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#a5eaaa" colspan="3"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#8ed792"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#76c479"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#5fb261"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#479f49"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#2f8c31"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#187918"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="/images/pixel.gif"></td></tr>
+						<tr class="horiz_pixel"><td class="horiz_pixel" bgcolor="#bcfcc1" colspan="2"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#a5eaaa"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#8ed792"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#76c479"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#5fb261"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#479f49"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#2f8c31"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#187918"><img src="/images/pixel.gif"></td>
+							<td class="horiz_and_vert_pixel" bgcolor="#006600"><img src="/images/pixel.gif"></td></tr>
+						<tr height="100%">
+							<td valign="top" align="left" width="100%">
+								<table cellpadding="10" cellspacing="0" border="0" height="100%" width="100%">
 									<tr>
 										<td align="left">
-											<table border=0 width=100%>
+											<table border="0" width="100%">
 												<tr>
 													<td align="left">
 														<span style="font-size:18px"><%= @title %></span>
@@ -121,8 +150,8 @@
 									</tr>
 									
 									<%# M A I N   B O D Y   O F   P A G E %>
-									<tr>
-										<td>
+									<tr height="100%">
+										<td valign="top">
 											<% if :notice.to_s.length >= 1 %>
 											  <p style="color:green; background-color:#F3FFCE"><%= flash[:notice] %></p>
 											<% end %>
@@ -138,19 +167,19 @@
 									</tr>
 								</table>
 							</td>
+							<!-- G R A D I E N T   " S H A D O W "   R I G H T   S I D E -->
+							<td style="width=1" bgcolor="#bcfcc1"><img src="/images/pixel.gif"></td>
+							<td style="width=1" bgcolor="#a5eaaa"><img src="/images/pixel.gif"></td>
+							<td style="width=1" bgcolor="#8ed792"><img src="/images/pixel.gif"></td>
+							<td style="width=1" bgcolor="#76c479"><img src="/images/pixel.gif"></td>
+							<td style="width=1" bgcolor="#5fb261"><img src="/images/pixel.gif"></td>
+							<td style="width=1" bgcolor="#479f49"><img src="/images/pixel.gif"></td>
+							<td style="width=1" bgcolor="#2f8c31"><img src="/images/pixel.gif"></td>
+							<td style="width=1" bgcolor="#187918"><img src="/images/pixel.gif"></td>
+							<td style="width=1" bgcolor="#006600"><img src="/images/pixel.gif"></td>
 						</tr>
 					</table>
 				</td>
-				<!-- G R A D I E N T   " S H A D O W "   R I G H T   S I D E -->
-				<td style="width=1" bgcolor="#bcfcc1"><img src="/images/pixel.gif"></td>
-				<td style="width=1" bgcolor="#a5eaaa"><img src="/images/pixel.gif"></td>
-				<td style="width=1" bgcolor="#8ed792"><img src="/images/pixel.gif"></td>
-				<td style="width=1" bgcolor="#76c479"><img src="/images/pixel.gif"></td>
-				<td style="width=1" bgcolor="#5fb261"><img src="/images/pixel.gif"></td>
-				<td style="width=1" bgcolor="#479f49"><img src="/images/pixel.gif"></td>
-				<td style="width=1" bgcolor="#187918"><img src="/images/pixel.gif"></td>
-				<td style="width=1" bgcolor="#2f8c31"><img src="/images/pixel.gif"></td>
-				<td style="width=1" bgcolor="#006600"><img src="/images/pixel.gif"></td>
 			</tr>
 		</table>
 	</td></tr>
