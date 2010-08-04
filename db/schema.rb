@@ -9,93 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100310034704) do
-
-  create_table "categories", :force => true do |t|
-    t.string   "name"
-    t.string   "meta"
-    t.integer  "parent_id"
-    t.integer  "ontology_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "collections", :force => true do |t|
-    t.string   "name"
-    t.string   "status"
-    t.string   "organization"
-    t.text     "contact_info"
-    t.text     "notes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "collections_ontologies", :force => true do |t|
-    t.integer  "collection_id"
-    t.integer  "ontology_id"
-    t.string   "status"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "collections_users", :force => true do |t|
-    t.integer  "collection_id"
-    t.integer  "user_id"
-    t.string   "role"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "languages", :force => true do |t|
-    t.string   "bibliographic_code", :limit => 3, :null => false
-    t.string   "terminologic_code"
-    t.string   "digit2_code"
-    t.string   "english_name",                    :null => false
-    t.string   "french_name",                     :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "relationships", :force => true do |t|
-    t.integer  "category_id"
-    t.integer  "synonym_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "ontologies", :force => true do |t|
-    t.string   "name"
-    t.string   "status"
-    t.string   "url_category_html"
-    t.string   "url_category_xml"
-    t.integer  "language_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "ontologies_users", :force => true do |t|
-    t.integer  "ontology_id"
-    t.integer  "user_id"
-    t.integer  "language_id"
-    t.string   "role"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "teams", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.integer  "privacy"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "teams_users", :force => true do |t|
-    t.integer  "team_id"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20100123231218) do
 
   create_table "users", :force => true do |t|
     t.string   "login",                     :limit => 40
@@ -114,15 +28,7 @@ ActiveRecord::Schema.define(:version => 20100310034704) do
     t.string   "state",                                    :default => "passive"
     t.datetime "deleted_at"
     t.integer  "validation_id"
-    t.string   "role",                      :limit => 25,  :default => "User",    :null => false
-  end
-
-  add_index "users", ["login"], :name => "index_users_on_login", :unique => true
-
-  create_table "validations", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.text     "roles"
   end
 
 end
