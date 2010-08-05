@@ -4,7 +4,7 @@ authorization do
 	# for the ":guest" role. 
     # Then don't forget to change it back afterwards, or your permissions will be 
 	# wide open for non-logged in users!
-	
+
   # =========
   # G U E S T
   role :guest do
@@ -12,12 +12,15 @@ authorization do
     has_permission_on :collections, :to => :read do
       if_attribute :status => "Active"
     end
-	
+
     has_permission_on :ontologies, :to => :read do
       if_attribute :privacy => "Public"
     end
-	
+
    has_permission_on [:categories], :to => :read
+
+   has_permission_on [:users], :to => :create # needed so they can create a login.
+   
    # has_permission_on [:categories, :category_collections, :collection_users, :languages, :relationships, :teams, :users, :validations], :to => :read
   end
   
@@ -113,6 +116,12 @@ authorization do
     # Admins inherit all the permissions of Owners.
 	includes :guest
    has_permission_on [:categories, :collections, :category_collections, :collection_users, :languages, :ontologies, :ontologies_users, :relationships, :teams, :teams_users, :users, :validations], :to => [:manage, :create]
+
+   has_permission_on :ontologies do 
+   		to :translate
+		if_attribute :status => "Locked"
+    end
+
    # Josh could not get the following working... 
        # documentation is at http://github.com/stffn/declarative_authorization
    # uncomment the following "has_permission_on" line, and 
@@ -130,4 +139,5 @@ privileges do
   privilege :manage, :includes => [:read, :update, :delete]
   
   privilege :create, :includes => [:new, :create]
+  privilege :translate, :includes => [:new, :create]
 end

@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  filter_resource_access
   # before_filter :login_required
   # DO NOT enable the following "filter_resource_access" as it prevents new Users from "signup"
   # filter_resource_access
