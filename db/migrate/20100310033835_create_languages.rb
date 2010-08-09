@@ -4,6 +4,7 @@ class CreateLanguages < ActiveRecord::Migration
       t.string :bibliographic_code, :null => false, :limit => 3
       t.string :terminologic_code
       t.string :digit2_code
+      t.integer :sort_group
       t.string :english_name, :null => false
       t.string :french_name, :null => false
 

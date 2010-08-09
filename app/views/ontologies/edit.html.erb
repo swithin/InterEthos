@@ -14,7 +14,7 @@
 		
         <td>
 	<p><%= label(:language, :id, 'Language') %><br />
-		<%= collection_select(:ontology, :language_id, Language.find(:all), :id, :english_name, options = {}, html_options = {}) %></p>
+		<%= collection_select(:ontology, :language_id, Language.find(:all, :order => "sort_group, english_name"), :id, :english_name, options = {}, html_options = {}) %></p>
         </td>
       </tr>
     </table>
