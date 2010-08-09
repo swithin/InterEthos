@@ -30,6 +30,9 @@ class OntologiesController < ApplicationController
   # GET /ontologies/new.xml
   def new
     # @ontology is created in before_filter
+	if params[:translation_id]
+      @translation = Ontology.find(params[:translation_id])
+    end
 
     respond_to do |format|
       format.html # new.html.erb

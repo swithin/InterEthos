@@ -6,10 +6,10 @@
   <p><%= label(:ontology, :id, 'Ontology') %><br />
 	<% if params[:parent_id].to_i == 0 %>
       <strong><%= "New Root Ontology" %></strong>
-      <%= hidden_field_tag("ontologies_category[ontology_id]", 0) %></p>
+      <%= hidden_field_tag("category[ontology_id]", 0) %></p>
 	<% else %>
       <strong><%= @ontology.name %></strong>
-      <%= hidden_field_tag("ontologies_category[ontology_id]", @ontology.id) %></p>
+      <%= hidden_field_tag("category[ontology_id]", @ontology.id) %></p>
 	<% end %>
 
   <p><%= f.label :parent_category %><br />

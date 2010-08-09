@@ -4,6 +4,16 @@
 	<%= f.error_messages %>
 
     <table width=100%>
+	  <% if params[:translation_id] %>
+        <tr>
+          <td colspan="3">
+            <strong><%= @translation.name %></strong> (existing ontology)<br />
+              <%= f.label :translation, 'Note: The new ontology that you enter below will be a translation of the above existing ontology' %>
+              <%= hidden_field_tag("ontology[translation_id]", @translation.id) %>
+          </td>
+        </tr>
+      <% end %>
+	  
 	  <tr>
 	    <td>
 	      <%= f.label :name %><br />
@@ -34,7 +44,7 @@
       <tr>
         <td>
           <%= f.label :status %><br />
-		<%= f.select("status", %w[Stable Beta Deprecated], {}, {}) %>
+		<%= f.select("status", %w[Beta Stable Deprecated], {}, {}) %>
         </td>
 		
         <td width=10%>&nbsp;</td>
