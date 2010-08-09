@@ -33,8 +33,7 @@ authorization do
 	# ---------------------
 	# C O L L E C T I O N S
 	# Owners can "create" any new collection that they wish.
-      has_permission_on :collections, :to => :create do
-      end
+      has_permission_on [:collections, :category_collections], :to => [:create, :manage]
 	
 	# Owners can only "manage" the collections that they own.
 	  has_permission_on [:collections, :collection_users] do

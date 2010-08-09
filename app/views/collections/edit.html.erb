@@ -3,6 +3,8 @@
 <% form_for(@collection) do |f| %>
 	<%= f.error_messages %>
 
+    <%= hidden_field_tag("collection[user_id]", current_user.id) %>
+    
     <table width=100%>
 	  <tr>
 	    <td>
@@ -42,12 +44,6 @@
         <td>
           <%= f.label :privacy %><br />
 		    <%= f.select("privacy", %w[Public Personal Registered-Users-Only IP-Only SOAP-Only], {}, {}) %>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <%= f.label :owner %><br />
-            <%= select :collection, :user_id, [["Me",current_user.id]] %>
         </td>
       </tr>
     </table>

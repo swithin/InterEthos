@@ -4,10 +4,30 @@
     name: The Boston Indicators Project
     status: Active
     updated_at: 2010-03-12 20:30:23
-    id: "1"
+    id: 1
+    meta: 
     notes: ""
     contact_info: ""
+    url_about: 
     organization: Boston Foundation
+    privacy: Public
+    user_id: 24
     created_at: 2010-03-12 18:48:54
+  attributes_cache: {}
+
+- !ruby/object:Collection 
+  attributes: 
+    name: Test Collection
+    status: Active
+    updated_at: 2010-08-09 17:34:05
+    id: 2
+    meta: ""
+    notes: ""
+    contact_info: ""
+    url_about: ""
+    organization: Testers Inc
+    privacy: Public
+    user_id: 26
+    created_at: 2010-08-09 17:30:43
   attributes_cache: {}
 
