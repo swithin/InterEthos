@@ -11,21 +11,10 @@
 	      <%= f.label :name %><br />
 		    <%= f.text_field :name %>
         </td>
-				
+        			
         <td rowspan=5>
-		  <%= f.label "Categories" %>
-	      <%#= @collection.category_collections.id %><br />
-		    <%#= tree_select(Category.find(:all, :conditions => "parent_id = 170"),
-                        'collection', 'category_id', :category) %>
-						<!-- NEW "Multiple Select Helper"
-						The easiest way to port your code to the new version is change all call to
-						+multiple_select+, +collection_multiple_select+ and +tree_multiple_select+ -->
-						<%= tree_multiple_select('collection', 'category_ids', Category.find(:all, :conditions => "parent_id = 170"), :id, :name, :outer_class => 'multiple_select', :inner_class => 'multiple_select_checkbox') %>
-		    <%#= tree_select(Realm.find(:all, :conditions => "parent_id = 1"),
-                        'group', 'realm_id', @group.realm) %>
-
-			<%#= collection_select(:categories_collection, :category_id, Category.find(:all), :id, :name, options = {}, html_options = {}) %>
-            <%#= select :collection, :category_ids, [@category_ids] %>
+          <%= f.label "Categories" %>
+          <%= tree_multiple_select('collection', 'category_ids', Category.find(:all, :conditions => "parent_id = 170"), :id, :name, :outer_class => 'multiple_select', :inner_class => 'multiple_select_checkbox') %>
         </td>
       </tr>
       <tr>
