@@ -8,13 +8,16 @@
 	<%= hidden_field_tag("ontologies_category[ontology_id]", @category.ontology_id) %></p>
 
   <p><%= f.label :parent_category %><br />
-  <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"), 'category', 'parent_id', @category) %></p>
+  <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"), 'category', 'parent_id', @category.parent) %></p>
 
   <p><%= f.label :category_name %><br />
     <%= f.text_field :name %></p>
 
   <p><%= f.label :category_meta %><br />
     <%= f.text_area :meta, :rows => 4, :cols => 45 %></p>
+  
+  <%# Note: Do not change the User_id to the current user. For instance were an Admin to update this, we want to leave the original "owner's" user_id. %>
+  <%= hidden_field_tag("category[user_id]", @category.user_id) %>
 
   <p><%= f.submit 'Update' %></p>
 

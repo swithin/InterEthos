@@ -1,5 +1,6 @@
 class Category < ActiveRecord::Base
   belongs_to :ontology
+  belongs_to :user
   has_many :relationships
     has_many :synonyms, :through => :relationships
 

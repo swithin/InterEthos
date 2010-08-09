@@ -64,135 +64,138 @@ document.getElementById('hideimg<%= category.id %>').style.display = "none";
 
 <% @Category_Branch_Root = category.id %>
 <%# Note: this "Current_Category_Root" session variable is only set in the "Category Controller" if it comes in as "...&Root_id=#" in the URL, as when someone is adding another category to a branch %>
-<% if !session[:uroot_id] %>
-    <%# hide branch %>
-        <% categories_display = "none" %>
-        <img id="showimg<%= category.id -%>" src="/images/open.jpg" onclick="show<%= category.id -%>('tree<%= category.id -%>')" style="display: ;"><img id="hideimg<%= category.id -%>" src="/images/close.jpg" onclick="hide<%= category.id -%>('tree<%= category.id -%>')" style="display: none;">&nbsp;&nbsp;<strong><%= h(category.name) -%></strong>
-<% else %>
-    <%# SHOW BRANCH !!! %>
-    <% if session[:uroot_id] == @Category_Branch_Root %>
-        <% categories_display = "" %>
-        <img id="showimg<%= category.id -%>" src="/images/open.jpg" onclick="show<%= category.id -%>('tree<%= category.id -%>')" style="display: none;"><img id="hideimg<%= category.id -%>" src="/images/close.jpg" onclick="hide<%= category.id -%>('tree<%= category.id -%>')" style="display: ;">&nbsp;&nbsp;<strong><%= h(category.name) -%></strong>
-    <%# hide branch %>
+
+<% if Category.find(category.id).ontology.privacy == "Public" %>
+    <% if !session[:uroot_id] %>
+        <%# hide branch %>
+            <% categories_display = "none" %>
+            <img id="showimg<%= category.id -%>" src="/images/open.jpg" onclick="show<%= category.id -%>('tree<%= category.id -%>')" style="display: ;"><img id="hideimg<%= category.id -%>" src="/images/close.jpg" onclick="hide<%= category.id -%>('tree<%= category.id -%>')" style="display: none;">&nbsp;&nbsp;<strong><%= h(category.name) -%></strong>
     <% else %>
-        <% categories_display = "none" %>
-        <img id="showimg<%= category.id -%>" src="/images/open.jpg" onclick="show<%= category.id -%>('tree<%= category.id -%>')" style="display: ;"><img id="hideimg<%= category.id -%>" src="/images/close.jpg" onclick="hide<%= category.id -%>('tree<%= category.id -%>')" style="display: none;">&nbsp;&nbsp;<strong><%= h(category.name) -%></strong>
-    <% end %>
-<% end %>
-        <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, :categories %>
-        <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
-        <!-- branch end? -->
-        <% if Category.find_all_by_parent_id(category.id).empty? %>
-            <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, :categories %>
-            <br />
-        <!-- branch continues... -->
+        <%# SHOW BRANCH !!! %>
+        <% if session[:uroot_id] == @Category_Branch_Root %>
+            <% categories_display = "" %>
+            <img id="showimg<%= category.id -%>" src="/images/open.jpg" onclick="show<%= category.id -%>('tree<%= category.id -%>')" style="display: none;"><img id="hideimg<%= category.id -%>" src="/images/close.jpg" onclick="hide<%= category.id -%>('tree<%= category.id -%>')" style="display: ;">&nbsp;&nbsp;<strong><%= h(category.name) -%></strong>
+        <%# hide branch %>
         <% else %>
-            <%= indent %><%= link_to '<img src="/images/xml.jpg" border="0">', :controller => 'categories', :action => 'tree', :id => category.id, :format => :xml %>
-            <%= indent %><%= link_to '<img src="/images/eye.jpg" border="0">', :controller => 'categories', :action => 'tree', :id => category.id, :uroot_id => @Category_Branch_Root %>
-            <br /><span id="tree<%= category.id %>" style="display: <%= categories_display %>;">
-                <ul><% for category in Category.find_all_by_parent_id(category.id, :order => "name") %>
-                <!-- Level TWO -->
-                    <li type="disc">
-                    <em><strong><%= h(category.name) -%></strong></em>
-                        <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, :categories %>
-                        <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
-                        <!-- branch end? -->
-                        <% if Category.find_all_by_parent_id(category.id).empty? %>
-                            <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, :categories %></li>
-                        <!-- branch continues... -->
-                        <% else %>
-                            </li>
-                            <ul><% for category in Category.find_all_by_parent_id(category.id, :order => "name") %>
-                            <!-- Level THREE -->
-                                <li type="circle">
-                                <%= h(category.name) -%>
-                                    <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, :categories %>
-                                    <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
-                                    <!-- branch end? -->
-                                    <% if Category.find_all_by_parent_id(category.id).empty? %>
-                                        <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, :categories %></li>
-                                    <!-- branch continues... -->
-                                    <% else %>
-                                        </li>
-                                        <ul><% for category in Category.find_all_by_parent_id(category.id, :order => "name") %>
-                                        <!-- Level FOUR -->
-                                            <li type="circle">
-                                            <em><%= h(category.name) -%></em>
-                                                <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, :categories %>
-                                                <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
-                                                <!-- branch end? -->
-                                                <% if Category.find_all_by_parent_id(category.id).empty? %>
-                                                    <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, :categories %></li>
-                                                <!-- branch continues... -->
-                                                <% else %>
-                                                    </li>
-                                                    <ul><% for category in Category.find_all_by_parent_id(category.id, :order => "name") %>
-                                                        <!-- Level FIVE -->
-                                                            <li type="circle">
-                                                            <em><%= h(category.name) -%></em>
-                                                                <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, :categories %>
-                                                                <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
-                                                                <!-- branch end? -->
-                                                                <% if Category.find_all_by_parent_id(category.id).empty? %>
-                                                                    <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, :categories %></li>
-                                                                <!-- branch continues... -->
-                                                                <% else %>
-                                                                    </li>
-                                                                    <ul><% for category in Category.find_all_by_parent_id(category.id, :order => "name") %>
-                                                                        <!-- Level SIX -->
-                                                                            <li type="circle">
-                                                                            <em><%= h(category.name) -%></em>
-                                                                                <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, :categories %>
-                                                                                <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
-                                                                                <!-- branch end? -->
-                                                                                <% if Category.find_all_by_parent_id(category.id).empty? %>
-                                                                                    <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, :categories %></li>
-                                                                                <!-- branch continues... -->
-                                                                                <% else %>
-                                                                                    </li>
-                                                                                    <ul><% for category in Category.find_all_by_parent_id(category.id, :order => "name") %>
-                                                                                    <!-- Level SEVEN -->
-                                                                                            <li type="circle">
-                                                                                                <table>
-                                                                                                    <tr>
-                                                                                                        <td><%= h(category.name) -%>
-                                                                                                            <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, :categories %>
-                                                                                                            <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
-                                                                                                            <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, :categories %>
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                </table>
-                                                                                            </li>
-                                                                                        <% end %>
-                                                                                    <!-- / Level SEVEN -->
-                                                                                    </ul>
-                                                                                    <% end %>
-                                                                                </li>
-                                                                            <% end %>
-                                                                        <!-- / Level SIX -->
-                                                                    </ul>
-                                                                    <% end %>
-                                                                </li>
-                                                            <% end %>
-                                                        <!-- / Level FIVE -->
-                                                    </ul>
-                                                    <% end %>
-                                                </li>
-                                            <% end %>
-                                        <!-- / Level FOUR -->
-                                        </ul>
-                                        <% end %>
-                                    </li>
-                                <% end %>
-                            <!-- / Level THREE -->
-                            </ul>
-                            <% end %>
-                        </li>
-                    <% end %>
-                <!-- / Level TWO -->
-                </ul>
-            </span>
+            <% categories_display = "none" %>
+            <img id="showimg<%= category.id -%>" src="/images/open.jpg" onclick="show<%= category.id -%>('tree<%= category.id -%>')" style="display: ;"><img id="hideimg<%= category.id -%>" src="/images/close.jpg" onclick="hide<%= category.id -%>('tree<%= category.id -%>')" style="display: none;">&nbsp;&nbsp;<strong><%= h(category.name) -%></strong>
         <% end %>
+    <% end %>
+            <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
+            <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
+            <!-- branch end? -->
+            <% if Category.find_all_by_parent_id(category.id).empty? %>
+                <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, category %>
+                <br />
+            <!-- branch continues... -->
+            <% else %>
+                <%= indent %><%= link_to '<img src="/images/xml.jpg" border="0">', :controller => 'categories', :action => 'tree', :id => category.id, :format => :xml %>
+                <%= indent %><%= link_to '<img src="/images/eye.jpg" border="0">', :controller => 'categories', :action => 'tree', :id => category.id, :uroot_id => @Category_Branch_Root %>
+                <br /><span id="tree<%= category.id %>" style="display: <%= categories_display %>;">
+                    <ul><% for category in Category.find_all_by_parent_id(category.id, :order => "name") %>
+                    <!-- Level TWO -->
+                        <li type="disc">
+                        <em><strong><%= h(category.name) -%></strong></em>
+                            <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
+                            <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
+                            <!-- branch end? -->
+                            <% if Category.find_all_by_parent_id(category.id).empty? %>
+                                <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, category %></li>
+                            <!-- branch continues... -->
+                            <% else %>
+                                </li>
+                                <ul><% for category in Category.find_all_by_parent_id(category.id, :order => "name") %>
+                                <!-- Level THREE -->
+                                    <li type="circle">
+                                    <%= h(category.name) -%>
+                                        <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
+                                        <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
+                                        <!-- branch end? -->
+                                        <% if Category.find_all_by_parent_id(category.id).empty? %>
+                                            <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, category %></li>
+                                        <!-- branch continues... -->
+                                        <% else %>
+                                            </li>
+                                            <ul><% for category in Category.find_all_by_parent_id(category.id, :order => "name") %>
+                                            <!-- Level FOUR -->
+                                                <li type="circle">
+                                                <em><%= h(category.name) -%></em>
+                                                    <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
+                                                    <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
+                                                    <!-- branch end? -->
+                                                    <% if Category.find_all_by_parent_id(category.id).empty? %>
+                                                        <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, category %></li>
+                                                    <!-- branch continues... -->
+                                                    <% else %>
+                                                        </li>
+                                                        <ul><% for category in Category.find_all_by_parent_id(category.id, :order => "name") %>
+                                                            <!-- Level FIVE -->
+                                                                <li type="circle">
+                                                                <em><%= h(category.name) -%></em>
+                                                                    <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
+                                                                    <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
+                                                                    <!-- branch end? -->
+                                                                    <% if Category.find_all_by_parent_id(category.id).empty? %>
+                                                                        <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, category %></li>
+                                                                    <!-- branch continues... -->
+                                                                    <% else %>
+                                                                        </li>
+                                                                        <ul><% for category in Category.find_all_by_parent_id(category.id, :order => "name") %>
+                                                                            <!-- Level SIX -->
+                                                                                <li type="circle">
+                                                                                <em><%= h(category.name) -%></em>
+                                                                                    <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
+                                                                                    <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
+                                                                                    <!-- branch end? -->
+                                                                                    <% if Category.find_all_by_parent_id(category.id).empty? %>
+                                                                                        <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, category %></li>
+                                                                                    <!-- branch continues... -->
+                                                                                    <% else %>
+                                                                                        </li>
+                                                                                        <ul><% for category in Category.find_all_by_parent_id(category.id, :order => "name") %>
+                                                                                        <!-- Level SEVEN -->
+                                                                                                <li type="circle">
+                                                                                                    <table>
+                                                                                                        <tr>
+                                                                                                            <td><%= h(category.name) -%>
+                                                                                                                <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
+                                                                                                                <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
+                                                                                                                <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, category %>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </li>
+                                                                                            <% end %>
+                                                                                        <!-- / Level SEVEN -->
+                                                                                        </ul>
+                                                                                        <% end %>
+                                                                                    </li>
+                                                                                <% end %>
+                                                                            <!-- / Level SIX -->
+                                                                        </ul>
+                                                                        <% end %>
+                                                                    </li>
+                                                                <% end %>
+                                                            <!-- / Level FIVE -->
+                                                        </ul>
+                                                        <% end %>
+                                                    </li>
+                                                <% end %>
+                                            <!-- / Level FOUR -->
+                                            </ul>
+                                            <% end %>
+                                        </li>
+                                    <% end %>
+                                <!-- / Level THREE -->
+                                </ul>
+                                <% end %>
+                            </li>
+                        <% end %>
+                    <!-- / Level TWO -->
+                    </ul>
+                </span>
+            <% end %>
+    <% end %>
 <% end %>
 <!-- / Level ONE -->
 

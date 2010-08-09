@@ -5,6 +5,7 @@ class CreateCategories < ActiveRecord::Migration
       t.string :meta
       t.references :parent
       t.references :ontology
+      t.references :user
 
       t.timestamps
     end

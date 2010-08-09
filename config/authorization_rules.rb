@@ -75,15 +75,13 @@ authorization do
 	# -------------------
 	# C A T E G O R I E S
 	# Owners can "create" any new category that they wish.
-      has_permission_on :categories, :to => :create do
-      end
+      has_permission_on :categories, :to => :create
 	  
 	# Owners can only "manage" the categories that they own.
-	  # has_permission_on [:categories, :category_users] do
-		# to :manage
-		# if_attribute :user_id => is {user.id}
-		# # | :category_users => is {user.category_users}
-	  # end
+	  has_permission_on :categories do
+		to :manage
+		if_attribute :user_id => is {user.id}
+	  end
 	
 	# Owners can only "manage" the category_users for which they own the category.
 	  # has_permission_on :category_users, :to => :manage do
@@ -93,8 +91,7 @@ authorization do
 	# ---------
 	# T E A M S
 	# Owners can "create" any new team that they wish.
-      has_permission_on :teams, :to => :create do
-      end
+      has_permission_on :teams, :to => :create
 	  
 	# Owners can only "manage" the teams that they own.
 	  has_permission_on [:teams, :team_users] do
