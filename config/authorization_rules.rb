@@ -10,7 +10,8 @@ authorization do
   role :guest do
     # add permissions for guests here, e.g.
     has_permission_on :collections, :to => :read do
-      if_attribute :status => "Active"
+      if_attribute :status => "Active",
+	:privacy => "Public"
     end
 
     has_permission_on :ontologies, :to => :read do

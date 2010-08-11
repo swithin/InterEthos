@@ -14,7 +14,7 @@
 	
 	<td rowspan=4>
 	  <%= f.label "Categories" %>
-	  <%= tree_multiple_select('collection', 'category_ids', Category.find(:all, :conditions => "parent_id = 170"), :id, :name, :outer_class => 'multiple_select', :inner_class => 'multiple_select_checkbox') %>
+          <%= tree_multiple_select('collection', 'category_ids', Category.with_permissions_to(:read).find_all_by_parent_id(1), :id, :name, :outer_class => 'multiple_select', :inner_class => 'multiple_select_checkbox') %>
 	</td>
       </tr>
 

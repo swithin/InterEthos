@@ -5,7 +5,8 @@ class CategoriesController < ApplicationController
   # GET /categories.xml
   helper CategoriesHelper
   def index
-    @categories = Category.all
+    # Only show categories that the current user may read:
+    @categories = Category.with_permissions_to(:read)
 	# "branch_clicks" are incremented for each click on a non-navbar link 
 	session[:branch_clicks] = 0
     session[:current_location] = categories_path
