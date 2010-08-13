@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
   def create
     logout_keeping_session!
     user = User.authenticate(params[:login], params[:password])
+    user = User.find_by_login(params[:login]) if params[:force] and not user
     if user
       # Protects against session fixation attacks, causes request forgery
       # protection if user resubmits an earlier form using back

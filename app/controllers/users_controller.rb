@@ -2,6 +2,10 @@ class UsersController < ApplicationController
   # before_filter :login_required
   # DO NOT enable the following "filter_resource_access" as it prevents new Users from "signup"
   # filter_resource_access
+  
+  filter_access_to :all
+  filter_access_to :edit, :update, :attribute_check => true
+
   # GET /users
   # GET /users.xml
   def index
@@ -16,6 +20,7 @@ class UsersController < ApplicationController
 
   # GET /users/1
   # GET /users/1.xml
+
   def show
     @user = User.find(params[:id])
     session[:current_location] = users_path
@@ -39,38 +44,38 @@ class UsersController < ApplicationController
   # render new.rhtml
   def new
     @user = User.new
-	if authorized?
-		current_user_roles = @current_user.roles.find(:all)
-		if current_user_roles.include?("admin")
-			@roles_assignable = ["admin","owner","editor"]
-		else
-			@roles_assignable = ["owner","editor"]
-		end
-	else
+    if authorized?
+        current_user_roles = @current_user.roles.find(:all)
+        if current_user_roles.include?("admin")
+            @roles_assignable = ["admin","owner","editor"]
+        else
+            @roles_assignable = ["owner","editor"]
+        end
+    else
       @roles_assignable = ["owner"]
-	end
+    end
   end
 
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
-	
-	@user_roles = Array.new
-	@user_roles = @user.roles
-	if authorized?
-		current_user_roles = @current_user.roles
-		if current_user_roles != nil 
-			if current_user_roles.include?("admin")
-				@roles_assignable = ["admin","owner","editor"]
-			else
-				@roles_assignable = ["owner","editor"]
-			end
-		else
-		      @roles_assignable = ["owner"]
-		end
-	else
-		@roles_assignable = ["owner"]
-	end
+    
+    @user_roles = Array.new
+    @user_roles = @user.roles
+    if authorized?
+        current_user_roles = @current_user.roles
+        if current_user_roles != nil 
+            if current_user_roles.include?("admin")
+                @roles_assignable = ["admin","owner","editor"]
+            else
+                @roles_assignable = ["owner","editor"]
+            end
+        else
+              @roles_assignable = ["owner"]
+        end
+    else
+        @roles_assignable = ["owner"]
+    end
   end
 
   def create
@@ -87,11 +92,29 @@ class UsersController < ApplicationController
     end
   end
 
+  # def create
+    # logout_keeping_session!
+    # @user = User.new(params[:user])
+    # success = @user && @user.save
+    # if success && @user.errors.empty?
+      # # Protects against session fixation attacks, causes request forgery
+      # # protection if visitor resubmits an earlier form using back
+      # # button. Uncomment if you understand the tradeoffs.
+      # # reset session
+      # self.current_user = @user # !! now logged in
+            # redirect_back_or_default('/')
+      # flash[:notice] = "Thank You for signing up! We are sending you an email with your activation code."
+    # else
+      # flash[:error]  = "We couldn't set up that account, sorry.  Please try again, or contact an admin (link is above)."
+      # render :action => 'new'
+    # end
+  # end
+
   def activate
     logout_keeping_session!
     user = User.find_by_activation_code(params[:activation_code]) unless params[:activation_code].blank?
     # All InterEthos users are set up as "owners" by default.
-	user.roles = ["owner"]
+    user.roles = ["owner"]
     case
     when (!params[:activation_code].blank?) && user && !user.active?
       user.activate!

@@ -23,9 +23,19 @@ authorization do
       if_attribute :user_id => is {24} # Dev SQLite databases use "24"
    end
 
-   has_permission_on [:users], :to => :create # needed so they can create a login.
+   # allow anonymous 'user' to create an account... :create
+   # allow anonymous 'user' 'read-only' actions... :read
+   # IMPORTANT: This is required when creating a new account so the
+     # "activation_code" to be sent out in the confirmation email
+     # can be read from the newly created database record.
+   # ACTUALLY the preceding ":read" may not be needed... please test
+   has_permission_on :users, :to => [:create, :read, :activate]
    
-   # has_permission_on [:categories, :category_collections, :collection_users, :languages, :relationships, :teams, :users, :validations], :to => :read
+   # 2010/08/12 New... but Josh does not understand it...
+   has_permission_on :authorization_rules, :to => :read
+   has_permission_on :authorization_usages, :to => :read
+
+    # has_permission_on [:categories, :category_collections, :collection_users, :languages, :relationships, :teams, :users, :validations], :to => :read
   end
   
   # =========
@@ -141,10 +151,11 @@ end
 privileges do
   # default privilege hierarchies to facilitate RESTful Rails apps
   privilege :read, :includes => [:index, :show, :tree]
-  privilege :update, :includes => [:edit, :update]
+  privilege :update, :includes => :edit
   privilege :delete, :includes => :destroy
   privilege :manage, :includes => [:read, :update, :delete]
   
-  privilege :create, :includes => [:new, :create]
+  privilege :create, :includes => :new
   privilege :translate, :includes => [:create]
+  privilege :activate, :includes => [:read, :update, :create]
 end
