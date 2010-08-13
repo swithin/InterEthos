@@ -1,6 +1,6 @@
 Welcome to InterEthos!
 
-Special Note: Before running "rake db:migrate" you need to change the last word in line #9 of the "config/authorization_rules.rb" file from ":read" to ":manage". Otherwise you will get an "rake db:migrate" error like "no matching rules found for create...". The "declarative_authorization" plugin takes control of the migrations. The user of the migration is obviously not logged into the site, so the default ":guest" role must be TEMPORARILY given ":manage" permissions. Once the migration is done, then revert that word back to ":read".
+Special Note: Before running "rake db:migrate" you need to change the last words in a few of the early lines of the "config/authorization_rules.rb" file, pertaining to only the ":guest" role, from ":read" to "[:manage, :create]". Otherwise you will get an "rake db:migrate" error like "no matching rules found for create...". The "declarative_authorization" plugin takes control of the migrations. The user of the migration is obviously not logged into the site, so the default ":guest" role must be TEMPORARILY given ":manage" permissions. Once the migration is done, then revert that word back to ":read".
 
 Feature Set
 
