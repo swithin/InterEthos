@@ -10,7 +10,7 @@
     <th align="left">&nbsp;&nbsp;&nbsp;&nbsp;</th>
     <th align="left">Privacy</th>
     <th width=10%>&nbsp;</th>
-    <th colspan=3>&nbsp;</th>
+    <th colspan=2>&nbsp;</th>
   </tr>
 
 <% @ontologies.each do |ontology| %>
@@ -21,9 +21,11 @@
     <td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;</td>
     <td nowrap="nowrap"><%=h ontology.privacy %></td>
     <td><% if permitted_to? :show, ontology %>&nbsp;<% else %><strong>(<%=h ontology.status %>)<strong><% end %></td>
-    <td><%= link_to '<img src="/images/eye.jpg" border="0">', ontology if permitted_to? :show, ontology %></td>
-    <td><%= link_to '<img src="/images/delta.jpg" border="0">', edit_ontology_path(ontology) if permitted_to? :edit, ontology %></td>
-    <td><%= link_to '<img src="/images/remove.jpg" border="0">', ontology, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, ontology %></td>
+    <td align="center">
+      <%= link_to '<img src="/images/eye.jpg" border="0">', ontology if !permitted_to? :edit, ontology %>
+      <%= link_to '<img src="/images/delta.jpg" border="0">', ontology if permitted_to? :edit, ontology %>
+    </td>
+    <td><%#= link_to '<img src="/images/remove.jpg" border="0">', ontology, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, ontology %></td>
     <td>
 	<%= link_to '<img src="/images/translate.jpg" border="0">', new_ontology_path(:translation_id => ontology.id), :confirm => 'You are about to enable this Collection for translation. Once enabled, then you cannot modify existing categories. You can add new categories, but cannot modify even those new ones once they are created.', :method => :create  if permitted_to? :translate, ontology %>
 	
