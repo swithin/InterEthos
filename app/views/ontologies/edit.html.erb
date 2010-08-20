@@ -47,10 +47,10 @@
         <td width=10%>&nbsp;</td>
 		
         <td>
-          <%= f.label :owner %><br />
-            <%= select :ontology, :user_id, [ ["Me",current_user.id]] %>
+          <%#= f.label :owner %><br />
+            <%#= select :ontology, :user_id, [ ["Me",current_user.id]] %>
             <!-- User.find_by_id(session[:user_id]).id.to_i -->
-            <%#= hidden_field "user_id", User.find_by_id(session[:user_id]).id.to_i %>
+            <%= hidden_field_tag "ontology[user_id]", [current_user.id] %>
             <%#= f.hidden_field :user_id, current_user.id %>
             <%#= hidden_field "ontology[user_id]", current_user.id %>
         </td>

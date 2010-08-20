@@ -7,10 +7,10 @@ class CategoriesController < ApplicationController
   def index
     # Only show categories that the current user may read:
     @categories = Category.with_permissions_to(:read)
-	# "branch_clicks" are incremented for each click on a non-navbar link 
-	session[:branch_clicks] = 0
+    # "branch_clicks" are incremented for each click on a non-navbar link 
+    session[:branch_clicks] = 0
     session[:current_location] = categories_path
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @categories }
@@ -19,18 +19,19 @@ class CategoriesController < ApplicationController
   end
 
   def tree
-  	@xml = Builder::XmlMarkup.new
+    @xml = Builder::XmlMarkup.new
     @categories = Category.find(:all)
-	@category_root_id = Category.find(params[:id])
-	@tree = @category_root_id.children
-	@Category_tree = Category.find_all_by_parent_id(@category_root_id, :order => "name")
-	# "branch_clicks" are incremented for each click on a non-navbar link 
-	session[:branch_clicks] = 1
+    @category_root_id = Category.find(params[:id])
+    @tree = @category_root_id.children
+    @Category_tree = Category.find_all_by_parent_id(@category_root_id, :order => "name")
+    # "branch_clicks" are incremented for each click on a non-navbar link 
+    session[:branch_clicks] = 1
     session[:current_location] = categories_path
-	respond_to do |format|
-	  format.html # index.html.erb
+    
+    respond_to do |format|
+      format.html # index.html.erb
       format.xml  # tree.xml.builder
-	  # format.xml  { render :xml => @tree }
+      # format.xml  { render :xml => @tree }
     end
   end
 
@@ -38,7 +39,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1.xml
   def show
     session[:current_location] = categories_path
-
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @category.to_xml }
@@ -61,20 +62,22 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
     @ontology = Category.find(params[:uroot_id]).ontology
-	@synonyms = @category.synonyms
+    @synonyms = @category.synonyms
     session[:uroot_id] = params[:uroot_id].to_i
   end
 
   # POST /categories
   # POST /categories.xml
   def create
+    ontology = @category.ontology
+    
     respond_to do |format|
       if @category.save
         flash[:notice] = 'Category was successfully created.'
         if params[:add_similar]
           format.html { redirect_to(new_category_path(:parent_id => @category.parent_id)) }
         else
-          format.html { redirect_to(:controller => 'categories', :action => 'index') }
+          format.html { redirect_to(ontology) }
         end
         format.xml  { render :xml => @category, :status => :created, :location => @category }
       else
@@ -87,10 +90,12 @@ class CategoriesController < ApplicationController
   # PUT /categories/1
   # PUT /categories/1.xml
   def update
+    ontology = @category.ontology
+    
     respond_to do |format|
       if @category.update_attributes(params[:category])
         flash[:notice] = 'Category was successfully updated.'
-        format.html { redirect_to(:controller => 'categories', :action => 'index') }
+        format.html { redirect_to(ontology) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -102,12 +107,13 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1
   # DELETE /categories/1.xml
   def destroy
+    ontology = @category.ontology
     @category.destroy
     # did not have time to add the "...&uroot_id=#" variable to the "destroy" links.
     # session[:uroot_id] = params[:uroot_id].to_i
 
     respond_to do |format|
-      format.html { redirect_to(categories_url) }
+      format.html { redirect_to(ontology) }
       format.xml  { head :ok }
     end
   end

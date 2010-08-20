@@ -19,7 +19,9 @@ class OntologiesController < ApplicationController
   def show
     # @ontology is loaded in before_filter
     session[:current_location] = ontologies_path
-
+    @category_root_id = @ontology.categories.find_all_by_parent_id(1)
+    @Category_tree = Category.find_all_by_parent_id(@category_root_id, :order => "name")
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @ontology }
