@@ -12,37 +12,41 @@
           <p><b>Language:</b> <%=h @ontology.language.english_name %>
         </td>
       </tr>
-    </table>
     
-    <p><b>URL for a descriptive overview about the Ontology</b><br />
-      <%= indent %><% if @ontology.url_about.length > 0 %><a href="<%=h @ontology.url_about %>" target="_blank"><%=h @ontology.url_about %></a><% else %><em>(none supplied)</em><% end %></p>
+      <tr>
+        <td colspan=3>
+          <b>URL for a descriptive overview about the Ontology</b><br />
+          <%= indent %><% if @ontology.url_about.length > 0 %><a href="<%=h @ontology.url_about %>" target="_blank"><%=h @ontology.url_about %></a><% else %><em>(none supplied)</em><% end %></p>
+        </td>
+      </tr>
     
-    <p><b>URL for HTML searches</b><br />
-      <%= indent %><% if @ontology.url_category_html.length > 0 %><a href="<%=h @ontology.url_category_html %>" target="_blank"><%=h @ontology.url_category_html %></a><% else %><em>(none supplied)</em><% end %><br />
-      <%= indent %>Include [category] marker if available.<br />
-      <%= indent %>ex. http://www.bostonindicators.org/Indicators2008/[category]':</p>
+      <tr>
+        <td colspan=3>
+          <b>URL for HTML searches</b><br />
+          <%= indent %><% if @ontology.url_category_html.length > 0 %><a href="<%=h @ontology.url_category_html %>" target="_blank"><%=h @ontology.url_category_html %></a><% else %><em>(none supplied)</em><% end %><br />
+          <%= indent %>Include [category] marker if available.<br />
+          <%= indent %>ex. http://www.bostonindicators.org/Indicators2008/[category]':</p>
+        </td>
+      </tr>
     
-    <p><b>URL for XML searches</b><br />
-      <%= indent %><% if @ontology.url_category_xml.length > 0 %><a href="<%=h @ontology.url_category_xml %>" target="_blank"><%=h @ontology.url_category_xml %></a><% else %><em>(none supplied)</em><% end %><br />
-      <%= indent %>Include [category] marker if available.<br />
-      <%= indent %>ex. http://www.bostonindicators.org/Indicators2008/[category]':</p>
+      <tr>
+        <td colspan=3>
+          <b>URL for XML searches</b><br />
+          <%= indent %><% if @ontology.url_category_xml.length > 0 %><a href="<%=h @ontology.url_category_xml %>" target="_blank"><%=h @ontology.url_category_xml %></a><% else %><em>(none supplied)</em><% end %><br />
+          <%= indent %>Include [category] marker if available.<br />
+          <%= indent %>ex. http://www.bostonindicators.org/Indicators2008/[category]':</p>
+        </td>
+      </tr>
     
-    <table width=100%>
       <tr>
         <td>
           <b>Status:</b> <%=h @ontology.status %>
-	</td>
+        </td>
         
         <td width=10%>&nbsp;</td>
         
         <td>
           <b>Privacy:</b> <%=h @ontology.privacy %>
-        </td>
-
-        <td width=10%>&nbsp;</td>
-        
-        <td>
-	  &nbsp;
         </td>
       </tr>
     </table>
@@ -57,48 +61,65 @@
 <% prior_indent_level = -1 %>
 
 <p>
-  <b>Category Trees:</b>
+  <b>Category Tree:</b><br />
+  
   <blockquote>
+    <% for category in @ontology.categories.with_permissions_to(:read).find_all_by_parent_id(1) %>
+      <% @Category_Branch_Root = category.id %>
+      <b><%= category.name %></b>
+      <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
+      <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
+      <!-- branch end? -->
+      <% if Category.with_permissions_to(:read).find_all_by_parent_id(category.id).empty? %>
+          <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure you want to remove the top-level Category?', :method => :delete if permitted_to? :delete, category %>
+          <br />
+      <% else %>
+            <%= indent %><%= link_to '<img src="/images/xml.jpg" border="0">', :controller => 'categories', :action => 'tree', :id => category.id, :format => :xml %>
+            <%= indent %><%= link_to '<img src="/images/eye.jpg" border="0">', :controller => 'categories', :action => 'tree', :id => category.id, :uroot_id => @Category_Branch_Root %>
+      <% end %><br />
+    <% end %>
     <% if @ontology.categories(@collection).empty? %>
-            <em>(none found)</em>
+      <em>(none found)</em>
+      <%= indent %>
+      <%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:ontology_id => @ontology.id, :uroot_id => 1) if permitted_to? :create, :categories %>
     <% else %>
+      <ul>
       <% for category in @Category_tree %>
-    <% @Category_Branch_Root = category.id %>
-        <% if prior_indent_level > -1 %>
-          <% return_count = prior_indent_level + 1 %>
-          <% return_count.times do |n| %> <%= "</ul>" %> <% end %>
-          <% prior_indent_level = -1 %>
-        <% end %>
-        <em><strong><%= h(category.name) -%></strong></em> <%#= h(category.id) -%>
-          <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
-          <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
-          <% if Category.with_permissions_to(:read).find_all_by_parent_id(category.id).empty? %>
-            <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure you want to delete this category?', :method => :delete if permitted_to? :delete, category %>
-      <% end %>
-          <%= indent %><%= link_to '<img src="/images/xml.jpg" border="0">', :controller => 'categories', :action => 'tree', :id => category.id, :format => :xml %>
-          <%= indent %><%= link_to '<img src="/images/eye.jpg" border="0">', :controller => 'categories', :action => 'tree', :id => category.id, :uroot_id => @Category_Branch_Root %>
-        <% render_tree(category) do |branch| %>
-          <% if branch[1] > prior_indent_level %>
-                  <ul>
-          <% elsif branch[1] < prior_indent_level %>
-            <% return_count = prior_indent_level - branch[1] %>
+        <% @Category_Branch_Root = category.id %>
+          <% if prior_indent_level > -1 %>
+            <% return_count = prior_indent_level + 1 %>
             <% return_count.times do |n| %> <%= "</ul>" %> <% end %>
+            <% prior_indent_level = -1 %>
           <% end %>
-          <li type="<% if branch[1] < 1 %><%= "disc" %><% else %><%= "circle" %><% end %>">
-            <em><%= h(branch[0].name) %></em><%#= h(branch[1]) %><%#= " | " %><%#= h(prior_indent_level) %>
-            <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => branch[0].id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
-            <%#= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', edit_category_path(branch[0].id) if permitted_to? :edit, :category %>
-        <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => branch[0].id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
-            <%#= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category_path(branch[0].id) if permitted_to? :delete, :category, :confirm => 'Are you sure?', :method => :delete %>
-        <% if Category.find_all_by_parent_id(branch[0].id).empty? %>
-              <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', branch[0], :confirm => 'Are you sure you want to delete this category?', :method => :delete if permitted_to? :delete, branch[0] %>
-        <% end %>
+          <li type="disc">
+            <em><strong><%= h(category.name) -%></strong></em> <%#= h(category.id) -%>
+            <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
+            <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
+            <% if Category.with_permissions_to(:read).find_all_by_parent_id(category.id).empty? %>
+             <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', category, :confirm => 'Are you sure you want to delete this category?', :method => :delete if permitted_to? :delete, category %>
+            <% end %>
           </li>
-          <% prior_indent_level = branch[1] %>
+          <% render_tree(category) do |branch| %>
+            <% if branch[1] > prior_indent_level %>
+              <ul>
+            <% elsif branch[1] < prior_indent_level %>
+              <% return_count = prior_indent_level - branch[1] %>
+              <% return_count.times do |n| %> <%= "</ul>" %> <% end %>
+            <% end %>
+            <li type="<% if branch[1] < 1 %><%= "disc" %><% else %><%= "circle" %><% end %>">
+              <em><%= h(branch[0].name) %></em><%#= h(branch[1]) %><%#= " | " %><%#= h(prior_indent_level) %>
+              <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:parent_id => branch[0].id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
+              <%= link_to '<img src="/images/delta.jpg" border="0">', edit_category_path(branch[0].id) if permitted_to? :edit, :category %>
+              <%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', :controller => 'categories', :action => 'edit', :id => branch[0].id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
+              <%= link_to '<img src="/images/remove.jpg" border="0">', category_path(branch[0].id) if permitted_to? :delete, :category, :confirm => 'Are you sure?', :method => :delete %>
+              <% if Category.find_all_by_parent_id(branch[0].id).empty? %>
+                <%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', branch[0], :confirm => 'Are you sure you want to delete this category?', :method => :delete if permitted_to? :delete, branch[0] %>
+              <% end %>
+            </li>
+            <% prior_indent_level = branch[1] %>
         <% end %>
       <% end %>
+      </ul>
     <% end %>
   </blockquote>
-  
-  <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_category_path(:ontology_id => @ontology.id) %>
 </p>

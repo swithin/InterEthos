@@ -50,7 +50,11 @@ class CategoriesController < ApplicationController
   # GET /categories/new.xml
   def new
     @parent_id = params[:parent_id].to_i
-    @ontology = Category.find(params[:uroot_id]).ontology
+    if params[:ontology_id]
+      @ontology = Ontology.find(params[:ontology_id])
+    else
+      @ontology = Category.find(params[:uroot_id]).ontology
+    end
     session[:uroot_id] = params[:uroot_id].to_i
 
     respond_to do |format|
@@ -69,15 +73,19 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.xml
   def create
-    ontology = @category.ontology
+    # if @category.ontology.id.to_s.length > 1
+      ontology = @category.ontology
+    # else
+      # ontology = Category.find(params[:uroot_id]).ontology
+    # end
     
     respond_to do |format|
       if @category.save
         flash[:notice] = 'Category was successfully created.'
         if params[:add_similar]
-          format.html { redirect_to(new_category_path(:parent_id => @category.parent_id)) }
+          format.html { redirect_to(new_category_path(:parent_id => @category.parent_id, :uroot_id => session[:uroot_id])) }
         else
-          format.html { redirect_to(ontology) }
+          format.html { redirect_to(@category.ontology) }
         end
         format.xml  { render :xml => @category, :status => :created, :location => @category }
       else

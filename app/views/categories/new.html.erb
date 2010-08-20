@@ -4,28 +4,41 @@
   <%= f.error_messages %>
 
   <p><%= label(:ontology, :id, 'Ontology') %><br />
-	<% if params[:parent_id].to_i == 0 %>
-      <strong><%= "New Root Ontology" %></strong>
-      <%= hidden_field_tag("category[ontology_id]", 0) %></p>
-	<% else %>
-      <strong><%= @ontology.name %></strong>
-      <%= hidden_field_tag("category[ontology_id]", @ontology.id) %></p>
-	<% end %>
+    <strong><%= @ontology.name %></strong>
+    <%= hidden_field_tag("category[ontology_id]", @ontology.id) %>
+  </p>
 
-  <p><%= f.label :parent_category %><br />
-    <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"), 'category', 'parent_id', @category) %></p>
+  <% if params[:parent_id].to_i == 0 %>
+    <%= hidden_field_tag("category[parent_id]", 1) %>
+  <% else %>
+    <p>
+      <%= f.label :parent_category %><br />
+      <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"), 'category', 'parent_id', @category) %>
+    </p>
+  <% end %>
 
   <p><%= f.label :category_name %><br />
-    <%= f.text_field :name %></p>
+    <% if params[:parent_id].to_i == 0 %>
+      <%= text_field_tag("category[name]", @ontology.name) %><br />
+      <%= indent %><strong>Special:</strong> <em>You are about to set the top-level Category for your new Ontology.<br />
+      <%= indent %><%= indent %>There can only be one top-level Category for an Ontology.<br />
+      <%= indent %><%= indent %>It should be given a name that is similar to the name of the Ontology.<br />
+      <%= indent %><%= indent %>So we have entered that name above.</em>
+    <% else %>
+      <%= f.text_field :name %>
+    <% end %>
+  </p>
 
   <p><%= f.label :category_meta %><br />
     <%= f.text_area :meta, :rows => 4, :cols => 45 %></p>
   
   <%= hidden_field_tag("category[user_id]", current_user.id) %>
 
-  <p><%= f.label "add similar" %><br />
-    <%= check_box_tag 'add_similar' %></p>
-
+  <% if params[:parent_id].to_i != 0 %>
+    <p><%= f.label "add similar" %><br />
+      <%= check_box_tag 'add_similar' %></p>
+  <% end %>
+  
   <p><%= f.submit 'Create' %></p>
 
 <% end %>
