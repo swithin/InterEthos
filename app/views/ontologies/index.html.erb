@@ -14,24 +14,50 @@
   </tr>
 
 <% @ontologies.each do |ontology| %>
-  <tr>
-    <td nowrap="nowrap"><%=h ontology.name %></td>
-    <td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td nowrap="nowrap"><%=h ontology.status %></td>
-    <td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <td nowrap="nowrap"><%=h ontology.privacy %></td>
-    <td><% if permitted_to? :show, ontology %>&nbsp;<% else %><strong>(<%=h ontology.status %>)<strong><% end %></td>
-    <td align="center">
-      <%= link_to '<img src="/images/eye.jpg" border="0">', ontology if !permitted_to? :edit, ontology %>
-      <%= link_to '<img src="/images/delta.jpg" border="0">', ontology if permitted_to? :edit, ontology %>
-    </td>
-    <td><%#= link_to '<img src="/images/remove.jpg" border="0">', ontology, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, ontology %></td>
-    <td>
-	<%= link_to '<img src="/images/translate.jpg" border="0">', new_ontology_path(:translation_id => ontology.id), :confirm => 'You are about to enable this Collection for translation. Once enabled, then you cannot modify existing categories. You can add new categories, but cannot modify even those new ones once they are created.', :method => :create  if permitted_to? :translate, ontology %>
-	
-	<%# new_ontology_path(:translate_id => @ontology.id) %>
+  <% if ontology.translation_id.nil? %>
+    <tr>
+      <td nowrap="nowrap"><%=h ontology.name %>
+      <% for translation in ontology.translations %>
+	      ||<%= "aaa" %>||
+	    <% end %>
+      </td>
+      <td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td nowrap="nowrap"><%=h ontology.status %></td>
+      <td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td nowrap="nowrap"><%=h ontology.privacy %></td>
+      <td><% if permitted_to? :show, ontology %>&nbsp;<% else %><strong>(<%=h ontology.status %>)<strong><% end %></td>
+      <td align="center">
+	<%= link_to '<img src="/images/eye.jpg" border="0">', ontology if !permitted_to? :edit, ontology %>
+	<%= link_to '<img src="/images/delta.jpg" border="0">', ontology if permitted_to? :edit, ontology %>
+      </td>
+      <td><%#= link_to '<img src="/images/remove.jpg" border="0">', ontology, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, ontology %></td>
+      <td>
+	  <%= link_to '<img src="/images/translate.jpg" border="0">', new_ontology_path(:translation_id => ontology.id), :confirm => 'You are about to enable this Collection for translation. Once enabled, then you cannot modify existing categories. You can add new categories, but cannot modify even those new ones once they are created.', :method => :create  if permitted_to? :translate, ontology %>
+	  
+	  <%# new_ontology_path(:translate_id => @ontology.id) %>
+	  </td>
+    </tr>
+  <% end %>
+    <% if !ontology.translation_id.nil? %>
+      <tr>
+	<td nowrap="nowrap"><em><%=h ontology.name %><%=h ontology.translation_id %></em></td>
+	<td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td nowrap="nowrap"><%=h ontology.status %></td>
+	<td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td nowrap="nowrap"><%=h ontology.privacy %></td>
+	<td><% if permitted_to? :show, ontology %>&nbsp;<% else %><strong>(<%=h ontology.status %>)<strong><% end %></td>
+	<td align="center">
+	  <%= link_to '<img src="/images/eye.jpg" border="0">', ontology if !permitted_to? :edit, ontology %>
+	  <%= link_to '<img src="/images/delta.jpg" border="0">', ontology if permitted_to? :edit, ontology %>
 	</td>
-  </tr>
+	<td><%#= link_to '<img src="/images/remove.jpg" border="0">', ontology, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, ontology %></td>
+	<td>
+	    <%= link_to '<img src="/images/translate.jpg" border="0">', new_ontology_path(:translation_id => ontology.id), :confirm => 'You are about to enable this Collection for translation. Once enabled, then you cannot modify existing categories. You can add new categories, but cannot modify even those new ones once they are created.', :method => :create  if permitted_to? :translate, ontology %>
+	    
+	    <%# new_ontology_path(:translate_id => @ontology.id) %>
+	    </td>
+      </tr>
+    <% end %>
 <% end %>
 </table>
 
