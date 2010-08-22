@@ -8,6 +8,12 @@ class CollectionsController < ApplicationController
   def index
     # Only show collections that the current user may read:
     @collections = Collection.with_permissions_to(:read)
+    if params[:search]
+      @collections = @collections.find(:all, :conditions => ['name OR category_collections.categories.name LIKE ?', "%#{params[:search]}%"])
+    else
+      @collections = @collections.find(:all)
+    end
+
     session[:current_location] = collections_path
 
     respond_to do |format|
