@@ -16,11 +16,7 @@
 <% @ontologies.each do |ontology| %>
   <% if ontology.translation_id.nil? %>
     <tr>
-      <td nowrap="nowrap"><%=h ontology.name %>
-      <% for translation in ontology.translations %>
-	      ||<%= "aaa" %>||
-	    <% end %>
-      </td>
+      <td nowrap="nowrap"><%=h ontology.name %></td>
       <td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;</td>
       <td nowrap="nowrap"><%=h ontology.status %></td>
       <td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;</td>
