@@ -38,7 +38,7 @@
 
     <td><%=h post.post_author %></td>
     <td><%=h post.topic.topic_name %></td>
-    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to '<img src="/images/View.gif" border="0">', post %></td>
     <td><%= link_to 'Edit', edit_post_path(post) %></td>
     <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
@@ -47,4 +47,4 @@
 
 <br />
 
-<%= link_to 'New post', new_post_path %>
+<%= link_to '<img src="/images/newPage.gif" border="0">', new_post_path %>
