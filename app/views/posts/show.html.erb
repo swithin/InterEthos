@@ -1,0 +1,38 @@
+<% @title = 'Post' %>
+
+<p>
+    <b>Post date:</b>
+    <%=h @post.created_at.to_formatted_s(:rfc822)%>
+      <%#=h @post.created_at.to_date.to_formatted_s(:rfc822)%>
+       <%#=h Time.zone.local(@post.created_at)%>
+            <%#=h (@post.created_at).Time.zone.local%>
+</p>
+
+<p>
+  <b>Post title:</b>
+  <%=h @post.post_title %>
+</p>
+
+<p>
+  <b>Post text:</b>
+  <%=h @post.post_text %>
+</p>
+
+<p>
+  <b>Post author:</b>
+  <%=h @post.post_author %>
+</p>
+
+<p>
+  <b>Author email:</b>
+  <%=h @post.author_email %>
+</p>
+
+<p>
+  <b>Topic:</b>
+  <%=h @post.topic.topic_name %></td>
+</p>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

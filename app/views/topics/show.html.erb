@@ -1,0 +1,9 @@
+<% @title = 'Topic'%>
+<p>
+  <b>Topic name:</b>
+  <%=h @topic.topic_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Back', topics_path %>

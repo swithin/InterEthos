@@ -1,0 +1,50 @@
+<% @title = 'Posts' %>
+<%#<h1>Listing posts</h1> %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th>Date</th>
+    <th>Author</th>
+    <th>Topic</th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><% if post.post_title.length > 10 %>
+      <%=h post.post_title.slice(0..8)+"..." %>
+    <% else %>
+      <%= h post.post_title %>
+    <% end %>
+     <%#=h post.post_title %></td>
+    <td><% if post.post_text.length > 25 %>
+      <%=h post.post_text.slice(0..25)+"..." %>
+    <% else %>
+      <%= h post.post_text %>
+    <% end %>
+    </td>
+    <%#<td><%=h post.created_at %> <%#/td> %>
+    <td nowrap><%=h post.created_at.to_date.to_formatted_s(:rfc822) %>
+        <%def to_s(format = :default) %>
+         <% return utc.to_s(format) if format == :db %>
+         <% if formatter = ::Time::DATE_FORMATS[format] %>
+         <%   formatter.respond_to?(:call) ? formatter.call(self).to_s : strftime(formatter) %>
+         <% else %>
+           <% "#{time.strftime("%Y-%m-%d %H:%M:%S")} #{formatted_offset(false, 'UTC')}" %> # mimicking Ruby 1.9 Time#to_s format
+         <% end %>
+        <% end %>
+    </td>
+
+    <td><%=h post.post_author %></td>
+    <td><%=h post.topic.topic_name %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New post', new_post_path %>

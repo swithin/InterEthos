@@ -1,0 +1,36 @@
+<h1>Editing post</h1>
+
+<% form_for(@post) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :post_title %><br />
+    <%= f.text_field :post_title %>
+  </p>
+  <p>
+    <%= f.label :post_text %><br />
+    <%= f.text_area :post_text %>
+  </p>
+  <p>
+    <%#= f.label :date_of_update %><br />
+    <%#= f.date_select :date_of_update %>
+  </p>
+  <p>
+    <%= f.label :post_author %><br />
+    <%= f.text_field :post_author %>
+  </p>
+  <p>
+    <%= f.label :author_email %><br />
+    <%= f.text_field :author_email %>
+  </p>
+  <p>
+    <%= label(:topic, :id, 'Topic') %><br />
+    <%= collection_select(:post, :topic_id, Topic.find(:all), :id, :topic_name, options = {}, html_options = {}) %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @post %> |
+<%= link_to 'Back', posts_path %>
