@@ -91,6 +91,7 @@ document.getElementById('hideimg<%= category.id %>').style.display = "none";
             <% else %>
                 <%= indent %><%= link_to '<img src="/images/xml.jpg" border="0">', :controller => 'categories', :action => 'tree', :id => category.id, :format => :xml %>
                 <%= indent %><%= link_to '<img src="/images/eye.jpg" border="0">', :controller => 'categories', :action => 'tree', :id => category.id, :uroot_id => @Category_Branch_Root %>
+            <%= indent %><%= link_to '<img src="/images/eye.jpg" border="0">', new_post_path(:category_id => category.id) %>
                 <br /><span id="tree<%= category.id %>" style="display: <%= categories_display %>;">
                     <ul><% for category in Category.with_permissions_to(:read).find_all_by_parent_id(category.id, :order => "name") %>
                     <!-- Level TWO -->

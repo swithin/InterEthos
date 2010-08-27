@@ -19,9 +19,9 @@
       <% navbar_link_array = Array.new %>
       <% if authorized? %>
         <% if current_user.roles.to_s == "admin" %>
-          <% navbar_link_array = [root_path, collections_path, ontologies_path, users_path, logout_path] %>
+          <% navbar_link_array = [root_path, collections_path, ontologies_path, users_path, posts_path, topics_path, logout_path] %>
         <% else %>
-          <% navbar_link_array = [root_path, collections_path, ontologies_path, logout_path] %>
+          <% navbar_link_array = [root_path, collections_path, ontologies_path, posts_path, logout_path] %>
         <% end %>
       <% else %>
         <% navbar_link_array = [root_path, login_path, collections_path, ontologies_path] %>

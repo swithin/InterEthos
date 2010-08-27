@@ -18,7 +18,7 @@ authorization do
       if_attribute :privacy => "Public"
     end
 
-   has_permission_on :categories, :to => :read do
+   has_permission_on [:categories, :posts], :to => :read do
       if_attribute :user_id => is {1}  # Production user_id is "1"
       if_attribute :user_id => is {24} # Dev SQLite databases use "24"
    end
