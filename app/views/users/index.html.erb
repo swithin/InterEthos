@@ -1,26 +1,37 @@
-<% @title = 'Users' %>
+<%# NOTE: The "Declarative Authorization" seems to require that "guests" can both
+"create" and "show" User records, toward the end that they will need those
+two permissions when creating their login.
 
-<table>
-  <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Email</th>
-    <th>Validation</th>
-  </tr>
-
-<% @users.each do |user| %>
-  <tr>
-    <td><%=h user.first_name %></td>
-    <td><%=h user.last_name %></td>
-    <td><%=h user.email %></td>
-    <td><%=h user.validation.name %></td>
-    <td><%= indent %><%= link_to '<img src="/images/eye.jpg" border="0">', user if permitted_to? :show %></td>
-    <td><%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', edit_user_path(user) if permitted_to? :edit %></td>
-    <td><%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', user if permitted_to? :delete, user, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+The following two IF statements are an attempt to: %>
+<%# 1) exclude "guests" from seeing all users %>
+<% if authorized? %>
+  <%# 1) exclude logged in users from seeing any users except for their own. %>
+  <% if current_user.id == @user.id %>
+    <% @title = 'Users' %>
+    
+    <table>
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Email</th>
+        <th>Validation</th>
+      </tr>
+    
+    <% @users.each do |user| %>
+      <tr>
+        <td><%=h user.first_name %></td>
+        <td><%=h user.last_name %></td>
+        <td><%=h user.email %></td>
+        <td><%=h user.validation.name %></td>
+        <td><%= indent %><%= link_to '<img src="/images/eye.jpg" border="0">', user if permitted_to? :show %></td>
+        <td><%= indent %><%= link_to '<img src="/images/delta.jpg" border="0">', edit_user_path(user) if permitted_to? :edit %></td>
+        <td><%= indent %><%= link_to '<img src="/images/remove.jpg" border="0">', user if permitted_to? :delete, user, :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+    <% end %>
+    </table>
+    
+    <br />
+    
+    <%= link_to 'New user', new_user_path if permitted_to? :create %>
+  <% end %>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New user', new_user_path if permitted_to? :create %>

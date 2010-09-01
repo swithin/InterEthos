@@ -1,54 +1,65 @@
-<% @title = 'User' %>
+<%# NOTE: The "Declarative Authorization" seems to require that "guests" can both
+"create" and "show" User records, toward the end that they will need those
+two permissions when creating their login.
 
-<p><b>First name:</b>
-  <%=h @user.first_name %></p>
-
-<p><b>Last name:</b>
-  <%=h @user.last_name %></p>
-
-<p><b>Email:</b>
-  <%=h @user.email %></p>
-
-<p><b>Validation:</b>
-  <%=h @user.validation.name %></p>
-
-<p>
-  <b>Collections:</b>
-  <% if @user.collections(@user).empty? %>
-	  <em>(none found)</em>
-  <% else %>
-	  <ul>
-		<% for collection in @user.collections %>
-		  <li><%=h collection.name %>
-		  <%= link_to '<img src="/images/eye.jpg" border="0">', collection %>
-    	  <%= link_to '<img src="/images/delta.jpg" border="0">', edit_collections_user_path(collection.id) %>
-		  <%= link_to '<img src="/images/remove.jpg" border="0">', collections_user_path(collection.id), :confirm => 'Are you sure?', :method => :delete %></li>
-		<% end %>
-	  </ul>
+The following two IF statements are an attempt to: %>
+<%# 1) exclude "guests" from seeing all users %>
+<% if authorized? %>
+  <%# 1) exclude logged in users from seeing any users except for their own. %>
+  <% if current_user.id == @user.id %>
+    <% @title = 'User' %>
+    
+    <p><b>First name:</b>
+      <%=h @user.first_name %></p>
+    
+    <p><b>Last name:</b>
+      <%=h @user.last_name %></p>
+    
+    <p><b>Email:</b>
+      <%=h @user.email %></p>
+    
+    <p><b>Validation:</b>
+      <%=h @user.validation.name %></p>
+    
+    <p>
+      <b>Collections:</b>
+      <% if @user.collections(@user).empty? %>
+	      <em>(none found)</em>
+      <% else %>
+	      <ul>
+		    <% for collection in @user.collections %>
+		      <li><%=h collection.name %>
+		      <%= link_to '<img src="/images/eye.jpg" border="0">', collection %>
+	      <%= link_to '<img src="/images/delta.jpg" border="0">', edit_collections_user_path(collection.id) %>
+		      <%= link_to '<img src="/images/remove.jpg" border="0">', collections_user_path(collection.id), :confirm => 'Are you sure?', :method => :delete %></li>
+		    <% end %>
+	      </ul>
+      <% end %>
+    
+      <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_collections_user_path(:user_id => @user.id) %>
+    </p>
+    
+    <p>
+      <b>Ontologies:</b>
+      <% if @user.ontologies(@user).empty? %>
+	      <em>(none found)</em>
+      <% else %>
+	      <ul>
+		    <% for ontology in @user.ontologies %>
+		      <li><%=h ontology.name %> <em>(<%=h ontology.role %>)</em>
+		      <%= link_to '<img src="/images/eye.jpg" border="0">', ontology %>
+	      <%= link_to '<img src="/images/delta.jpg" border="0">', edit_ontologies_user_path(ontology.id) %>
+		      <%= link_to '<img src="/images/remove.jpg" border="0">', ontologies_user_path(ontology.id), :confirm => 'Are you sure?', :method => :delete %></li>
+		    <% end %>
+	      </ul>
+      <% end %>
+    
+      <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_ontologies_user_path(:user_id => @user.id) %>
+    </p>
+    
+    <p>
+	    <%= link_to 'Edit', edit_user_path(@user) if permitted_to? :edit %> |
+	    <%= link_to 'Back', users_path %>
+    </p>
   <% end %>
-
-  <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_collections_user_path(:user_id => @user.id) %>
-</p>
-
-<p>
-  <b>Ontologies:</b>
-  <% if @user.ontologies(@user).empty? %>
-	  <em>(none found)</em>
-  <% else %>
-	  <ul>
-		<% for ontology in @user.ontologies %>
-		  <li><%=h ontology.name %> <em>(<%=h ontology.role %>)</em>
-		  <%= link_to '<img src="/images/eye.jpg" border="0">', ontology %>
-    	  <%= link_to '<img src="/images/delta.jpg" border="0">', edit_ontologies_user_path(ontology.id) %>
-		  <%= link_to '<img src="/images/remove.jpg" border="0">', ontologies_user_path(ontology.id), :confirm => 'Are you sure?', :method => :delete %></li>
-		<% end %>
-	  </ul>
-  <% end %>
-
-  <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_ontologies_user_path(:user_id => @user.id) %>
-</p>
-
-<p>
-	<%= link_to 'Edit', edit_user_path(@user) if permitted_to? :edit %> |
-	<%= link_to 'Back', users_path %>
-</p>
+<% end %>
