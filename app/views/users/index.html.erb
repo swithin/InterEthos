@@ -6,7 +6,7 @@ The following two IF statements are an attempt to: %>
 <%# 1) exclude "guests" from seeing all users %>
 <% if authorized? %>
   <%# 1) exclude logged in users from seeing any users except for their own. %>
-  <% if current_user.id == @user.id %>
+  <% if current_user.roles.to_s == "admin" %>
     <% @title = 'Users' %>
     
     <table>
