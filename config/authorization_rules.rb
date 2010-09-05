@@ -79,9 +79,9 @@ authorization do
           # | :ontology_users => is {user.ontology_users}
         end
         
-        # Owners can only "translate" the ontologies that they own, and that have "Status = Locked".
+        # Owners can only "internationalize" the ontologies that they own, and that have "Status = Locked".
 	has_permission_on :ontologies do
-	  to :translate
+	  to :internationalize
 	  if_attribute :user_id => is {user.id},
 	    :status => "Locked"
 	end
@@ -135,7 +135,7 @@ authorization do
         has_permission_on [:categories, :collections, :category_collections, :collection_users, :languages, :ontologies, :ontologies_users, :relationships, :teams, :teams_users, :users, :validations], :to => [:manage, :create]
 
         has_permission_on :ontologies do 
-          to :translate
+          to :internationalize
           if_attribute :status => "Locked"
         end
 
@@ -156,6 +156,6 @@ privileges do
   privilege :manage, :includes => [:read, :update, :delete]
   
   privilege :create, :includes => :new
-  privilege :translate, :includes => [:create]
+  privilege :internationalize, :includes => [:create]
   privilege :activate, :includes => [:read, :update, :create]
 end

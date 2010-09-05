@@ -10,7 +10,6 @@ class CreateOntologies < ActiveRecord::Migration
       t.string :url_category_xml
       t.references :language
       t.references :user
-      t.references :translation
 
       t.timestamps
     end

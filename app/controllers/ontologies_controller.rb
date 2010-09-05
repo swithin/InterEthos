@@ -21,7 +21,7 @@ class OntologiesController < ApplicationController
     session[:current_location] = ontologies_path
     @category_root_id = @ontology.categories.find_all_by_parent_id(1)
     @Category_tree = Category.find_all_by_parent_id(@category_root_id, :order => "name")
-    @Translations = Ontology.find_all_by_translation_id(@ontology.id, :order => "name")
+    @Internationalizations = Ontology.find_all_by_internationalization_id(@ontology.id, :order => "name")
     
     respond_to do |format|
       format.html # show.html.erb
@@ -33,8 +33,8 @@ class OntologiesController < ApplicationController
   # GET /ontologies/new.xml
   def new
     # @ontology is created in before_filter
-	if params[:translation_id]
-      @translation = Ontology.find(params[:translation_id])
+	if params[:internationalization_id]
+      @internationalization = Ontology.find(params[:internationalization_id])
     end
 
     respond_to do |format|

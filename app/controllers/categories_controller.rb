@@ -85,7 +85,11 @@ class CategoriesController < ApplicationController
         if params[:add_similar]
           format.html { redirect_to(new_category_path(:parent_id => @category.parent_id, :uroot_id => session[:uroot_id])) }
         else
-          format.html { redirect_to(@category.ontology) }
+	  if Category.find_all_by_id(@category.translation_id).empty?
+            format.html { redirect_to(@category.ontology) }
+	  else
+	    format.html { redirect_to(Category.find_all_by_id(@category.translation_id)[0].ontology) }
+	  end
         end
         format.xml  { render :xml => @category, :status => :created, :location => @category }
       else
@@ -103,7 +107,11 @@ class CategoriesController < ApplicationController
     respond_to do |format|
       if @category.update_attributes(params[:category])
         flash[:notice] = 'Category was successfully updated.'
-        format.html { redirect_to(ontology) }
+	if Category.find_all_by_id(@category.translation_id).empty?
+	  format.html { redirect_to(@category.ontology) }
+	else
+	  format.html { redirect_to(Category.find_all_by_id(@category.translation_id)[0].ontology) }
+	end
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
