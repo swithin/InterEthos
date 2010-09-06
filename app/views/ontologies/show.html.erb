@@ -144,7 +144,7 @@
 
 		</td>
 		<!-- I N T E R N A T I O N A L I Z A T I O N S -->
-		<% if @ontology.status == "Locked" %>
+		<% if @ontology.status == "Locked" && !@Internationalizations.empty? %>
 		  <td style="width=5">&nbsp;</td>
 		  <td valign="top" nowrap>
 		    <% for translation in Category.find_all_by_translation_id(category.id) %>
@@ -178,7 +178,7 @@
 		    <%= indent_small %><%= link_to '<img src="/images/newPage.gif" border="0">', new_post_path(:category_id => branch[0].id) %>
 		  </td>
 		  <!-- I N T E R N A T I O N A L I Z A T I O N S -->
-		  <% if @ontology.status == "Locked" %>
+		  <% if @ontology.status == "Locked" && !@Internationalizations.empty? %>
 		    <td style="width=5">&nbsp;</td>
 		    <td valign="top" nowrap>
 		      <% (branch[1]+2).times do |n| %> <%= indent_small %> <% end %>
@@ -200,7 +200,6 @@
 	      <% end %>
 	    <% end %>
 	  <% end %>
-        </td>
     </table>
   </blockquote>
 </p>
