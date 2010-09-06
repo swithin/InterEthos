@@ -33,7 +33,7 @@
       </td>
       <td><%#= link_to '<img src="/images/remove.jpg" border="0">', ontology, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, ontology %></td>
       <td>
-	  <%= link_to '<img src="/images/translate.jpg" border="0">', new_ontology_path(:internationalization_id => ontology.id), :confirm => 'You are about to enable this Collection for internationalization. Once enabled, then you cannot modify existing categories nor their relationship "tree" structure. However, you can add new category "branches, but cannot modify even those new ones once created.', :method => :create  if permitted_to? :internationalize, ontology %>
+	  <%= link_to '<img src="/images/translate.jpg" border="0">', new_ontology_path(:internationalization_id => ontology.id), :confirm => 'You are about to enable this Collection for internationalization. Once enabled, then you cannot modify existing categories nor their relationship "tree" structure. However, you can add new category "branches", but cannot modify even those new ones once created.', :method => :create  if permitted_to? :internationalize, ontology %>
 	  </td>
     </tr>
   <% end %>
