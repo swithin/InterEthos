@@ -39,7 +39,7 @@
 	  </ul>
   <% end %>
 
-  <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_collections_ontology_path(:collection_id => @collection.id) if permitted_to? :create, :collections %>
+  <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_collection_path(:collection_id => @collection.id) if permitted_to? :create, :collections %>
 </p>
 
 <p>
