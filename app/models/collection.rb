@@ -22,4 +22,6 @@ class Collection < ActiveRecord::Base
   def owned_by (user)
     collection_users.find_by_user_id(user)
   end
+
+  validates_presence_of :url_about, :message => "is a required field"
 end
