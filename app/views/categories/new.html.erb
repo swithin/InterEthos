@@ -10,17 +10,17 @@
 
   <%= hidden_field_tag("category[translation_id]", params[:translation_id]) %>
 
-  <% if params[:parent_id].to_i == 0 %>
-    <%= hidden_field_tag("category[parent_id]", 1) %>
+  <% if params[:parent_id] != 0 %>
+    <%= hidden_field_tag("category[parent_id]", params[:parent_id]) %>
   <% else %>
     <p>
       <%= f.label :parent_category %><br />
-      <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"), 'category', 'parent_id', @category) %>
+      <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"), 'category', 'parent_id', @category.parent_id) %>
     </p>
   <% end %>
 
   <p><%= f.label :category_name %><br />
-    <% if params[:parent_id].to_i == 0 %>
+    <% if params[:parent_id] == 0 %>
       <%= text_field_tag("category[name]", @ontology.name) %><br />
       <%= indent %><strong>Special:</strong> <em>You are about to set the top-level Category for your new Ontology.<br />
       <%= indent %><%= indent %>There can only be one top-level Category for an Ontology.<br />
@@ -36,7 +36,7 @@
   
   <%= hidden_field_tag("category[user_id]", current_user.id) %>
 
-  <% if params[:parent_id].to_i != 0 && params[:translation_id].to_i == 0 %>
+  <% if params[:parent_id] != 0 && @translation_id == 0 %>
     <p><%= f.label "add similar" %><br />
       <%= check_box_tag 'add_similar' %></p>
   <% end %>
@@ -45,5 +45,5 @@
 
 <% end %>
 
-<%= link_to 'Back', categories_path %>
+<%= link_to 'Back', ontology_path(@ontology.id) %>
 <%= javascript_tag "$('category_name').focus()" %>

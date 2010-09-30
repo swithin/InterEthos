@@ -3,7 +3,7 @@ class Ontology < ActiveRecord::Base
 
   belongs_to :language
 
-  has_many :internationalizations, :source => :ontology
+  has_many :internationalizations, :source => :ontology, :order => ':name'
       #, :foreign_key => 'internationalization_id', :class_name => "Internationalizations", 
 
   has_many :ontology_users

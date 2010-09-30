@@ -30,10 +30,12 @@ The following two IF statements are an attempt to: %>
       <p><%= f.label :email %><br />
 	<%= f.text_field :email %></p>
     
-      <p>
-	<%= f.label :roles %><br />
-	<%= f.select :roles, (controller.authorization_engine.roles + (@user.roles.to_a || [])).uniq, {}, {:multiple => true} %>
-      </p>
+      <% if current_user.roles.to_s == "admin" %>
+	<p>
+	  <%= f.label :roles %><br />
+	  <%= f.select :roles, (controller.authorization_engine.roles + (@user.roles.to_a || [])).uniq, {}, {:multiple => true} %>
+	</p>
+      <% end %>
     
       <p>
 	<%# for role in @roles_assignable %>

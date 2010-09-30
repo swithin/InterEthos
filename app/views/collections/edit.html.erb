@@ -12,9 +12,14 @@
 		    <%= f.text_field :name %>
         </td>
         			
-        <td rowspan=5>
+        <td rowspan=7>
           <%= f.label "Categories" %>
-          <%= tree_multiple_select('collection', 'category_ids', Category.with_permissions_to(:read).find_all_by_parent_id(1), :id, :name, :outer_class => 'multiple_select', :inner_class => 'multiple_select_checkbox') %>
+		<% if current_user.roles.to_s == "admin" %>
+		  <% find_id = 170 %>
+		<% else %>
+		  <% find_id = 170 %>
+		<% end %>
+          <%= tree_multiple_select('collection', 'category_ids', Category.with_permissions_to(:read).find(:all, :conditions => ["parent_id = ?", find_id], :order => "categories.name ASC"), :id, :name, :outer_class => 'multiple_select', :inner_class => 'multiple_select_checkbox') %>
         </td>
       </tr>
       <tr>
@@ -33,6 +38,32 @@
         <td>
           <%= f.label :privacy %><br />
 		    <%= f.select("privacy", %w[Public Personal Registered-Users-Only IP-Only SOAP-Only], {}, {}) %>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <%= f.label :country %><br />
+          <%= f.select("country", "", {}, {:onchange => "populateState()"}) %>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <%= f.label :state %><br />
+	  <%= f.select("state", "", {}, {}) %>
+	  <% if (@collection.country != nil && @collection.country.length >= 1) %>
+	    <script type="text/javascript">initCountryAndState('<%= @collection.country %>','<%= @collection.state %>'); </script>
+	  <% else %>
+	    <script type="text/javascript">initCountryAndState('US',''); </script>
+	  <% end %>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <%= f.label :city %><br />
+          <%= f.text_field :city %>
         </td>
       </tr>
     </table>

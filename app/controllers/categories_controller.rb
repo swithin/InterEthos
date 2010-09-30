@@ -49,7 +49,16 @@ class CategoriesController < ApplicationController
   # GET /categories/new
   # GET /categories/new.xml
   def new
-    @parent_id = params[:parent_id].to_i
+    if !params[:parent_id]
+      @parent_id = 1
+    else
+      @parent_id = params[:parent_id]
+    end
+    if !params[:translation_id]
+      @translation_id = 0
+    else
+      @translation_id = params[:translation_id]
+    end
     if params[:ontology_id]
       @ontology = Ontology.find(params[:ontology_id])
     else

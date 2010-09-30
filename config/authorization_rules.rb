@@ -34,8 +34,19 @@ authorization do
    # 2010/08/12 New... but Josh does not understand it...
    has_permission_on :authorization_rules, :to => :read
    has_permission_on :authorization_usages, :to => :read
-
-    # has_permission_on [:categories, :category_collections, :collection_users, :languages, :relationships, :teams, :users, :validations], :to => :read
+        
+   # Guests can only "internationalize" the ontologies that they own, and that have "Status = Locked".
+   has_permission_on :ontologies do
+      to :internationalize
+      if_attribute :status => "Open to the Whole Wide World" # ... a "status" which of course will never happen, as we don't want "guests" translating things.
+   end
+    
+   # Guests can "translate" the categories for which they can "internationalize" the ontology.
+   has_permission_on :categories, :to => :translate do
+      if_attribute :ontology_id => 0 # ... which of course will never happen, as we don't want "guests" translating things.
+     # JSS could not get the following working.
+     # if_permitted_to :internationalize, :ontology #... which will never happen, as stated above.
+   end
   end
   
   # =========
@@ -76,7 +87,10 @@ authorization do
         has_permission_on [:ontologies, :ontology_users] do
           to :manage
           if_attribute :user_id => is {user.id}
-          # | :ontology_users => is {user.ontology_users}
+        end
+        has_permission_on [:ontologies] do
+          to :read
+          if_attribute :privacy => is {"Public"}
         end
         
         # Owners can only "internationalize" the ontologies that they own, and that have "Status = Locked".
@@ -102,11 +116,16 @@ authorization do
           if_attribute :user_id => is {user.id}
         end
         
-        # Owners can only "manage" the category_users for which they own the category.
-        # has_permission_on :category_users, :to => :manage do
-          # if_permitted_to :manage, :category
-        # end
-          
+        # Owners can "read" the categories for which they can "read" the ontology.
+        has_permission_on :categories, :to => :read do
+          if_permitted_to :read, :ontology
+        end
+        
+        # Owners can "translate" the categories for which they can "internationalize" the ontology.
+        has_permission_on :categories, :to => :translate do
+          if_permitted_to :internationalize, :ontology
+        end
+        
     # ---------
     # T E A M S
         # Owners can "create" any new team that they wish.
@@ -124,6 +143,14 @@ authorization do
           if_permitted_to :manage, :team
         end
           
+    # ---------
+    # U S E R S
+        # Owners can "manage" their own profile.
+        has_permission_on [:users] do
+          to :manage
+          if_attribute :id => is {user.id}
+        end
+          
   end
   
   # =========
@@ -132,20 +159,15 @@ authorization do
     # Admins inherit all the permissions of Owners.
         includes :guest
         
-        has_permission_on [:categories, :collections, :category_collections, :collection_users, :languages, :ontologies, :ontologies_users, :relationships, :teams, :teams_users, :users, :validations], :to => [:manage, :create]
+        has_permission_on [:collections, :category_collections, :collection_users, :languages, :ontologies_users, :relationships, :teams, :teams_users, :users, :validations], :to => [:manage, :create]
+        has_permission_on [:ontologies], :to => [:manage, :create, :internationalize]
+        has_permission_on [:categories], :to => [:manage, :create, :translate]
 
         has_permission_on :ontologies do 
           to :internationalize
           if_attribute :status => "Locked"
         end
-
-        # Josh could not get the following working... 
-          # documentation is at http://github.com/stffn/declarative_authorization
-          # uncomment the following "has_permission_on" line, and 
-          #then go to "http://localhost:3000/authorization_rules"
-        # has_permission_on :authorization_rules, :to => :read
   end
-
 end
 
 privileges do
@@ -157,5 +179,6 @@ privileges do
   
   privilege :create, :includes => :new
   privilege :internationalize, :includes => [:create]
+  privilege :translate, :includes => [:create]
   privilege :activate, :includes => [:read, :update, :create]
 end

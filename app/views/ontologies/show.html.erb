@@ -30,13 +30,17 @@
       
       <tr>
         <td colspan=3>
-	  <b>Internationalizations:</b> <em>When the above "Status => Locked", then the Ontology can be internationalized into parallel Ontologies in different languages.</em>
-	  <blockquote>
-	    <table>
-	      <% for internationalization in @Internationalizations %>
-		<tr><td><% indent %><% indent %></td><td><img src="/images/translate.gif" border="0"></td><td style="width:10; text-align:center">-</td><td><%=h internationalization.name %></td></tr>
-	      <% end %>
-	    </table>
+	  <p><b>Internationalizations:</b> <em>When the above "Status => Locked", then the Ontology can be internationalized into parallel Ontologies in different languages.</em></p>
+	  <% if @ontology.status == "Locked" %>
+	    <p><em>Current internationalizations for this ontology:</em>
+	    <blockquote>
+	      <table>
+		<% for internationalization in @Internationalizations %>
+		  <tr><td><% indent %><% indent %></td><td><img src="/images/translate.gif" border="0"></td><td style="width:10; text-align:center">-</td><td><%=h internationalization.name %></td></tr>
+		<% end %>
+	      </table>
+	    </p>
+	  <% end %>
 	  </blockquote>
         </td>
       </tr>
@@ -82,16 +86,31 @@
 <!-- C A T E G O R I E S -->
 <p>
   <b>CATEGORIES:</b><br />
-  
+  <%# D E B U G %>  
+  <% if 1==2 %>
+    <blockquote>
+      <%= debug @ontology %>
+    </blockquote>
+    <p>&nbsp;</p>
+    <blockquote>
+      <%= debug @Internationalizations %>
+    </blockquote>
+  <% end %>
+
+  <% @Category_Branch_Root_Internationalization = 0 %>
   <blockquote>
     <table width=100%>
       <tr>
+	<!-- P R I M A R Y   L A N G U A G E -->
 	<%# Note: Following loop is just for the single "Parent" category. %>
 	<% for category in @ontology.categories.with_permissions_to(:read).find_all_by_parent_id(1) %>
-          <td style="background-color:#BCFCC1; width=10; vertical-align:top" nowrap>
+          <td style="background-color:#BCFCC1; width=10; vertical-align:bottom" nowrap>
 	    <% @Category_Branch_Root = category.id %>
 	    <b><%= category.name %></b>
-	    <%= link_to '<img src="/images/add.gif" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
+	    <%# if permitted_to? :create, @ontology[:categories] %>
+	    <% if @ontology.status != "Locked" %>
+	      <%= link_to '<img src="/images/add.gif" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) %>
+	    <% end %>
             <% if @ontology.status != "Locked" %>
 	      <%= link_to '<img src="/images/delta.gif" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
 	    <% end %>
@@ -109,97 +128,149 @@
 	<!-- I N T E R N A T I O N A L I Z A T I O N S -->
 	<% if @ontology.status == "Locked" %>
 	  <% for internationalization in @Internationalizations %>
-	    <td style="width=5">&nbsp;</td>
-	    <td style="background-color:#c4cdfd; width=10; vertical-align:top" nowrap>
+	    <td style="width=5" nowrap>&nbsp;</td>
+	    <td style="background-color:#c4cdfd; width=10; vertical-align:bottom" nowrap>
 	      <% for category in @ontology.categories.with_permissions_to(:read).find_all_by_parent_id(1) %>
 		<% @Category_Branch_Root = category.id %>
 		Language: <b><%= internationalization.language.english_name %></b>
+		<% if internationalization.categories.find_all_by_ontology_id(internationalization.id).empty? %>
+		    <% if authorized? %>
+		      <% if current_user.roles.to_s == "admin" %>
+			<%= link_to '<img src="/images/translate.gif" border="0">', new_category_path(:parent_id => 1, :uroot_id => 1, :ontology_id => internationalization.id, :translation_id => category.id) %>
+		      <% else %>
+			<img src="/images/grey_dot.gif" border="0">
+		      <% end %>
+		    <% else %>
+		      <img src="/images/grey_dot.gif" border="0">
+		    <% end %>
+		<% else %>
+		  <% for root_translation in internationalization.categories.with_permissions_to(:read).find_all_by_ontology_id(internationalization.id, :conditions => ['parent_id = 1']) %>
+		    <br />Name: <b><%= root_translation.name %></b>
+		  <% end %>
+		<% end %>
 	      <% end %>
 	    </td>
 	  <% end %>
 	<% end %>
       </tr>
-      <% if @ontology.categories(@collection).empty? %>
+      <% if @ontology.categories.empty? %>
 	<tr>
-	  <td>
+	  <td nowrap>
 	    <em>(none found)</em>
-	    
-	    <%= link_to '<img src="/images/add.gif" border="0">', new_category_path(:ontology_id => @ontology.id, :uroot_id => 1) if permitted_to? :create, :categories %>
+	    <% if permitted_to? :create, @ontology[:categories] %>
+	      <%= link_to '<img src="/images/add.gif" border="0">', new_category_path(:ontology_id => @ontology.id, :uroot_id => 1) %>
+	    <% end %>
 	  </td>
 	</tr>
       <% else %>
-	    <% for category in @Category_tree %>
-	      <% @Category_Branch_Root = category.id %>
-	      <tr>
-		<td>
-		  <%= indent_small %><em><strong><%= h(category.name) -%></strong></em>
-		  <% if @ontology.status != "Locked" %>
-		    <%= link_to '<img src="/images/add.gif" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
-		    <%= link_to '<img src="/images/delta.gif" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
-		    <% if Category.with_permissions_to(:read).find_all_by_parent_id(category.id).empty? %>
-		     <%= link_to '<img src="/images/remove.gif" border="0">', category, :confirm => 'Are you sure you want to delete this category?', :method => :delete if permitted_to? :delete, category %>
-		    <% end %>
-		  <% end %>
-		  <%= indent_small %><%= link_to '<img src="/images/newPage.gif" border="0">', new_post_path(:category_id => category.id) %>
-
-		</td>
-		<!-- I N T E R N A T I O N A L I Z A T I O N S -->
-		<% if @ontology.status == "Locked" && !@Internationalizations.empty? %>
-		  <td style="width=5">&nbsp;</td>
-		  <td valign="top" nowrap>
-		    <% for translation in Category.find_all_by_translation_id(category.id) %>
-		      <%= indent_small %><em><strong>
-			<%= h(Category.find_all_by_translation_id(category.id)[0].name) %>
-			<% if category.ontology.status != "Locked" %>
-			  <%= link_to '<img src="/images/delta.gif" border="0">', edit_category_path(category.id), :category %>
-			<% end %>
-		      </strong></em>
-		    <% end %>
-		    <% if Category.find_all_by_translation_id(category.id).empty? %>
-		      <%= link_to '<img src="/images/translate.gif" border="0">', new_category_path(:parent_id => @Category_Branch_Root, :uroot_id => @Category_Branch_Root, :translation_id => category.id) if permitted_to? :create, :categories %>
-		    <% end %>
-		  </td>
+	<% for category in @Category_tree %>
+	  <% @Category_Branch_Root = category.id %>
+	  <tr>
+	    <!-- P R I M A R Y   L A N G U A G E -->
+	    <td nowrap>
+	      <%= indent_small %><em><strong><%= h(category.name) -%></strong></em>
+	      <% if @ontology.status != "Locked" %>
+		<%= link_to '<img src="/images/add.gif" border="0">', new_category_path(:parent_id => category.id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, @ontology[:categories] %>
+		<%= link_to '<img src="/images/delta.gif" border="0">', :controller => 'categories', :action => 'edit', :id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
+		<% if Category.with_permissions_to(:read).find_all_by_parent_id(category.id).empty? %>
+		 <%= link_to '<img src="/images/remove.gif" border="0">', category, :confirm => 'Are you sure you want to delete this category?', :method => :delete if permitted_to? :delete, category %>
 		<% end %>
-	      </tr>
-	      <% render_tree(category) do |branch| %>
-		<tr>
-		  <td>
-		    <% (branch[1]+2).times do |n| %> <%= indent_small %> <% end %>
-		    <em><%= h(branch[0].name) %></em>
-		    <%= link_to '<img src="/images/add.gif" border="0">', new_category_path(:parent_id => branch[0].id, :uroot_id => @Category_Branch_Root) if permitted_to? :create, :categories %>
-		    <% if @ontology.status != "Locked" %>
-		      <%= link_to '<img src="/images/delta.gif" border="0">', edit_category_path(branch[0].id) if permitted_to? :edit, :category %>
-		      <%= link_to '<img src="/images/delta.gif" border="0">', :controller => 'categories', :action => 'edit', :id => branch[0].id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
-		      <%= link_to '<img src="/images/remove.gif" border="0">', category_path(branch[0].id) if permitted_to? :delete, :category, :confirm => 'Are you sure?', :method => :delete %>
-		      <% if Category.find_all_by_parent_id(branch[0].id).empty? %>
-			<%= link_to '<img src="/images/remove.gif" border="0">', branch[0], :confirm => 'Are you sure you want to delete this category?', :method => :delete if permitted_to? :delete, branch[0] %>
-		      <% end %>
-		    <% end %>
-		    <%= indent_small %><%= link_to '<img src="/images/newPage.gif" border="0">', new_post_path(:category_id => branch[0].id) %>
-		  </td>
-		  <!-- I N T E R N A T I O N A L I Z A T I O N S -->
-		  <% if @ontology.status == "Locked" && !@Internationalizations.empty? %>
-		    <td style="width=5">&nbsp;</td>
-		    <td valign="top" nowrap>
-		      <% (branch[1]+2).times do |n| %> <%= indent_small %> <% end %>
-		      <% for translation in Category.find_all_by_translation_id(branch[0]) %>
-			<em>
-			  <%= h(translation.name) %>
-			  <%# if translation.ontology.status != "Locked" %>
-			    <%= link_to '<img src="/images/delta.gif" border="0">', :controller => 'categories', :action => 'edit', :id => translation.id, :uroot_id => @Category_Branch_Root, :translation_id => branch[0] if permitted_to? :edit, translation %>
-			    <%#= link_to '<img src="/images/delta.gif" border="0">', edit_category_path(translation.id), :translation %>
-			  <%# end %>
-			</em>
-		      <% end %>
-		      <% if Category.find_all_by_translation_id(branch[0]).empty? %>
-			<%= link_to '<img src="/images/translate.gif" border="0">', new_category_path(:parent_id => @Category_Branch_Root, :uroot_id => @Category_Branch_Root, :translation_id => branch[0]) if permitted_to? :create, :categories %>
-		      <% end %>
-		    </td>
+	      <% end %>
+	      <%= indent_small %><%= link_to '<img src="/images/newPage.gif" border="0">', new_post_path(:category_id => category.id) %>
+
+	    </td>
+	    <!-- T R A N S L A T I O N S -->
+	    <% if @ontology.status == "Locked" && !@Internationalizations.empty? %>
+	      <%# Even though we are displaying "Translations" we still loop over "Internationalizations" as there may be "Translation" records missing. %>
+	      <% for internationalization in @Internationalizations %>
+		<td style="width=5" nowrap>&nbsp;</td>
+		<td valign="top" nowrap>
+		  <% for translation in Category.find(:all, :conditions => ["translation_id = ? and ontology_id = ?", category.id, internationalization.id]) %>
+		    <% @Category_Branch_Root_Internationalization = translation.id %>
+		    <%= indent_small %><em><strong>
+		      <%= h(translation.name) %>
+		      <%= link_to '<img src="/images/delta.gif" border="0">', :controller => 'categories', :action => 'edit', :id => translation.id, :translation_id => category.id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
+		    </strong></em>
 		  <% end %>
-		</tr>
+		  <% if Category.find(:all, :conditions => ["translation_id = ? and ontology_id = ?", category.id, internationalization.id]).empty? && @Category_Branch_Root_Internationalization != 0 %>
+		    <%# if permitted_to? :translate, @ontology[:categories] %>
+		    <% if authorized? %>
+		      <% if current_user.roles.to_s == "admin" %>
+			<%= indent_small %><%= link_to '<img src="/images/translate.gif" border="0">', new_category_path(:ontology_id => internationalization.id, :translation_id => category.id, :parent_id => @Category_Branch_Root_Internationalization, :uroot_id => @Category_Branch_Root_Internationalization) %>
+		      <% else %>
+			<img src="/images/grey_dot.gif" border="0">
+		      <% end %>
+		    <% else %>
+		      <img src="/images/grey_dot.gif" border="0">
+		    <% end %>
+		  <% end %>
+		</td>
 	      <% end %>
 	    <% end %>
+	  </tr>
+	  <% branch_level_previous = 0 %>
+	  <% render_tree(category) do |branch| %>
+	    <tr>
+	      <!-- P R I M A R Y   L A N G U A G E -->
+	      <td nowrap>
+		<% (branch[1]+2).times do |n| %> <%= indent_small %> <% end %>
+		<em><%= h(branch[0].name) %></em>
+		<%# if permitted_to? :create, @ontology[:categories] %>
+		<% if @ontology.status != "Locked" %>
+		  <%= link_to '<img src="/images/add.gif" border="0">', new_category_path(:parent_id => branch[0].id, :uroot_id => @Category_Branch_Root) %>
+		<% end %>
+		<% if @ontology.status != "Locked" %>
+		  <%= link_to '<img src="/images/delta.gif" border="0">', edit_category_path(branch[0].id) if permitted_to? :edit, :category %>
+		  <%= link_to '<img src="/images/delta.gif" border="0">', :controller => 'categories', :action => 'edit', :id => branch[0].id, :uroot_id => @Category_Branch_Root if permitted_to? :edit, category %>
+		  <%= link_to '<img src="/images/remove.gif" border="0">', category_path(branch[0].id) if permitted_to? :delete, :category, :confirm => 'Are you sure?', :method => :delete %>
+		  <% if Category.find_all_by_parent_id(branch[0].id).empty? %>
+		    <%= link_to '<img src="/images/remove.gif" border="0">', branch[0], :confirm => 'Are you sure you want to delete this category?', :method => :delete if permitted_to? :delete, branch[0] %>
+		  <% end %>
+		<% end %>
+		<%= indent_small %><%= link_to '<img src="/images/newPage.gif" border="0">', new_post_path(:category_id => branch[0].id) %>
+	      </td>
+	      <!-- T R A N S L A T I O N S -->
+	      <% if @ontology.status == "Locked" && !@Internationalizations.empty? %>
+		<%# Even though we are displaying "Translations" we still loop over "Internationalizations" as there may be "Translation" records missing. %>
+		<% for internationalization in @Internationalizations %>
+		  <td style="width=5">&nbsp;</td>
+		  <td valign="top" nowrap>
+		    <% (branch[1]+2).times do |n| %> <%= indent_small %> <% end %>
+		    <% translation_found = 0 %>
+		    <% for translation in Category.find(:all, :conditions => ["translation_id = ? and ontology_id = ?", branch[0], internationalization.id]) %>
+		      <% translation_found = 1 %>
+		      <em>
+			<%= h(translation.name) %>
+			<%= link_to '<img src="/images/delta.gif" border="0">', :controller => 'categories', :action => 'edit', :id => translation.id, :uroot_id => @Category_Branch_Root, :translation_id => branch[0] if permitted_to? :edit, translation %>
+			<% if (1==2) %>[<%= branch[0].id %>||<%= internationalization.id %>||<%= translation_found %>||<%= Category.find_all_by_translation_id(branch[0].parent_id) %>]<% end %>
+		      </em>
+		    <% end %>
+		    <% if translation_found == 0 %>
+		      <%# Only allow a category to be translated if the parent category has already been translated %>
+		      <% if Category.find_all_by_translation_id(branch[0].parent_id).length >= 1 %><%# with_permissions_to(:translate). %>
+			<% if authorized? %>
+			  <% if current_user.roles.to_s == "admin" %>
+			    <%= link_to '<img src="/images/translate.gif" border="0">', new_category_path(:ontology_id => internationalization.id, :translation_id => branch[0], :parent_id => Category.find_all_by_translation_id(branch[0].parent_id), :uroot_id => @Category_Branch_Root) if permitted_to? :translate, category %>
+			    <% if (1==2) %>[<%= branch[0].id %>||<%= internationalization.id %>||<%= translation_found %>||<%= Category.find_all_by_translation_id(branch[0].parent_id) %>]<% end %>
+			  <% else %>
+			    <img src="/images/grey_dot.gif" border="0">
+			  <% end %>
+			<% else %>
+			  <img src="/images/grey_dot.gif" border="0">
+			<% end %>
+		      <% else %>
+			<img src="/images/grey_dot.gif" border="0">
+			<% if (1==2) %>[<%= branch[0].id %>||<%= internationalization.id %>||<%= translation_found %>||<%= Category.find_all_by_translation_id(branch[0].parent_id) %>]<% end %>
+		      <% end %>
+		    <% end %>
+		  </td>
+		  <% branch_level_previous = branch[1] %>
+		<% end %>
+	      <% end %>
+	    </tr>
 	  <% end %>
+	<% end %>
+      <% end %>
     </table>
   </blockquote>
 </p>
