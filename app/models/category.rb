@@ -15,5 +15,6 @@ class Category < ActiveRecord::Base
 
   has_many :inverse_relationships, :class_name => "Relationship", :foreign_key => "synonym_id"
   has_many :inverse_synonyms, :through => :inverse_relationships, :source => :category
-    acts_as_tree :order => "name"
+  
+  acts_as_tree :order => "name"
 end
