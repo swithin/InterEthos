@@ -34,13 +34,7 @@ authorization do
    # 2010/08/12 New... but Josh does not understand it...
    has_permission_on :authorization_rules, :to => :read
    has_permission_on :authorization_usages, :to => :read
-        
-   # Guests can only "internationalize" the ontologies that they own, and that have "Status = Locked".
-   has_permission_on :ontologies do
-      to :internationalize
-      if_attribute :status => "Open to the Whole Wide World" # ... a "status" which of course will never happen, as we don't want "guests" translating things.
-   end
-    
+      
    # Guests can "translate" the categories for which they can "internationalize" the ontology.
    has_permission_on :categories, :to => :translate do
       if_attribute :ontology_id => 0 # ... which of course will never happen, as we don't want "guests" translating things.
