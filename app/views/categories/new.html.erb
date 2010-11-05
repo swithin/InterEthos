@@ -10,17 +10,25 @@
 
   <%= hidden_field_tag("category[translation_id]", params[:translation_id]) %>
 
-  <% if params[:parent_id] != 0 %>
-    <%= hidden_field_tag("category[parent_id]", params[:parent_id]) %>
-  <% else %>
-    <p>
+  <p>
+    <%# If no "parent_id" is in the URL, then assume it is the first one in the Ontology, and so give it a "1" %>
+    <% if !params[:parent_id] %>
+      <%= f.label :parent_category %><br />
+      <strong>Top-level category - <i>no parent</i></strong>
+      <%= hidden_field_tag("category[parent_id]", 1) %>
+    <% elsif params[:parent_id] != 0 %>
+      <%= f.label :parent_category %><br />
+      <% set_parent_id = params[:parent_id] %>
+      <strong><%= Category.find(set_parent_id).name %></strong>
+      <%= hidden_field_tag("category[parent_id]", params[:parent_id]) %>
+    <% else %>
       <%= f.label :parent_category %><br />
       <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"), 'category', 'parent_id', @category.parent_id) %>
-    </p>
-  <% end %>
+    <% end %>
+  </p>
 
   <p><%= f.label :category_name %><br />
-    <% if params[:parent_id] == 0 %>
+    <% if !params[:parent_id] %>
       <%= text_field_tag("category[name]", @ontology.name) %><br />
       <%= indent %><strong>Special:</strong> <em>You are about to set the top-level Category for your new Ontology.<br />
       <%= indent %><%= indent %>There can only be one top-level Category for an Ontology.<br />
@@ -36,9 +44,11 @@
   
   <%= hidden_field_tag("category[user_id]", current_user.id) %>
 
-  <% if params[:parent_id] != 0 && @translation_id == 0 %>
-    <p><%= f.label "add similar" %><br />
-      <%= check_box_tag 'add_similar' %></p>
+  <% if params[:parent_id] %>
+    <% if params[:parent_id] != 0 && @translation_id == 0 %>
+      <p><%= f.label "add similar" %><br />
+	<%= check_box_tag 'add_similar' %></p>
+    <% end %>
   <% end %>
   
   <p><%= f.submit 'Create' %></p>
