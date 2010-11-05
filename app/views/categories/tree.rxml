@@ -1,7 +1,7 @@
 @xml.instruct! :xml, :version=>"1.0"
 <%= "hello" %>
 @xml.categories{
-	for category in @categories
+	for category in @Category_tree
 	  @xml.category do
       @xml.name(category.name)
     end
