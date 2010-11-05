@@ -24,6 +24,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :relationships
 
   map.resources :taxonomies
+      # Leave the following. Although "Ontologies" have been renamed to "Taxonomies" this route entry is needed so that dataloads for migrations from GitHub will run.
+      map.resources :ontologies
 
   map.resources :taxonomies_users
 
