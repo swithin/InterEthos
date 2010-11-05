@@ -40,21 +40,21 @@ The following two IF statements are an attempt to: %>
     </p>
     
     <p>
-      <b>Ontologies:</b>
-      <% if @user.ontologies(@user).empty? %>
+      <b>Taxonomies:</b>
+      <% if @user.taxonomies(@user).empty? %>
 	      <em>(none found)</em>
       <% else %>
 	      <ul>
-		    <% for ontology in @user.ontologies %>
-		      <li><%=h ontology.name %> <em>(<%=h ontology.role %>)</em>
-		      <%= link_to '<img src="/images/eye.jpg" border="0">', ontology %>
-	      <%= link_to '<img src="/images/delta.jpg" border="0">', edit_ontologies_user_path(ontology.id) %>
-		      <%= link_to '<img src="/images/remove.jpg" border="0">', ontologies_user_path(ontology.id), :confirm => 'Are you sure?', :method => :delete %></li>
+		    <% for taxonomy in @user.taxonomies %>
+		      <li><%=h taxonomy.name %> <em>(<%=h taxonomy.role %>)</em>
+		      <%= link_to '<img src="/images/eye.jpg" border="0">', taxonomy %>
+	      <%= link_to '<img src="/images/delta.jpg" border="0">', edit_taxonomies_user_path(taxonomy.id) %>
+		      <%= link_to '<img src="/images/remove.jpg" border="0">', taxonomies_user_path(taxonomy.id), :confirm => 'Are you sure?', :method => :delete %></li>
 		    <% end %>
 	      </ul>
       <% end %>
     
-      <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_ontologies_user_path(:user_id => @user.id) %>
+      <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_taxonomies_user_path(:user_id => @user.id) %>
     </p>
     
     <p>

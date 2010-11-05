@@ -1,3 +1,3 @@
 class Language < ActiveRecord::Base
-  has_many :ontologies
+  has_many :taxonomies
 end

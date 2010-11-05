@@ -3,15 +3,15 @@
 <% form_for(@category) do |f| %>
   <%= f.error_messages %>
 
-  <p><%= label(:ontology, :id, 'Ontology') %><br />
-    <strong><%= @ontology.name %></strong>
-    <%= hidden_field_tag("category[ontology_id]", @ontology.id) %>
+  <p><%= label(:taxonomy, :id, 'Taxonomy') %><br />
+    <strong><%= @taxonomy.name %></strong>
+    <%= hidden_field_tag("category[taxonomy_id]", @taxonomy.id) %>
   </p>
 
   <%= hidden_field_tag("category[translation_id]", params[:translation_id]) %>
 
   <p>
-    <%# If no "parent_id" is in the URL, then assume it is the first one in the Ontology, and so give it a "1" %>
+    <%# If no "parent_id" is in the URL, then assume it is the first one in the Taxonomy, and so give it a "1" %>
     <% if !params[:parent_id] %>
       <%= f.label :parent_category %><br />
       <strong>Top-level category - <i>no parent</i></strong>
@@ -29,10 +29,10 @@
 
   <p><%= f.label :category_name %><br />
     <% if !params[:parent_id] %>
-      <%= text_field_tag("category[name]", @ontology.name) %><br />
-      <%= indent %><strong>Special:</strong> <em>You are about to set the top-level Category for your new Ontology.<br />
-      <%= indent %><%= indent %>There can only be one top-level Category for an Ontology.<br />
-      <%= indent %><%= indent %>It should be given a name that is similar to the name of the Ontology.<br />
+      <%= text_field_tag("category[name]", @taxonomy.name) %><br />
+      <%= indent %><strong>Special:</strong> <em>You are about to set the top-level Category for your new Taxonomy.<br />
+      <%= indent %><%= indent %>There can only be one top-level Category for a Taxonomy.<br />
+      <%= indent %><%= indent %>It should be given a name that is similar to the name of the Taxonomy.<br />
       <%= indent %><%= indent %>So we have entered that name above.</em>
     <% else %>
       <%= f.text_field :name %>
@@ -55,5 +55,5 @@
 
 <% end %>
 
-<%= link_to 'Back', ontology_path(@ontology.id) %>
+<%= link_to 'Back', taxonomy_path(@taxonomy.id) %>
 <%= javascript_tag "$('category_name').focus()" %>

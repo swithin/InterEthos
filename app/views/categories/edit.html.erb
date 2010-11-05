@@ -3,9 +3,9 @@
 <% form_for(@category) do |f| %>
   <%= f.error_messages %>
 
-  <p><%= label(:ontology, :id, 'Ontology') %><br />
-  	<strong><%= @ontology.name %></strong>
-	<%= hidden_field_tag("ontologies_category[ontology_id]", @category.ontology_id) %></p>
+  <p><%= label(:taxonomy, :id, 'Taxonomy') %><br />
+  	<strong><%= @taxonomy.name %></strong>
+	<%= hidden_field_tag("taxonomies_category[taxonomy_id]", @category.taxonomy_id) %></p>
 
   <%= hidden_field_tag("category[translation_id]", params[:translation_id]) %>
 
@@ -56,4 +56,4 @@
 
 <%= javascript_tag "$('category_name').focus()" %>
 <%= link_to 'Show', @category %> |
-<%= link_to 'Back', ontology_path(@ontology.id) %>
+<%= link_to 'Back', taxonomy_path(@taxonomy.id) %>

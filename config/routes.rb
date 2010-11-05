@@ -23,9 +23,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :relationships
 
-  map.resources :ontologies
+  map.resources :taxonomies
 
-  map.resources :ontologies_users
+  map.resources :taxonomies_users
 
   map.resources :teams
 

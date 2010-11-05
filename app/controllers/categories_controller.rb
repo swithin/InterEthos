@@ -59,10 +59,10 @@ class CategoriesController < ApplicationController
     else
       @translation_id = params[:translation_id]
     end
-    if params[:ontology_id]
-      @ontology = Ontology.find(params[:ontology_id])
+    if params[:taxonomy_id]
+      @taxonomy = Taxonomy.find(params[:taxonomy_id])
     else
-      @ontology = Category.find(params[:uroot_id]).ontology
+      @taxonomy = Category.find(params[:uroot_id]).taxonomy
     end
     session[:uroot_id] = params[:uroot_id].to_i
 
@@ -74,7 +74,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1/edit
   def edit
-    @ontology = Category.find(params[:uroot_id]).ontology
+    @taxonomy = Category.find(params[:uroot_id]).taxonomy
     @synonyms = @category.synonyms
     session[:uroot_id] = params[:uroot_id].to_i
   end
@@ -82,10 +82,10 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.xml
   def create
-    # if @category.ontology.id.to_s.length > 1
-      ontology = @category.ontology
+    # if @category.taxonomy.id.to_s.length > 1
+      taxonomy = @category.taxonomy
     # else
-      # ontology = Category.find(params[:uroot_id]).ontology
+      # taxonomy = Category.find(params[:uroot_id]).taxonomy
     # end
     
     respond_to do |format|
@@ -95,9 +95,9 @@ class CategoriesController < ApplicationController
           format.html { redirect_to(new_category_path(:parent_id => @category.parent_id, :uroot_id => session[:uroot_id])) }
         else
 	  if Category.find_all_by_id(@category.translation_id).empty?
-            format.html { redirect_to(@category.ontology) }
+            format.html { redirect_to(@category.taxonomy) }
 	  else
-	    format.html { redirect_to(Category.find_all_by_id(@category.translation_id)[0].ontology) }
+	    format.html { redirect_to(Category.find_all_by_id(@category.translation_id)[0].taxonomy) }
 	  end
         end
         format.xml  { render :xml => @category, :status => :created, :location => @category }
@@ -111,15 +111,15 @@ class CategoriesController < ApplicationController
   # PUT /categories/1
   # PUT /categories/1.xml
   def update
-    ontology = @category.ontology
+    taxonomy = @category.taxonomy
     
     respond_to do |format|
       if @category.update_attributes(params[:category])
         flash[:notice] = 'Category was successfully updated.'
 	if Category.find_all_by_id(@category.translation_id).empty?
-	  format.html { redirect_to(@category.ontology) }
+	  format.html { redirect_to(@category.taxonomy) }
 	else
-	  format.html { redirect_to(Category.find_all_by_id(@category.translation_id)[0].ontology) }
+	  format.html { redirect_to(Category.find_all_by_id(@category.translation_id)[0].taxonomy) }
 	end
         format.xml  { head :ok }
       else
@@ -132,13 +132,13 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1
   # DELETE /categories/1.xml
   def destroy
-    ontology = @category.ontology
+    taxonomy = @category.taxonomy
     @category.destroy
     # did not have time to add the "...&uroot_id=#" variable to the "destroy" links.
     # session[:uroot_id] = params[:uroot_id].to_i
 
     respond_to do |format|
-      format.html { redirect_to(ontology) }
+      format.html { redirect_to(taxonomy) }
       format.xml  { head :ok }
     end
   end

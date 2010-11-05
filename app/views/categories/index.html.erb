@@ -65,7 +65,7 @@ document.getElementById('hideimg<%= category.id %>').style.display = "none";
 <% @Category_Branch_Root = category.id %>
 <%# Note: this "Current_Category_Root" session variable is only set in the "Category Controller" if it comes in as "...&Root_id=#" in the URL, as when someone is adding another category to a branch %>
 
-<% if Category.find(category.id).ontology.privacy == "Public" %>
+<% if Category.find(category.id).taxonomy.privacy == "Public" %>
     <% if !session[:uroot_id] %>
         <%# hide branch %>
             <% categories_display = "none" %>

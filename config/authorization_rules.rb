@@ -14,7 +14,7 @@ authorization do
 	:privacy => "Public"
     end
 
-    has_permission_on :ontologies, :to => :read do
+    has_permission_on :taxonomies, :to => :read do
       if_attribute :privacy => "Public"
     end
 
@@ -35,11 +35,11 @@ authorization do
    has_permission_on :authorization_rules, :to => :read
    has_permission_on :authorization_usages, :to => :read
       
-   # Guests can "translate" the categories for which they can "internationalize" the ontology.
+   # Guests can "translate" the categories for which they can "internationalize" the taxonomy.
    has_permission_on :categories, :to => :translate do
-      if_attribute :ontology_id => 0 # ... which of course will never happen, as we don't want "guests" translating things.
+      if_attribute :taxonomy_id => 0 # ... which of course will never happen, as we don't want "guests" translating things.
      # JSS could not get the following working.
-     # if_permitted_to :internationalize, :ontology #... which will never happen, as stated above.
+     # if_permitted_to :internationalize, :taxonomy #... which will never happen, as stated above.
    end
   end
   
@@ -74,29 +74,29 @@ authorization do
         
     # -------------------
     # O N T O L O G I E S
-        # Owners can "create" any new ontology that they wish.
-        has_permission_on :ontologies, :to => :create
+        # Owners can "create" any new taxonomy that they wish.
+        has_permission_on :taxonomies, :to => :create
         
-        # Owners can only "manage" the ontologies that they own.
-        has_permission_on [:ontologies, :ontology_users] do
+        # Owners can only "manage" the taxonomies that they own.
+        has_permission_on [:taxonomies, :taxonomy_users] do
           to :manage
           if_attribute :user_id => is {user.id}
         end
-        has_permission_on [:ontologies] do
+        has_permission_on [:taxonomies] do
           to :read
           if_attribute :privacy => is {"Public"}
         end
         
-        # Owners can only "internationalize" the ontologies that they own, and that have "Status = Locked".
-	has_permission_on :ontologies do
+        # Owners can only "internationalize" the taxonomies that they own, and that have "Status = Locked".
+	has_permission_on :taxonomies do
 	  to :internationalize
 	  if_attribute :user_id => is {user.id},
 	    :status => "Locked"
 	end
 	
-        # Owners can only "manage" the ontology_users for which they own the ontology.
-        has_permission_on :ontology_users, :to => :manage do
-          if_permitted_to :manage, :ontology
+        # Owners can only "manage" the taxonomy_users for which they own the taxonomy.
+        has_permission_on :taxonomy_users, :to => :manage do
+          if_permitted_to :manage, :taxonomy
         end
         
     # -------------------
@@ -110,14 +110,14 @@ authorization do
           if_attribute :user_id => is {user.id}
         end
         
-        # Owners can "read" the categories for which they can "read" the ontology.
+        # Owners can "read" the categories for which they can "read" the taxonomy.
         has_permission_on :categories, :to => :read do
-          if_permitted_to :read, :ontology
+          if_permitted_to :read, :taxonomy
         end
         
-        # Owners can "translate" the categories for which they can "internationalize" the ontology.
+        # Owners can "translate" the categories for which they can "internationalize" the taxonomy.
         has_permission_on :categories, :to => :translate do
-          if_permitted_to :internationalize, :ontology
+          if_permitted_to :internationalize, :taxonomy
         end
         
     # ---------
@@ -153,11 +153,11 @@ authorization do
     # Admins inherit all the permissions of Owners.
         includes :guest
         
-        has_permission_on [:collections, :category_collections, :collection_users, :languages, :ontologies_users, :relationships, :teams, :teams_users, :users, :validations], :to => [:manage, :create]
-        has_permission_on [:ontologies], :to => [:manage, :create, :internationalize]
+        has_permission_on [:collections, :category_collections, :collection_users, :languages, :taxonomies_users, :relationships, :teams, :teams_users, :users, :validations], :to => [:manage, :create]
+        has_permission_on [:taxonomies], :to => [:manage, :create, :internationalize]
         has_permission_on [:categories], :to => [:manage, :create, :translate]
 
-        has_permission_on :ontologies do 
+        has_permission_on :taxonomies do 
           to :internationalize
           if_attribute :status => "Locked"
         end

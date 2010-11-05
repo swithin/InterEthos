@@ -20,12 +20,12 @@
       <% navbar_link_array = Array.new %>
       <% if authorized? %>
         <% if current_user.roles.to_s == "admin" %>
-          <% navbar_link_array = [root_path, collections_path, ontologies_path, logout_path] %><%# , users_path, posts_path, topics_path %>
+          <% navbar_link_array = [root_path, collections_path, taxonomies_path, logout_path] %><%# , users_path, posts_path, topics_path %>
         <% else %>
-          <% navbar_link_array = [root_path, collections_path, ontologies_path, posts_path, logout_path] %>
+          <% navbar_link_array = [root_path, collections_path, taxonomies_path, posts_path, logout_path] %>
         <% end %>
       <% else %>
-        <% navbar_link_array = [root_path, login_path, collections_path, ontologies_path] %>
+        <% navbar_link_array = [root_path, login_path, collections_path, taxonomies_path] %>
       <% end %>
       <% cell_height = 500/navbar_link_array.length %>
 
@@ -110,11 +110,7 @@
                     <table align="center" cellpadding="10" cellspacing="0" border="0" height="100%" width="100%">
                       <tr>
                         <td align="left" valign="middle">
-			  <% if navbar_link.delete("/") != "ontologies" %>
-			    <%= link_to navbar_link.delete("/"), navbar_link %>
-			  <% else %>
-			    <%= link_to "categories", navbar_link %>
-			  <% end %>
+			  <%= link_to navbar_link.delete("/"), navbar_link %>
                         </td>
                       </tr>
                     </table>

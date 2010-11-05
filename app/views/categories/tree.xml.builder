@@ -2,7 +2,7 @@ xml = Builder::XmlMarkup.new
 
 xml.instruct!
 
-xml.ontology(:id => @category_root_id.id, :name => @category_root_id.name) do 
+xml.taxonomy(:id => @category_root_id.id, :name => @category_root_id.name) do 
 	for category in Category.find_all_by_parent_id(@category_root_id, :order => "name")
 	  xml.category(:id => category.id, :name => category.name) do 
 		for category_1 in Category.find_all_by_parent_id(category.id, :order => "name")

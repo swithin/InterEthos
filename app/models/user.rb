@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
     has_many :team, :through => :team_users
   has_many :collection_users
     has_many :collections, :through => :collection_users
-  has_many :ontology_users
-    has_many :ontologies, :through => :ontology_users
+  has_many :taxonomy_users
+    has_many :taxonomies, :through => :taxonomy_users
   
   include Authentication
   include Authentication::ByPassword

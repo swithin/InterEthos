@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  belongs_to :ontology
+  belongs_to :taxonomy
   
   belongs_to :user
   
