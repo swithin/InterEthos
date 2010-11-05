@@ -1,5 +1,5 @@
 --- 
-- !ruby/object:Taxonomy 
+- !ruby/object:Ontology 
   attributes: 
     name: Master Taxonomy - Philanthropy
     status: Locked
@@ -16,7 +16,7 @@
     created_at: 2010-04-22 11:26:55
   attributes_cache: {}
 
-- !ruby/object:Taxonomy 
+- !ruby/object:Ontology 
   attributes: 
     name: Big Five Personality Traits
     status: Stable
@@ -33,7 +33,7 @@
     created_at: 2010-04-22 11:47:37
   attributes_cache: {}
 
-- !ruby/object:Taxonomy 
+- !ruby/object:Ontology 
   attributes: 
     name: Test Taxonomy
     status: Beta
@@ -50,7 +50,7 @@
     created_at: 2010-08-09 14:27:53
   attributes_cache: {}
 
-- !ruby/object:Taxonomy 
+- !ruby/object:Ontology 
   attributes: 
     name: Master Taxonomy - Philanthropy in Amharic
     status: Beta
