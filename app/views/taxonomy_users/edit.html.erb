@@ -1,0 +1,18 @@
+<% @title = 'Edit User Taxonomy' %>
+
+<% form_for(@taxonomies_user) do |f| %>
+  <%= f.error_messages %>
+
+  <p><%= label(:user, :id, 'User') %><br />
+  	<strong><%= @user.full_name %></strong>
+	<%= hidden_field_tag("taxonomies_user[user_id]", @user.id) %></p>
+
+  <p><%= label(:collection, :id, 'Collection') %><br />
+    <%= collection_select(:taxonomies_user, :taxonomy_id, Taxonomy.find(:all), :id, :name, options = {}, html_options = {}) %></p>
+  
+  <p><%= f.submit 'Update' %></p>
+
+<% end %>
+
+<%= link_to 'Show', @taxonomies_user %> |
+<%= link_to 'Back', taxonomies_users_path %>

@@ -1,0 +1,64 @@
+<% @title = 'Taxonomies' %>
+
+<blockquote>
+  Notes:<br /><em>
+    <p>1) The word "Taxonomy" refers to a group of related Categories. Opening a Taxonomy listed below, will reveal the Categories within it.</p>
+    <p>2) Setting a Taxonomy's "Status => Locked" (which can only be done by the "owner") enables the internationalization of the Taxonomy, and the translation of the related Categories, into multiple languages.</p>
+  </em><br />&nbsp;
+</blockquote>
+
+<table border=0>
+  <tr>
+    <th align="left">Name</th>
+    <th align="left">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th align="left">Status</th>
+    <th align="left">&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th align="left" colspan=5>Privacy</th>
+  </tr>
+
+<% @taxonomies = @taxonomies.find(:all).sort_by(&:name) %>
+
+<% @taxonomies.each do |taxonomy| %>
+  <% if taxonomy.internationalization_id.nil? %>
+    <tr>
+      <td nowrap="nowrap"><%=h taxonomy.name %></td>
+      <td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td nowrap="nowrap"><%=h taxonomy.status %></td>
+      <td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td nowrap="nowrap"><%=h taxonomy.privacy %></td>
+      <td><% if permitted_to? :show, taxonomy %>&nbsp;<% else %><strong>(<%=h taxonomy.status %>)<strong><% end %></td>
+      <td align="center">
+	<%= link_to '<img src="/images/eye.gif" border="0">', taxonomy if !permitted_to? :edit, taxonomy %>
+	<%= link_to '<img src="/images/delta.gif" border="0">', taxonomy if permitted_to? :edit, taxonomy %>
+      </td>
+      <td><%#= link_to '<img src="/images/remove.gif" border="0">', taxonomy, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, taxonomy %></td>
+      <td>
+	  <%= link_to '<img src="/images/translate.gif" border="0">', new_taxonomy_path(:internationalization_id => taxonomy.id), :confirm => 'You are about to enable this Collection for internationalization. Once enabled, then you cannot modify existing categories nor their relationship "tree" structure. However, you can add new category "branches", but cannot modify even those new ones once created.', :method => :create  if permitted_to? :internationalize, taxonomy %>
+	  </td>
+    </tr>
+  <% elsif !taxonomy.internationalization_id.nil? %>
+      <tr>
+	<td nowrap="nowrap"><%= indent %><em><%=h taxonomy.name %></em></td>
+	<td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td nowrap="nowrap"><%=h taxonomy.status %></td>
+	<td nowrap="nowrap">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	<td nowrap="nowrap"><%=h taxonomy.privacy %></td>
+	<td><% if permitted_to? :show, taxonomy %>&nbsp;<% else %><strong>(<%=h taxonomy.status %>)<strong><% end %></td>
+	<td>
+	  &nbsp;
+	</td>
+	<td>
+	  &nbsp;
+	</td>
+	<td align="center">
+	  <%= link_to '<img src="/images/eye.gif" border="0">', taxonomy if !permitted_to? :edit, taxonomy %>
+	  <%= link_to '<img src="/images/delta.gif" border="0">', taxonomy if permitted_to? :edit, taxonomy %>
+	</td>
+      </tr>
+    <% end %>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New taxonomy', new_taxonomy_path if permitted_to? :create, :taxonomies %>

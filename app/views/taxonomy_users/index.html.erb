@@ -1,0 +1,22 @@
+<% @title = 'User Taxonomies' %>
+
+<table>
+  <tr>
+    <th>Taxonomy</th>
+    <th>User</th>
+  </tr>
+
+<% @taxonomies_users.each do |taxonomies_user| %>
+  <tr>
+    <td><%=h taxonomies_user.taxonomy %></td>
+    <td><%=h taxonomies_user.user %></td>
+    <td><%= link_to 'Show', taxonomies_user %></td>
+    <td><%= link_to 'Edit', edit_taxonomies_user_path(taxonomies_user) %></td>
+    <td><%= link_to 'Destroy', taxonomies_user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New taxonomies_user', new_taxonomies_user_path %>
