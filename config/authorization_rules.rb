@@ -17,6 +17,11 @@ authorization do
     has_permission_on :taxonomies, :to => :read do
       if_attribute :privacy => "Public"
     end
+    # PLEASE LEAVE THIS - Even though "Ontologies" have been renamed "Taxonomies" this is still
+      #needed for the dataload of Ontology data on full migrations for GitHub repository installations
+    has_permission_on :ontologies, :to => [:manage, :create] do
+      if_attribute :privacy => "Public"
+    end
 
    has_permission_on [:categories, :posts], :to => :read do
       if_attribute :user_id => is {1}  # Production user_id is "1"
