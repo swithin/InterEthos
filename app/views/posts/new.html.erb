@@ -21,6 +21,7 @@
     <%= f.text_field :author_email %>   
   </p> 
     <%= hidden_field_tag "post[collection_id]", @collection_id %>
+    <%= hidden_field_tag "post[taxonomy_id]", @taxonomy_id %>
     <%= hidden_field_tag "post[category_id]", @category_id %>
   <p>
     <%= label(:topic, :id, 'Topic') %><br />  

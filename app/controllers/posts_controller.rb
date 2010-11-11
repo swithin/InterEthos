@@ -33,6 +33,7 @@ class PostsController < ApplicationController
     @post = Post.new
       #BEG ADD
     @collection_id = params[:collection_id].to_i
+    @taxonomy_id = params[:taxonomy_id].to_i
     @category_id = params[:category_id].to_i
     session[:_location] = posts_path
   #END ADD
@@ -72,7 +73,15 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         flash[:notice] = 'Post was successfully created.'
-        format.html { redirect_to(@post) }
+        if @post.collection_id > 0
+          format.html { redirect_to(Collection.find_all_by_id(@post.collection_id))}
+        elsif @post.taxonomy_id > 0
+          format.html { redirect_to(Taxonomy.find_all_by_id(@post.taxonomy_id))}
+        elsif @post.category_id > 0
+          format.html { redirect_to(Category.find_all_by_id(@post.category_id))}
+        else
+          format.html # new.html.erb
+        end
         format.xml  { render :xml => @post, :status => :created, :location => @post }
       else
         format.html { render :action => "new" }
