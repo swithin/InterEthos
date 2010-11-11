@@ -20,12 +20,12 @@
       <% navbar_link_array = Array.new %>
       <% if authorized? %>
         <% if current_user.roles.to_s == "admin" %>
-          <% navbar_link_array = [root_path, collections_path, taxonomies_path, posts_path, topics_path, users_path, logout_path] %><%# xxx %>
+          <% navbar_link_array = [root_path, taxonomies_path, collections_path, posts_path, topics_path, users_path, logout_path] %><%# xxx %>
         <% else %>
-          <% navbar_link_array = [root_path, collections_path, taxonomies_path, posts_path, logout_path] %>
+          <% navbar_link_array = [root_path, taxonomies_path, collections_path, posts_path, logout_path] %>
         <% end %>
       <% else %>
-        <% navbar_link_array = [root_path, login_path, collections_path, taxonomies_path] %>
+        <% navbar_link_array = [root_path, login_path, taxonomies_path, collections_path] %>
       <% end %>
       <% cell_height = 500/navbar_link_array.length %>
 
