@@ -20,7 +20,7 @@
       <% navbar_link_array = Array.new %>
       <% if authorized? %>
         <% if current_user.roles.to_s == "admin" %>
-          <% navbar_link_array = [root_path, collections_path, taxonomies_path, logout_path] %><%# , users_path, posts_path, topics_path %>
+          <% navbar_link_array = [root_path, collections_path, taxonomies_path, posts_path, topics_path, users_path, logout_path] %><%# xxx %>
         <% else %>
           <% navbar_link_array = [root_path, collections_path, taxonomies_path, posts_path, logout_path] %>
         <% end %>
