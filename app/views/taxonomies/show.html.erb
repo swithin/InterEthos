@@ -1,4 +1,60 @@
 <% @title = 'Taxonomy' %>
+<script type="text/javascript">
+//browser detection
+ var ns4 = (document.layers);
+var ie4 = (document.all && !document.getElementById);
+var ie5 = (document.all && document.getElementById);
+var ns6 = (!document.all && document.getElementById);
+
+//SHOW
+function showit(id){
+var button_name_show = "hideimg_" + id;
+var button_name_hide = "showimg_" + id;
+// Netscape 4
+if(ns4){
+document.layers[id].display = "";
+}
+// Explorer 4
+else if(ie4){
+document.all[id].style.display = "";
+}
+// W3C - Netscape 6+
+else if(ns6){
+document.getElementById(id).style.display = "";
+document.getElementById(button_name_hide).style.display = "none";
+document.getElementById(button_name_show).style.display = "";
+}
+// W3C - IE5
+else if(ie5){
+var elem=document.getElementById(id)
+elem.style.display="";
+var elemshowimg=document.getElementById(button_name_hide)
+elemshowimg.style.display="none";
+var elemhideimg=document.getElementById(button_name_show)
+elemhideimg.style.display="";
+}
+}
+ 
+//HIDE
+function hideit(id){
+var button_name_show = "showimg_" + id;
+var button_name_hide = "hideimg_" + id;
+// Netscape 4
+if(ns4){
+document.layers[id].display = "none";
+}
+// Explorer 4
+else if(ie4){
+document.all[id].style.display = "none";
+}
+// W3C - Explorer 5+ and Netscape 6+
+else if(ie5 || ns6){
+document.getElementById(id).style.display = "none";
+document.getElementById(button_name_show).style.display = "";
+document.getElementById(button_name_hide).style.display = "none";
+}
+}
+</script>
 
 <% indent_small = "&nbsp;&nbsp;" %>
     
@@ -30,50 +86,70 @@
       
       <tr>
         <td colspan=3>
-	  <p><b>Internationalizations:</b> <em>When the above "Status => Locked", then the Taxonomy can be internationalized into parallel Taxonomies in different languages.</em></p>
-	  <% if @taxonomy.status == "Locked" %>
-	    <p><em>Current internationalizations for this taxonomy:</em>
-	    <blockquote>
-	      <table>
-		<% for internationalization in @Internationalizations %>
-		  <tr><td><% indent %><% indent %></td><td><img src="/images/translate.gif" border="0"></td><td style="width:10; text-align:center">-</td><td><%=h internationalization.name %></td></tr>
-		<% end %>
-	      </table>
-	    </p>
-	  <% end %>
-	  </blockquote>
-        </td>
-      </tr>
-      
-      <tr>
-        <td colspan=3>
-          <b>URL for a descriptive overview about the Taxonomy</b><br />
-          <%= indent %><% if @taxonomy.url_about.length > 0 %><a href="<%=h @taxonomy.url_about %>" target="_blank"><%=h @taxonomy.url_about %></a><% else %><em>(none supplied)</em><% end %>
-        </td>
-      </tr>
-      
-      <tr>
-        <td colspan=3>
-          <b>URL for HTML searches</b><br />
-          <%= indent %><% if @taxonomy.url_category_html.length > 0 %><a href="<%=h @taxonomy.url_category_html %>" target="_blank"><%=h @taxonomy.url_category_html %></a><% else %><em>(none supplied)</em><% end %><br />
-          <%= indent %>Include [category] marker if available.<br />
-          <%= indent %>ex. http://www.bostonindicators.org/Indicators2008/[category]':
-        </td>
-      </tr>
-      
-      <tr>
-        <td colspan=3>
-          <b>URL for XML searches</b><br />
-          <%= indent %><% if @taxonomy.url_category_xml.length > 0 %><a href="<%=h @taxonomy.url_category_xml %>" target="_blank"><%=h @taxonomy.url_category_xml %></a><% else %><em>(none supplied)</em><% end %><br />
-          <%= indent %>Include [category] marker if available.<br />
-          <%= indent %>ex. http://www.bostonindicators.org/Indicators2008/[category]':
-        </td>
-      </tr>
-      
-      <tr>
-        <td colspan=3>
 	  <b>Meta:</b><br />
 	   <%=h @taxonomy.meta %>
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan=3>
+	  <img id="showimg_i18n" src="/images/open.jpg" onclick="showit('i18n');" style="display: ;"><img id="hideimg_i18n" src="/images/close.jpg" onclick="hideit('i18n')" style="display: none;"> <b>Internationalizations</b>
+	  <span id="i18n" style="display: none;">
+	  <table bgcolor="#BCFCC1" width="100%" cellpadding=5 cellspacing=0 border=0><tr><td>
+	    <table width="100%" cellpadding=0 cellspacing=0 border=0><tr><td>
+	      <p><em>When the above "Status => Locked", then the Taxonomy can be internationalized into parallel Taxonomies in different languages.</em></p>
+	      <% if @taxonomy.status == "Locked" %>
+		<p><em>Current internationalizations for this taxonomy:</em>
+		<blockquote>
+		  <table>
+		    <% for internationalization in @Internationalizations %>
+		      <tr><td><% indent %><% indent %></td><td><img src="/images/translate.gif" border="0"></td><td style="width:10; text-align:center">-</td><td><%=h internationalization.name %></td></tr>
+		    <% end %>
+		  </table>
+		</p>
+	      <% end %>
+	      </blockquote>
+	    </td><tr></table>
+	  </td><tr></table>
+	  </span>
+        </td>
+      </tr>
+      
+      <tr>
+        <td colspan=3>
+	  <img id="showimg_urls" src="/images/open.jpg" onclick="showit('urls');" style="display: ;"><img id="hideimg_urls" src="/images/close.jpg" onclick="hideit('urls')" style="display: none;"> <b>URLs</b>
+	  <span id="urls" style="display: none;">
+	  <table bgcolor="#BCFCC1" width="100%" cellpadding=5 cellspacing=0 border=0>
+	    <tr>
+	      <td>
+		<table width="100%" cellpadding=0 cellspacing=0 border=0>
+		  <tr>
+		    <td colspan=3>
+		      <b>URL for a descriptive overview about the Taxonomy</b><br />
+		      <%= indent %><% if @taxonomy.url_about.length > 0 %><a href="<%=h @taxonomy.url_about %>" target="_blank"><%=h @taxonomy.url_about %></a><% else %><em>(none supplied)</em><% end %>
+		    </td>
+		  </tr>
+		  <tr>
+		    <td colspan=3>
+		      <b>URL for HTML searches</b><br />
+		      <%= indent %><% if @taxonomy.url_category_html.length > 0 %><a href="<%=h @taxonomy.url_category_html %>" target="_blank"><%=h @taxonomy.url_category_html %></a><% else %><em>(none supplied)</em><% end %><br />
+		      <%= indent %>Include [category] marker if available.<br />
+		      <%= indent %>ex. http://www.bostonindicators.org/Indicators2008/[category]':
+		    </td>
+		  </tr>
+		  <tr>
+		    <td colspan=3>
+		      <b>URL for XML searches</b><br />
+		      <%= indent %><% if @taxonomy.url_category_xml.length > 0 %><a href="<%=h @taxonomy.url_category_xml %>" target="_blank"><%=h @taxonomy.url_category_xml %></a><% else %><em>(none supplied)</em><% end %><br />
+		      <%= indent %>Include [category] marker if available.<br />
+		      <%= indent %>ex. http://www.bostonindicators.org/Indicators2008/[category]':
+		    </td>
+		  </tr>
+		</table>
+	      </td>
+	    </tr>
+	  </table>
+	  </span>
         </td>
       </tr>
     </table>
