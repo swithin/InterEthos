@@ -18,6 +18,16 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def import
+    @doc = Nokogiri.XML('<foo><bar /><foo>', nil, 'EUC-JP')
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  # tree.xml.builder
+      # format.xml  { render :xml => @tree }
+    end
+  end
+
   def tree
     @xml = Builder::XmlMarkup.new
     @categories = Category.find(:all)

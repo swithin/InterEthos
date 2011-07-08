@@ -26,7 +26,7 @@
     <td><%= link_to '<img src="/images/eye.jpg" border="0">', collection_path(collection) if permitted_to? :show, collection %></td>
     <td><%= link_to '<img src="/images/delta.jpg" border="0">', edit_collection_path(collection) if permitted_to? :edit, collection %></td>
     <td><%= link_to '<img src="/images/remove.jpg" border="0">', collection, :confirm => 'Are you sure?', :method => :delete if permitted_to? :delete, collection %></td>
-    <td><%= link_to '<img src="/images/newPage.gif" border="0">', new_post_path(:collection_id => collection.id) %></td>
+    <td><%= link_to '<img src="/images/newPage.gif" border="0">', new_post_path(:collection_id => collection.id) if permitted_to? :create, @posts %></td>
   </tr>
 <% end %>
 </table>

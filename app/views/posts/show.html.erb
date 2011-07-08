@@ -1,25 +1,43 @@
 <% @title = 'Post' %>
 
 <p>
-    <b>Post date:</b>
-    <%=h @post.created_at.to_formatted_s(:rfc822)%>
-      <%#=h @post.created_at.to_date.to_formatted_s(:rfc822)%>
-       <%#=h Time.zone.local(@post.created_at)%>
-            <%#=h (@post.created_at).Time.zone.local%>
+  <% if !@post.collection_id.nil? %>
+    About collection: <strong><%= @collection[0].name %></strong>
+  <% end %>
+  <% if !@post.taxonomy_id.nil? %>
+    About taxonomy: <strong><%= @taxonomy[0].name %></strong>
+  <% end %>
+  <% if !@post.category_id.nil? %>
+    About category: <strong><%= @category[0].name %></strong>
+  <% end %>
 </p>
 
 <p>
-  <b>Post title:</b>
-  <%=h @post.post_title %>
+    <table cellpadding=0 cellspacing=0 border=0 width="100%">
+      <tr>
+        <td width="50%" rowspan=2 align="left">
+          <b>Title:</b><br />
+          <%=h @post.post_title %>
+        </td>
+        <td width="50%" align="right">
+          Created at: <%=h @post.created_at.to_date.to_formatted_s(:rfc822) %>
+        </td>
+      </tr>
+      <tr>
+        <td align="right">
+          Updated at: <%=h @post.updated_at.to_date.to_formatted_s(:rfc822) %>
+        </td>
+      </tr>
+    </table>
 </p>
 
 <p>
-  <b>Post text:</b>
+  <b>Text:</b>
   <%=h @post.post_text %>
 </p>
 
 <p>
-  <b>Post author:</b>
+  <b>Author:</b>
   <%=h @post.post_author %>
 </p>
 
@@ -30,9 +48,10 @@
 
 <p>
   <b>Topic:</b>
-  <%=h @post.topic.topic_name %></td>
+  <%=h @post.topic.topic_name %>
 </p>
 
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<p>
+    <%= link_to 'Edit', edit_post_path(@post) if permitted_to? :edit, :posts %> |
+    <%= link_to 'Back', posts_path %>
+</p>

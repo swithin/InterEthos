@@ -1,22 +1,43 @@
-<h1>Editing post</h1>
+<% @title = 'Edit Post' %>
 
 <% form_for(@post) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :post_title %><br />
-    <%= f.text_field :post_title %>
+    <% if @collection.length > 0 %>
+      <%= f.label :about_collection %>: <%= hidden_field_tag "post[collection_id]", @collection[0].id %><strong><%= @collection[0].name %></strong>
+    <% end %>
+    <% if @taxonomy.length > 0 %>
+      <%= f.label :about_taxonomy %>: <%= hidden_field_tag "post[taxonomy_id]", @taxonomy[0].id %><strong><%= @taxonomy[0].name %></strong>
+    <% end %>
+    <% if @category.length > 0 %>
+      <%= f.label :about_category %>: <%= hidden_field_tag "post[category_id]", @category[0].id %><strong><%= @category[0].name %></strong>
+    <% end %>
   </p>
   <p>
-    <%= f.label :post_text %><br />
-    <%= f.text_area :post_text %>
+    <table cellpadding=0 cellspacing=0 border=0 width="100%">
+      <tr>
+        <td width="50%" rowspan=2 align="left">
+          <%= f.label :title %><br />
+          <%= f.text_field :post_title %>
+        </td>
+        <td width="50%" align="right">
+          <%= f.label :created_at %>: <%=h @post.created_at.to_date.to_formatted_s(:rfc822) %>
+        </td>
+      </tr>
+      <tr>
+        <td align="right">
+          <%= f.label :updated_at %>: <%=h @post.updated_at.to_date.to_formatted_s(:rfc822) %>
+        </td>
+      </tr>
+    </table>
   </p>
   <p>
-    <%#= f.label :date_of_update %><br />
-    <%#= f.date_select :date_of_update %>
+    <%= f.label :text %><br />
+    <%= f.text_area :post_text,:rows => 7,:cols => 45 %>
   </p>
   <p>
-    <%= f.label :post_author %><br />
+    <%= f.label :author %><br />
     <%= f.text_field :post_author %>
   </p>
   <p>

@@ -23,11 +23,13 @@ authorization do
       if_attribute :privacy => "Public"
     end
 
-   has_permission_on [:categories, :posts], :to => :read do
+   has_permission_on [:categories], :to => :read do
       if_attribute :user_id => is {1}  # Production user_id is "1"
       if_attribute :user_id => is {24} # Dev SQLite databases use "24"
    end
 
+   has_permission_on :posts, :to => :read
+   
    # allow anonymous 'user' to create an account... :create
    # allow anonymous 'user' 'read-only' actions... :read
    # IMPORTANT: This is required when creating a new account so the
@@ -126,6 +128,16 @@ authorization do
         end
         
     # ---------
+    # P O S T S
+        # Owners can "create" any new post that they wish.
+        has_permission_on [:posts], :to => [:create]
+        
+    # -----------
+    # T O P I C S
+        # Owners can "read" all topics.
+        has_permission_on [:topics], :to => [:read]
+        
+    # ---------
     # T E A M S
         # Owners can "create" any new team that they wish.
         has_permission_on :teams, :to => :create
@@ -158,7 +170,7 @@ authorization do
     # Admins inherit all the permissions of Owners.
         includes :guest
         
-        has_permission_on [:collections, :category_collections, :collection_users, :languages, :taxonomies_users, :relationships, :teams, :teams_users, :users, :validations], :to => [:manage, :create]
+        has_permission_on [:collections, :category_collections, :collection_users, :languages, :posts, :taxonomies_users, :relationships, :teams, :teams_users, :topics, :users, :validations], :to => [:manage, :create]
         has_permission_on [:taxonomies], :to => [:manage, :create, :internationalize]
         has_permission_on [:categories], :to => [:manage, :create, :translate]
 

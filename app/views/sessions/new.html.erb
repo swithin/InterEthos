@@ -3,7 +3,13 @@
 <tr><td> -->
 <% @title = 'Log In' %>
 
-<blockquote>Note: <em>You do not need to login if you are searching our public catalog. By logging in you will be able to add new Collections, and add new Categories to catalog them with.</em><br />&nbsp;</blockquote>
+<blockquote>
+  <p>Note: <em>You do not need to login if you are searching our public catalog. By logging in you will be able to add new Collections, and add new Categories to catalog them with.</em></p>
+
+  <p>Also, you can always access the system via "username=<strong>test</strong>" and "password=<strong>tester</strong>".</p>
+
+  <p>To create your own login click the "Sign up" link at the bottom of the page.</p>
+</blockquote>
 
 <% form_tag session_path do -%>
 <p><%= label_tag 'login' %><br />

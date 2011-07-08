@@ -1,5 +1,31 @@
 <% @title = 'Posts' %>
-<%#<h1>Listing posts</h1> %>
+
+<p>
+  <strong>help <i>(noun)</i>:</strong>
+  <blockquote>
+    <li> InterEthos offers the following "how to" videos, and documents about our service and current projects.</li>
+    <li> You can also read the helpful comments left by other users (a complete site-wide listing of which is at the bottom of this page).</li>
+    <li> <%= link_to 'Contact Us: <img src="/images/newPage.gif" border="0">', new_post_path %></li>
+  </blockquote>
+</p>
+
+<p>
+  <strong>help <i>(verb)</i>: </strong>
+  <blockquote>We also invite your assistance on creating more and better of the "help <i>(noun)</i>" above. Post your own comments, videos, documents, etc on any of the following:  
+    <li> <strong>Documentation -</strong> click <img src="/images/newPage.gif" alt="submit a post"> next to any of the above "help <i>(noun)</i>" items...</li>
+    <li> <strong>Comment -</strong> click <img src="/images/newPage.gif" alt="submit a post"> next to any existing post to "reply"...</li>
+    <li> <strong>Category -</strong> click <img src="/images/newPage.gif" alt="submit a post"> next to any Category...</li>
+    <li> <strong>Taxonomy -</strong> click <img src="/images/newPage.gif" alt="submit a post"> next to any Taxonomy...</li>
+    <li> <strong>Collection -</strong> click <img src="/images/newPage.gif" alt="submit a post"> next to any Collection... or</li>
+    <li> <strong>InterEthos -</strong> to submit more general questions or feedback, click on the "Contact Us <img src="/images/newPage.gif" alt="submit a post">" link above on this page.</li>
+  </blockquote>
+</p>
+
+<hr width="85%">
+
+<p>
+  <strong>Existing Posts</strong>
+</p>
 
 <table>
   <tr>
@@ -12,17 +38,18 @@
 
 <% @posts.each do |post| %>
   <tr>
-    <td><% if post.post_title.length > 10 %>
-      <%=h post.post_title.slice(0..8)+"..." %>
-    <% else %>
-      <%= h post.post_title %>
-    <% end %>
-     <%#=h post.post_title %></td>
-    <td><% if post.post_text.length > 25 %>
-      <%=h post.post_text.slice(0..25)+"..." %>
-    <% else %>
-      <%= h post.post_text %>
-    <% end %>
+    <td>
+      <% if post.post_title.length > 10 %>
+        <%=h post.post_title.slice(0..8)+"..." %>
+      <% else %>
+        <%= h post.post_title %>
+      <% end %>
+       <%#=h post.post_title %></td>
+      <td><% if post.post_text.length > 25 %>
+        <%=h post.post_text.slice(0..25)+"..." %>
+      <% else %>
+        <%= h post.post_text %>
+      <% end %>
     </td>
     <%#<td><%=h post.created_at %> <%#/td> %>
     <td nowrap><%=h post.created_at.to_date.to_formatted_s(:rfc822) %>
@@ -38,9 +65,9 @@
 
     <td><%=h post.post_author %></td>
     <td><%=h post.topic.topic_name %></td>
-    <td><%= link_to '<img src="/images/view.gif" border="0">', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to '<img src="/images/view.gif" border="0">', post if permitted_to? :read, post %></td>
+    <td><%= link_to '<img src="/images/delta.jpg" border="0">', edit_post_path(post) if permitted_to? :manage, post %></td>
+    <td><%= link_to '<img src="/images/remove.jpg" border="0">', post, :confirm => 'Are you sure?', :method => :delete if permitted_to? :manage, post %></td>
   </tr>
 <% end %>
 </table>

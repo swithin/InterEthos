@@ -36,7 +36,7 @@
 	  <%= link_to '<img src="/images/translate.gif" border="0">', new_taxonomy_path(:internationalization_id => taxonomy.id), :confirm => 'You are about to enable this Collection for internationalization. Once enabled, then you cannot modify existing categories nor their relationship "tree" structure. However, you can add new category "branches", but cannot modify even those new ones once created.', :method => :create  if permitted_to? :internationalize, taxonomy %>
       </td>
       <td>
-          <td><%= link_to '<img src="/images/newPage.gif" border="0">', new_post_path(:taxonomy_id => taxonomy.id) %></td>
+          <td><%= link_to '<img src="/images/newPage.gif" border="0">', new_post_path(:taxonomy_id => taxonomy.id) if permitted_to? :create, @posts %></td>
       </td>
 
     </tr>
@@ -59,7 +59,7 @@
 	  <%= link_to '<img src="/images/delta.gif" border="0">', taxonomy if permitted_to? :edit, taxonomy %>
 	</td>
 	<td>
-	    <td><%= link_to '<img src="/images/newPage.gif" border="0">', new_post_path(:taxonomy_id => taxonomy.id) %></td>
+	    <td><%= link_to '<img src="/images/newPage.gif" border="0">', new_post_path(:taxonomy_id => taxonomy.id) if permitted_to? :create, @posts %></td>
 	</td>
       </tr>
     <% end %>

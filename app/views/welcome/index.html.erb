@@ -23,6 +23,7 @@
 </table>
 </p>
 
+<p><a name="overview_video"></a><br /><strong>Overview Video (3 minutes)</strong><br />(Also a <a href=#detailed_video>longer 9-minute "More Detailed Video"</a> is below on this page)</p>
 <object id="scPlayer" class="embeddedObject" width="640" height="480" type="application/x-shockwave-flash" data="http://content.screencast.com/users/Swithin/folders/Default/media/9da949d3-d932-461a-9b90-c9b4af414245/mp4h264player.swf" > <param name="movie" value="http://content.screencast.com/users/Swithin/folders/Default/media/9da949d3-d932-461a-9b90-c9b4af414245/mp4h264player.swf" /> <param name="quality" value="high" /> <param name="bgcolor" value="#FFFFFF" /> <param name="flashVars" value="thumb=http://content.screencast.com/users/Swithin/folders/Default/media/9da949d3-d932-461a-9b90-c9b4af414245/FirstFrame.jpg&containerwidth=640&containerheight=480&content=http://content.screencast.com/users/Swithin/folders/Default/media/9da949d3-d932-461a-9b90-c9b4af414245/InterEthos%20Elevator%20Speech.mp4&blurover=false" /> <param name="allowFullScreen" value="true" /> <param name="scale" value="showall" /> <param name="allowScriptAccess" value="always" /> <param name="base" value="http://content.screencast.com/users/Swithin/folders/Default/media/9da949d3-d932-461a-9b90-c9b4af414245/" /> <iframe type="text/html" frameborder="0" scrolling="no" style="overflow:hidden;" src="http://www.screencast.com/users/Swithin/folders/Default/media/9da949d3-d932-461a-9b90-c9b4af414245/embed" height="480" width="640" ></iframe> </object>
 
 <p><strong>Mission</strong>
@@ -94,6 +95,7 @@ The three main services are:
 <p>&nbsp;</p>
 <p style="font-weight:bold">"A More Detailed Overview of InterEthos' Services" <i>(video)</i></p>
 
+<p><a name="detailed_video"></a><br /><strong>More Detailed Video (9 minutes)</strong><br /> (Also a <a href=#overview_video>shorter 3-minute "Overview Video"</a> is above on this page)</p>
 <object id="scPlayer" class="embeddedObject" width="640" height="455" type="application/x-shockwave-flash" data="http://content.screencast.com/users/Swithin/folders/Default/media/36afe347-9a43-4483-a8e5-bdc28b259253/scplayer.swf" > <param name="movie" value="http://content.screencast.com/users/Swithin/folders/Default/media/36afe347-9a43-4483-a8e5-bdc28b259253/scplayer.swf" /> <param name="quality" value="high" /> <param name="bgcolor" value="#FFFFFF" /> <param name="flashVars" value="thumb=http://content.screencast.com/users/Swithin/folders/Default/media/36afe347-9a43-4483-a8e5-bdc28b259253/FirstFrame.png&containerwidth=640&containerheight=455&autohide=true&autostart=false&loop=false&showendscreen=true&showsearch=false&showstartscreen=true&tocdoc=left&xmp=sc.xmp&content=http://content.screencast.com/users/Swithin/folders/Default/media/36afe347-9a43-4483-a8e5-bdc28b259253/InterEthos%20Overview.mp4&blurover=false" /> <param name="allowFullScreen" value="true" /> <param name="scale" value="showall" /> <param name="allowScriptAccess" value="always" /> <param name="base" value="http://content.screencast.com/users/Swithin/folders/Default/media/36afe347-9a43-4483-a8e5-bdc28b259253/" /> <iframe type="text/html" frameborder="0" scrolling="no" style="overflow:hidden;" src="http://www.screencast.com/users/Swithin/folders/Default/media/36afe347-9a43-4483-a8e5-bdc28b259253/embed" height="455" width="640" ></iframe> </object>
 
 <p style="font-weight:bold">Application Features</p>
@@ -114,11 +116,12 @@ The three main services are:
 			<li type="a">Collections originating in European countries largely use metric measurements, whereas US ones do not, and both can be made interchangable</li>
 	   </ol>
 	</li>
-   <li>This site is currently monitored for uptime by <a href='http://mon.itor.us/?ref=button1'><img src='http://images.mon.itor.us/monbadges110-2.png' title='Mon.itor.us - Free website, server & network monitoring tool' border=0 /></a></li>
+   <li>The availability of InterEthos is monitored by <a href=http://www.monitis.com><span style='color:#72CC00;'><b>mon</b></span><span style='color:#FFB400'><b>it</b></span><span style='color:#FF2900'><b>is</b></span></a>.</li>
 </ol>
+
 &nbsp;<br>
 
-<p><span style="font-weight:bold">Contact Info</span><br>
-Josh Shortlidge | <a href="http://www.linkedin.com/in/swithin" target="_blank">on LinkedIn</a>  | <a href="http://swithin.com" target="_blank">just click on the logo and send a message</a><br>
-781-462-1113 | 132 Bay State Road, Melrose, MA 02176</p>
+<p><span style="font-weight:bold"><%= link_to 'Contact Us: <img src="/images/newPage.gif" border="0">', new_post_path if permitted_to? :create, @posts %><%= link_to 'Contact Us: <img src="/images/newPage.gif" border="0">', login_path if !permitted_to? :create, @posts %></span><br>
+Josh Shortlidge | <a href="http://www.linkedin.com/in/swithin" target="_blank">on LinkedIn</a> | 781-462-1113<br>
+132 Bay State Road, Melrose, MA 02176</p>
 

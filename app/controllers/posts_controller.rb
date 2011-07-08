@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
-  #  filter_resource_access # :nested_in => :collections_users
+  filter_resource_access
+  
   # GET /posts
   # GET /posts.xml
   def index
@@ -17,6 +18,9 @@ class PostsController < ApplicationController
   # GET /posts/1.xml
   def show
     @post = Post.find(params[:id])
+    @collection = Collection.find_all_by_id(@post.collection_id)
+    @taxonomy = Taxonomy.find_all_by_id(@post.taxonomy_id)
+    @category = Category.find_all_by_id(@post.category_id)
   #BEG ADD
     session[:current_location] = posts_path
   #END ADD
@@ -32,9 +36,9 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
       #BEG ADD
-    @collection_id = params[:collection_id].to_i
-    @taxonomy_id = params[:taxonomy_id].to_i
-    @category_id = params[:category_id].to_i
+    @collection = Collection.find_all_by_id(params[:collection_id])
+    @taxonomy = Taxonomy.find_all_by_id(params[:taxonomy_id])
+    @category = Category.find_all_by_id(params[:category_id])
     session[:_location] = posts_path
   #END ADD
     
@@ -53,6 +57,9 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
+    @collection = Collection.find_all_by_id(@post.collection_id)
+    @taxonomy = Taxonomy.find_all_by_id(@post.taxonomy_id)
+    @category = Category.find_all_by_id(@post.category_id)
   end
     #BEG ADD
     # @top = Topic.find(:all)
@@ -64,6 +71,9 @@ class PostsController < ApplicationController
   # POST /posts.xml
   def create
     @post = Post.new(params[:post])
+    @collection = Collection.find_all_by_id(@post.collection_id)
+    @taxonomy = Taxonomy.find_all_by_id(@post.taxonomy_id)
+    @category = Category.find_all_by_id(@post.category_id)
     
     #BEG ADD
     # @post.topic_id  = (params[category])
@@ -73,14 +83,15 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         flash[:notice] = 'Post was successfully created.'
-        if @post.collection_id > 0
+        PostMailer::deliver_post_notification(@current_user,@post)
+        if !@post.collection_id.nil?
           format.html { redirect_to(Collection.find_all_by_id(@post.collection_id))}
-        elsif @post.taxonomy_id > 0
+        elsif !@post.taxonomy_id.nil?
           format.html { redirect_to(Taxonomy.find_all_by_id(@post.taxonomy_id))}
-        elsif @post.category_id > 0
+        elsif !@post.category_id.nil?
           format.html { redirect_to(Category.find_all_by_id(@post.category_id))}
         else
-          format.html # new.html.erb
+          format.html { redirect_to(:controller => :welcome)}
         end
         format.xml  { render :xml => @post, :status => :created, :location => @post }
       else

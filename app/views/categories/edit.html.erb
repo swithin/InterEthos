@@ -21,37 +21,34 @@
   <%# Note: Do not change the User_id to the current user. For instance were an Admin to update this, we want to leave the original "owner's" user_id. %>
   <%= hidden_field_tag("category[user_id]", @category.user_id) %>
 
-  <p><%= f.submit 'Update' %></p>
-
-  <p>&nbsp;</p>
   <p>
-	  <b>Synonyms:</b>
-	  <ul>
+	<b>Synonyms: </b>
 		  <% if @category.relationships(@category).empty? %>
-			  <li><em>(none found)</em></li>
+			  <em>(none found)</em>
 		  <% else %>
+			(<%= @category.relationships.length %> found)
 			<% for relationship in @category.relationships %>
 			  <li><%=h relationship.synonym.name %>
-			   <%= link_to '<img src="/images/remove.jpg" border="0">', relationship_path(relationship.id), :confirm => 'Are you sure?', :method => :delete %>
-			   <%= link_to '<img src="/images/delta.jpg" border="0">', edit_relationship_path(relationship.id), :method => :get %></li>
+			   <%#= link_to '<img src="/images/remove.jpg" border="0">', relationship_path(relationship.id), :confirm => 'Are you sure?', :method => :delete %>
+			   <%#= link_to '<img src="/images/delta.jpg" border="0">', edit_relationship_path(relationship.id), :method => :get %></li>
 			<% end %>
 		  <% end %>
-		  <li><em>add new...</em> <%= indent %><%= link_to '<img src="/images/add.jpg" border="0">', new_relationship_path(:category_id => @category.id) %></li>
-	  </ul>
+    <%= tree_multiple_select('category', 'synonym_ids', Category.with_permissions_to(:read).find(:all, :conditions => ["parent_id = ?", 170], :order => "categories.name ASC"), :id, :name, :outer_class => 'multiple_select', :inner_class => 'multiple_select_checkbox') %>
 	</p>
 	
 	<p>
 	  <b>Other categories that list this category as a synonym:</b>
-	  <ul>
-		  <% if @category.inverse_synonyms(@category).empty? %>
-			  <li><em>(none found)</em></li>
-		  <% else %>
+	  <% if @category.inverse_synonyms(@category).empty? %>
+		  <em>(none found)</em>
+	  <% else %>
+		  <ul>
 			<% for inverse_synonym in @category.inverse_synonyms %>
 			  <li><%=h inverse_synonym.name %></li>
 			<% end %>
-		  <% end %>
-	  </ul>
+		  </ul>
+	  <% end %>
 	</p>
+  <p><%= f.submit 'Update' %></p>
 <% end %>
 
 <%= javascript_tag "$('category_name').focus()" %>

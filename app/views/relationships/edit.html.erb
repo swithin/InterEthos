@@ -10,6 +10,9 @@
     <%= label(:synonym, :id, 'Synonym') %><br />
     <%= tree_select(Category.find(:all, :conditions => "parent_id = 1"),
                         'relationship', 'synonym_id',  @relationship.synonym) %>
+
+    <%= tree_multiple_select('@category', 'synonym_id', Category.with_permissions_to(:read).find(:all, :conditions => ["parent_id = ?", 170], :order => "categories.name ASC"), :id, :name, :outer_class => 'multiple_select', :inner_class => 'multiple_select_checkbox') %>
+
   </p>
   <p><%= f.submit "Submit" %></p>
 <% end %>

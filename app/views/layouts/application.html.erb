@@ -110,7 +110,11 @@
                     <table align="center" cellpadding="10" cellspacing="0" border="0" height="100%" width="100%">
                       <tr>
                         <td align="left" valign="middle">
-			  <%= link_to navbar_link.delete("/"), navbar_link %>
+			  <% if navbar_link.delete("/") != "posts" %>
+			    <%= link_to navbar_link.delete("/"), navbar_link %>
+			  <% else %>
+			    <%= link_to "help <i>(noun)</i><br />or<br />help <i>(verb)</i>", navbar_link %>
+			  <% end %>
                         </td>
                       </tr>
                     </table>
